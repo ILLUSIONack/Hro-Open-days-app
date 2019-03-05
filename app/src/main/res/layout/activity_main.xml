@@ -11,8 +11,8 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="122dp"
-        android:layout_marginTop="265dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
         android:text="STAR PLATINUM"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
