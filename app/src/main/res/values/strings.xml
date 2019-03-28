@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">pb</string>
+    <string name="app_name">Open Dagen</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="studies">Studies</string>
+    <string name="yes">Yes</string>
+    <string name="menu">Menu</string>
+    <string name="Contact_page">Contact_page</string>
 </resources>

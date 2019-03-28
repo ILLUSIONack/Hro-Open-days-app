@@ -1,4 +1,4 @@
-package com.main.pb;
+package project.pb;
 
 import org.junit.Test;
 
