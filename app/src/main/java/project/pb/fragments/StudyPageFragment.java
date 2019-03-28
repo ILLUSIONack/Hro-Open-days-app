@@ -10,12 +10,13 @@ import android.view.ViewGroup;
 
 import project.pb.R;
 
-public class HomeScreenFragment extends Fragment {
+public class StudyPageFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.home_layout, container, false);
+        View view = inflater.inflate(R.layout.study_page, container, false);
         return view;
+
     }
 }

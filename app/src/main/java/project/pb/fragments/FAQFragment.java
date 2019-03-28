@@ -10,7 +10,8 @@ import android.view.ViewGroup;
 
 import project.pb.R;
 
-public class VeelGesteldeVragenFragment extends Fragment {
+public class FAQFragment extends Fragment {
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

@@ -1,23 +1,20 @@
 package project.pb;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
-import project.pb.fragments.ContactPage;
+import project.pb.fragments.ContactPageFragment;
+import project.pb.fragments.FAQFragment;
 import project.pb.fragments.HomeScreenFragment;
-import project.pb.fragments.SchoolInformationFragment;
 import project.pb.fragments.SettingsFragment;
-import project.pb.fragments.VeelGesteldeVragenFragment;
+import project.pb.fragments.SettlementFragment;
+import project.pb.fragments.StudyPageFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -66,15 +63,19 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_studies:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new SchoolInformationFragment()).commit();
+                        new StudyPageFragment()).commit();
+                break;
+            case R.id.nav_settlement:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new SettlementFragment()).commit();
                 break;
             case R.id.nav_askedquestions:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new VeelGesteldeVragenFragment()).commit();
+                        new FAQFragment()).commit();
                 break;
             case R.id.nav_contact_page:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ContactPage()).commit();
+                        new ContactPageFragment()).commit();
                 break;
             case R.id.nav_settings:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
