@@ -16,6 +16,8 @@ import android.view.MenuItem;
 import project.pb.fragments.ContactPage;
 import project.pb.fragments.HomeScreenFragment;
 import project.pb.fragments.SchoolInformationFragment;
+import project.pb.fragments.SettingsFragment;
+import project.pb.fragments.VeelGesteldeVragenFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -66,9 +68,18 @@ public class MainActivity extends AppCompatActivity
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new SchoolInformationFragment()).commit();
                 break;
+            case R.id.nav_askedquestions:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new VeelGesteldeVragenFragment()).commit();
+                break;
             case R.id.nav_contact_page:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new ContactPage()).commit();
+                break;
+            case R.id.nav_settings:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new SettingsFragment()).commit();
+                break;
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

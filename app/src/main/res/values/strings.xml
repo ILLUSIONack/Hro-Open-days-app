@@ -11,4 +11,6 @@
     <string name="yes">Yes</string>
     <string name="menu">Menu</string>
     <string name="Contact_page">Contact_page</string>
+    <string name="questions_page">Questions Page</string>
+    <string name="settings_page">Settings Page</string>
 </resources>
