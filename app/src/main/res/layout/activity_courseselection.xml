@@ -7,7 +7,7 @@
     tools:layout_editor_absoluteY="25dp">
 
     <ImageButton
-        android:id="@+id/InformaticaKeuzeImageButton"
+        android:id="@+id/InfKeuzeImageButton"
         android:layout_width="239dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -28,7 +28,7 @@
         android:src="@drawable/technischeinformaticakeuzebutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InformaticaKeuzeImageButton" />
+        app:layout_constraintTop_toBottomOf="@+id/InfKeuzeImageButton" />
 
     <ImageButton
         android:id="@+id/CmdKeuzeImageButton"
