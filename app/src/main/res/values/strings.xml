@@ -13,8 +13,13 @@
     <string name="Contact_page">Contact_page</string>
     <string name="questions_page">Questions Page</string>
     <string name="settings_page">Settings Page</string>
+
     <string name="todo">TODO</string>
     <string name="_31640727325">+31640727325</string>
     <string name="would_you_rather_send_a_message_fill_the_form_in_below">Would you rather send a message? Fill the form in below.</string>
     <string name="name">Name</string>
+    <string name="informatica">Informatica is a nice study etc</string>
+    <string name="obutton">Open dagen</string>
+    <string name="share">Share</string>
+
 </resources>
