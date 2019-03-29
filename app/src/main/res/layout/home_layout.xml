@@ -5,18 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/homeTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="246dp"
-        android:layout_marginEnd="143dp"
-        android:layout_marginBottom="302dp"
-        android:text="Home Page"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="418dp"
+        android:layout_height="218dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/locwijnhaven" />
+
+    <TextView
+        android:id="@+id/text_view_date"
+        android:layout_width="136dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="228dp"
+        android:text="Date"
+        android:textSize="30px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
 </android.support.constraint.ConstraintLayout>
