@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new HomeScreenFragment()).commit();
     }
 
 
