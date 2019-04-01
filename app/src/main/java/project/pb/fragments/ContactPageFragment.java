@@ -85,5 +85,4 @@ public class ContactPageFragment extends Fragment {
             }
         });
     }
-
 }

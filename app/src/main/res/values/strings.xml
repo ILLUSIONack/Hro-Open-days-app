@@ -22,6 +22,7 @@
     <string name="question">Question</string>
     <string name="send">Send</string>
     <string name="informatica">Informatica is a nice study etc</string>
+    <string name="informaticaopenday">On the open day of informatica you can....</string>
     <string name="informaticaopenday">Proin viverra, dui quis facilisis efficitur, nibh ligula imperdiet nulla, sit amet pulvinar mauris magna ut metus. Nam eu molestie eros, eget tincidunt ipsum. Fusce ut commodo purus. Etiam malesuada dui sed orci elementum, dictum feugiat sem tempus. Duis sem lorem, lacinia id consequat et, fringilla ac felis. Vivamus suscipit dolor et turpis accumsan blandit. Sed auctor sed erat eget maximus. Curabitur rhoncus turpis mauris. Cras elit est, consectetur vitae ligula eu, porttitor vestibulum libero. Vivamus imperdiet libero venenatis nisi porta blandit ut at odio. Praesent lectus ante, feugiat nec ex sit amet, dapibus rhoncus dolor</string>
     <string name="obutton">Open dagen</string>
     <string name="share">Share</string>
