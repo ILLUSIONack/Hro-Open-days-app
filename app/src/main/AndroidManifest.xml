@@ -17,6 +17,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".fragments.GeneralCourseInformation">
+        </activity>
+
+        <activity android:name=".fragments.OpenDagenInformation">
+        </activity>
+
     </application>
 
 </manifest>
