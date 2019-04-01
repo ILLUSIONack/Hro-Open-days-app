@@ -8,9 +8,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.EditText;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 import project.pb.fragments.ContactPageFragment;
 import project.pb.fragments.FAQFragment;
 import project.pb.fragments.HomeScreenFragment;
@@ -40,20 +38,6 @@ public class MainActivity extends AppCompatActivity
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new HomeScreenFragment()).commit();
 
-        final EditText your_name        = (EditText) findViewById(R.id.textName);
-        final EditText your_email       = (EditText) findViewById(R.id.textEmail);
-        final EditText your_subject     = (EditText) findViewById(R.id.textSubject);
-        final EditText your_message     = (EditText) findViewById(R.id.textMessage);
-
-    }
-
-    private boolean isValidEmail(String email) {
-        String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
-                + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-
-        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
-        Matcher matcher = pattern.matcher(email);
-        return matcher.matches();
     }
 
     @Override
