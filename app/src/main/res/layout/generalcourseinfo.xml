@@ -51,7 +51,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/openday"
         app:layout_constraintVertical_bias="0.284"
-        app:srcCompat="@drawable/ic_menu_share" />
+        app:srcCompat="@drawable/ic_menu_share"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/textView4"
