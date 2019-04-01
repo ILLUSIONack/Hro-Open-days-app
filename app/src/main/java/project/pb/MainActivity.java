@@ -26,7 +26,7 @@ import project.pb.fragments.StudyPageFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private EditText
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,14 +46,13 @@ public class MainActivity extends AppCompatActivity
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new HomeScreenFragment()).commit();
 
-
-        final EditText your_name        = (EditText) findViewById(R.id.textName);
-        final EditText your_email       = (EditText) findViewById(R.id.textEmail);
-        final EditText your_subject     = (EditText) findViewById(R.id.textSubject);
-        final EditText your_message     = (EditText) findViewById(R.id.textMessage);
+        final EditText your_name        = findViewById(R.id.textName);
+        final EditText your_email       = findViewById(R.id.textEmail);
+        final EditText your_subject     = findViewById(R.id.textSubject);
+        final EditText your_message     = findViewById(R.id.textMessage);
 
         Button email = findViewById(R.id.buttonSend);
-        email.setOnClickListener(new View.OnClickListener() {
+        email.setOnClickListener(new View.OnClickListener() { // TODO NullPointer Error is here Help
             @Override
             public void onClick(View v) {
                 String name      = your_name.getText().toString();
