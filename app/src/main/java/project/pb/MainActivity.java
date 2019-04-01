@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new HomeScreenFragment()).commit();
 
+
         final EditText your_name        = (EditText) findViewById(R.id.textName);
         final EditText your_email       = (EditText) findViewById(R.id.textEmail);
         final EditText your_subject     = (EditText) findViewById(R.id.textSubject);
@@ -97,6 +98,7 @@ public class MainActivity extends AppCompatActivity
         Pattern pattern = Pattern.compile(EMAIL_PATTERN);
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
+
     }
 
 
