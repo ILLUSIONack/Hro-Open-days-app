@@ -11,21 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity
-            android:name=".MainActivity">
+        <activity android:name=".fragments.opendays.inf1Activity"></activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".fragments.GeneralCourseInformation">
-        </activity>
-
-        <activity android:name=".fragments.OpenDagenInformation">
-        </activity>
-
+        <activity android:name=".fragments.GeneralCourseInformation"></activity>
+        <activity android:name=".fragments.OpenDagenInformation"></activity>
     </application>
 
 </manifest>
