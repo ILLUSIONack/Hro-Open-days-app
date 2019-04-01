@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#cf0245"
     android:layout_height="match_parent">
 
     <TextView
@@ -14,9 +15,13 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/informatica"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="6dp"
         android:textSize="18sp"
-        android:textStyle="italic"
+        android:textStyle="normal"
+        android:textColor="#FFF"
+        android:background="@drawable/text_view_border_by_hadi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,19 +45,18 @@
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="57dp"
-        android:layout_height="52dp"
+        android:layout_width="65dp"
+        android:layout_height="69dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@android:color/background_light"
+        android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/openday"
-        app:layout_constraintVertical_bias="0.284"
-        app:srcCompat="@drawable/ic_menu_share"
-        android:contentDescription="TODO" />
+        app:layout_constraintVertical_bias="0.532"
+        app:srcCompat="@drawable/hadi_share_button_v2" />
 
 </android.support.constraint.ConstraintLayout>
