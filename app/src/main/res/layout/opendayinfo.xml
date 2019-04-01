@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1500dp"
+            android:lineSpacingExtra="8sp"
+            android:maxLines="@android:integer/config_longAnimTime"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:text="@string/informaticaopenday"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
