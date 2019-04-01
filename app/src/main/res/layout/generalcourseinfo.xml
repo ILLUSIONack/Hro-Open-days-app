@@ -6,6 +6,22 @@
     android:background="#cf0245"
     android:layout_height="match_parent">
 
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="65dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/openday"
+        app:layout_constraintVertical_bias="0.532"
+        app:srcCompat="@drawable/hadi_share_button_v2" />
+
     <TextView
         android:id="@+id/informaticag"
         android:scrollbars="vertical"
@@ -41,22 +57,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/informaticag" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="65dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/openday"
-        app:layout_constraintVertical_bias="0.532"
-        app:srcCompat="@drawable/hadi_share_button_v2" />
+        app:layout_constraintTop_toBottomOf="@+id/informaticag"/>
 
 </android.support.constraint.ConstraintLayout>
