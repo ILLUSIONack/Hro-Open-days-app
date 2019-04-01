@@ -10,7 +10,7 @@ public interface StudyListener {
 
     String[] getOpenDayInformation();
 
-    Date[] getOpenDaysDates();
+    String[] getOpenDaysDates();
 
 
 }
