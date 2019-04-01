@@ -33,6 +33,7 @@ public class ContactPageFragment extends Fragment {
 
         initialize(view);
         return view;
+
     }
 
     private void initialize(View view){
