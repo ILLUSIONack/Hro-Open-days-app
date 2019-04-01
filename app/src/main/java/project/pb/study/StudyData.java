@@ -51,9 +51,9 @@ public enum StudyData implements StudyListener {
         }
 
         @Override
-        public Date[] getOpenDaysDates() {
-            return new Date[] {
-                    new Date("2019-04-4")
+        public String[] getOpenDaysDates() {
+            return new String[] {
+                    new String("2019-04-4")
             };
         }
     },
@@ -101,9 +101,9 @@ public enum StudyData implements StudyListener {
         }
 
         @Override
-        public Date[] getOpenDaysDates() {
-            return new Date[] {
-                    new Date("2019-04-4")
+        public String[] getOpenDaysDates() {
+            return new String[] {
+                    new String("2019-04-4")
             };
         }
     }, VOLTIJD_COMMUNICATIE() {
@@ -154,9 +154,9 @@ public enum StudyData implements StudyListener {
         }
 
         @Override
-        public Date[] getOpenDaysDates() {
-            return new Date[] {
-                    new Date("2019-04-4")
+        public String[] getOpenDaysDates() {
+            return new String[] {
+                    new String("2019-04-4")
             };
         }
     }, VOLTIJD_COMMUNICATIE_MEDIA() {
@@ -203,9 +203,9 @@ public enum StudyData implements StudyListener {
         }
 
         @Override
-        public Date[] getOpenDaysDates() {
-            return new Date[] {
-                    new Date("2019-04-4")
+        public String[] getOpenDaysDates() {
+            return new String[] {
+                    new String("2019-04-4")
 
             };
         }
@@ -253,10 +253,10 @@ public enum StudyData implements StudyListener {
         }
 
         @Override
-        public Date[] getOpenDaysDates() {
-            return new Date[] {
-                    new Date("2019-04-12"),
-                    new Date("2019-06-4")
+        public String[] getOpenDaysDates() {
+            return new String[] {
+                    new String("2019-04-12"),
+                    new String("2019-06-4")
             };
         }
     }, DEELTIJD_COMMUNICATIE() {
@@ -290,10 +290,6 @@ public enum StudyData implements StudyListener {
                     "          ",
                     "Docenten en/of studenten geven een korte voorlichting over de opleiding in een lokaal. De voorlichting duurt ca. 45 minuten.",
                     "          ",
-                    "16:45",
-                    "17:30",
-                    "18:15",
-                    "18:45",
                     "          ",
                     "Voorbeelden van projecten",
                     "          ",
@@ -310,11 +306,11 @@ public enum StudyData implements StudyListener {
         }
 
         @Override
-        public Date[] getOpenDaysDates() {
-            return new Date[] {
-                    new Date("2019-04-12"),
-                    new Date("2019-06-4")
+        public String[] getOpenDaysDates() {
+            return new String[] {
+                    new String("2019-04-12"),
+                    new String("2019-06-4")
             };
         }
-    };
+    }
 }
