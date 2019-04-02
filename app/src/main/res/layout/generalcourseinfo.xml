@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/openday"
         app:layout_constraintVertical_bias="0.532"
-        app:srcCompat="@drawable/hadi_share_button_v2" />
+        app:srcCompat="@drawable/ic_menu_share" />
 
     <TextView
         android:id="@+id/informaticag"
