@@ -21,14 +21,6 @@ import project.pb.R;
 
 public class ContactPageFragment extends Fragment {
 
-    private MainActivity context;
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        this.context = (MainActivity) context;
-    }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -36,7 +28,6 @@ public class ContactPageFragment extends Fragment {
 
         initialize(view);
         return view;
-
     }
 
     private void initialize(View view) {
