@@ -6,8 +6,4 @@ public interface StudyListener {
 
     String[] getGeneralInformation();
 
-    String[] getOpenDayInformation();
-
-    String[] getOpenDaysDates();
-
 }
