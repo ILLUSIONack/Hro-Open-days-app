@@ -6,57 +6,25 @@
     android:background="#cf0245"
     android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="65dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/openday"
-        app:layout_constraintVertical_bias="0.532"
-        app:srcCompat="@drawable/hadi_share_button_v2" />
-
     <TextView
         android:id="@+id/informaticag"
-        android:scrollbars="vertical"
         android:layout_width="412dp"
-        android:layout_height="318dp"
+        android:layout_height="664dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/text_view_border_by_hadi"
         android:fontFamily="sans-serif-black"
-        android:text="@string/informatica"
-        android:textAlignment="viewStart"
         android:paddingHorizontal="8dp"
         android:paddingVertical="6dp"
+        android:scrollbars="vertical"
+        android:text="@string/informatica"
+        android:textAlignment="viewStart"
+        android:textColor="#FFF"
         android:textSize="18sp"
         android:textStyle="normal"
-        android:textColor="#FFF"
-        android:background="@drawable/text_view_border_by_hadi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/openday"
-        android:layout_width="163dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_blue_dark"
-        android:text="@string/obutton"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/informaticag"/>
 
 </android.support.constraint.ConstraintLayout>

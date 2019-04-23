@@ -14,7 +14,6 @@ import project.pb.study.StudyData;
 public class GeneralCourseInformation extends Activity {
 
     private TextView generalInfo;
-    private Button openday;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +21,6 @@ public class GeneralCourseInformation extends Activity {
         setContentView(R.layout.generalcourseinfo);
 
         generalInfo = findViewById(R.id.informaticag);
-        openday = findViewById(R.id.openday);
 
         final StudyData key = (StudyData) getIntent().getSerializableExtra("opleiding");
         String[] content = key.getGeneralInformation();
@@ -32,14 +30,5 @@ public class GeneralCourseInformation extends Activity {
         }
         generalInfo.setMovementMethod(new ScrollingMovementMethod());
         generalInfo.setText(s);
-
-        openday.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), OpenDagenInformation.class);
-                i.putExtra("opleiding", key);
-                v.getContext().startActivity(i);
-            }
-        });
     }
 }
