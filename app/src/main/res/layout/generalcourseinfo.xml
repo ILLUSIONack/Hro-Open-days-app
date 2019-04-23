@@ -8,11 +8,9 @@
 
     <TextView
         android:id="@+id/informaticag"
-        android:layout_width="412dp"
-        android:layout_height="664dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="405dp"
+        android:layout_height="649dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/text_view_border_by_hadi"
         android:fontFamily="sans-serif-black"
         android:paddingHorizontal="8dp"
         android:paddingVertical="6dp"
