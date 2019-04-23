@@ -37,6 +37,7 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
+        android:background="@drawable/text_view_border_by_hadi"
         android:layout_width="360dp"
         android:layout_height="226dp"
         android:layout_marginTop="8dp"
@@ -53,6 +54,7 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/inf1Button"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:layout_marginStart="8dp"
@@ -67,6 +69,7 @@
                 app:srcCompat="@drawable/inf1" />
 
             <ImageButton
+                android:id="@+id/tinf1Button"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:layout_marginStart="8dp"
@@ -81,6 +84,7 @@
                 app:srcCompat="@drawable/ti1" />
 
             <ImageButton
+                android:id="@+id/cmdButton"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:layout_marginStart="8dp"
@@ -95,6 +99,7 @@
                 app:srcCompat="@drawable/cmd1" />
 
             <ImageButton
+                android:id="@+id/com1Button"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:layout_marginStart="8dp"
@@ -109,6 +114,7 @@
                 app:srcCompat="@drawable/co1" />
 
             <ImageButton
+                android:id="@+id/inf2Button"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:layout_marginStart="8dp"
@@ -123,6 +129,7 @@
                 app:srcCompat="@drawable/inf2" />
 
             <ImageButton
+                android:id="@+id/com2Button"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:layout_marginStart="8dp"

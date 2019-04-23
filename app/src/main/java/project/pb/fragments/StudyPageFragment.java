@@ -1,7 +1,6 @@
 package project.pb.fragments;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import project.pb.R;
@@ -16,6 +16,7 @@ import project.pb.study.StudyData;
 
 public class StudyPageFragment extends Fragment {
 
+    private Button openday;
     private ImageButton VoltijdInfButton, VoltijdTechInfButton, VoltijdCommButton,
             VoltijdCmdButton, DeeltijdInfButton, DeeltijdCommButton;
 
@@ -80,4 +81,5 @@ public class StudyPageFragment extends Fragment {
         return view;
 
     }
+
 }
