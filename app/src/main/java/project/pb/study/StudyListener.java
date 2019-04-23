@@ -1,7 +1,5 @@
 package project.pb.study;
 
-import java.util.Date;
-
 public interface StudyListener {
 
     String getName();
@@ -11,6 +9,5 @@ public interface StudyListener {
     String[] getOpenDayInformation();
 
     String[] getOpenDaysDates();
-
 
 }
