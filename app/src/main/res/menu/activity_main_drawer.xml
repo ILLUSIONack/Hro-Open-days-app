@@ -15,11 +15,11 @@
         <item
             android:id="@+id/nav_settlement"
             android:icon="@drawable/ic_business_black_24dp"
-            android:title="Settlement" />
+            android:title="About HR" />
         <item
             android:id="@+id/nav_askedquestions"
             android:icon="@drawable/ic_question_answer_black_24dp"
-            android:title="Asked questions" />
+            android:title="FAQ" />
         <item
             android:id="@+id/nav_contact_page"
             android:icon="@drawable/contact_icon"
