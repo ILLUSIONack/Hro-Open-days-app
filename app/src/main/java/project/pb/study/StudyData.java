@@ -22,40 +22,6 @@ public enum StudyData implements StudyListener {
                     "Ben jij geïnteresseerd in nieuwe technologische ontwikkelingen, nieuwsgierig, een beetje eigenzinnig en een doorzetter, dan is de opleiding Informatica iets voor jou!"
             };
         }
-
-        @Override
-        public String[] getOpenDayInformation() {
-            return new String[] {
-                    "Klassikale voorlichting",
-                    "          ",
-                    "Docenten en/of studenten geven een korte voorlichting over de opleiding in een lokaal. De voorlichting duurt ca. 45 minuten.",
-                    "          ",
-                    "16:45",
-                    "17:30",
-                    "18:15",
-                    "18:45",
-                    "          ",
-                    "Voorbeelden van projecten",
-                    "          ",
-                    "Studenten Informatica hebben het studielandschap op de 4e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.",
-                    "16.00 - 20.00 uur doorlopend",
-                    "          ",
-                    "Workshops",
-                    "          ",
-                    "Je kunt een workshop volgen. Je ervaart dan zelf wat je onder andere leert tijdens de opleiding.",
-                    "          ",
-                    "16.00 - 20.00 uur doorlopend"
-
-
-            };
-        }
-
-        @Override
-        public String[] getOpenDaysDates() {
-            return new String[] {
-                    new String("2019-04-4")
-            };
-        }
     },
     VOLTIJD_TECHNISE() {
         @Override
@@ -71,39 +37,6 @@ public enum StudyData implements StudyListener {
                     "In het dagelijks leven zijn we steeds meer afhankelijk geworden van ICT-systemen. Reizen in het OV kan alleen nog met de OV-chipkaart, je bagage komt op Schiphol automatisch op de juiste plek, energiemeters worden ‘slim’ en medische ingrepen worden soms door een apparaat in plaats van een chirurg gedaan. Allemaal voorbeelden waarbij hard- en software samenkomen in een enkel systeem.",
                     "          ",
                     "Als technisch informaticus draag je bij aan het ontwikkelen, beveiligen en in de lucht houden van deze systemen. Gedurende de studie maak je kennis met de technische aspecten van ICT. Je leert te programmeren in diverse programmeertalen, waaronder de zogenaamde 'lagere' talen voor hardware toepassingen. Hiermee leer je oplossingen ontwikkelen voor verschillende apparaten, robots en andere moderne systemen. Je bent een all-rounder op alle disciplines, maar specialiseert je ook in een of meerdere aspecten in het werkveld. Denk daarbij aan Machine Learning, Augmented Reality, Automated Systems en uiteraard de met IoT (Internet of Things) nauw verbonden met Embedded Systems."
-            };
-        }
-
-        @Override
-        public String[] getOpenDayInformation() {
-            return new String[] {
-                    "Klassikale voorlichting",
-                    "          ",
-                    "Docenten en/of studenten geven een korte voorlichting over de opleiding in een lokaal. De voorlichting duurt ca. 45 minuten.",
-                    "          ",
-                    "16:45",
-                    "17:30",
-                    "18:15",
-                    "18:45",
-                    "          ",
-                    "Voorbeelden van projecten",
-                    "          ",
-                    "Studenten Informatica hebben het studielandschap op de 4e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.",
-                    "16.00 - 20.00 uur doorlopend",
-                    "          ",
-                    "Workshops",
-                    "          ",
-                    "Je kunt een workshop volgen. Je ervaart dan zelf wat je onder andere leert tijdens de opleiding.",
-                    "          ",
-                    "16.00 - 20.00 uur doorlopend"
-
-            };
-        }
-
-        @Override
-        public String[] getOpenDaysDates() {
-            return new String[] {
-                    new String("2019-04-4")
             };
         }
     }, VOLTIJD_COMMUNICATIE() {
@@ -127,38 +60,6 @@ public enum StudyData implements StudyListener {
             };
         }
 
-        @Override
-        public String[] getOpenDayInformation() {
-            return new String[] {
-                    "Klassikale voorlichting",
-                    "          ",
-                    "Docenten en/of studenten geven een korte voorlichting over de opleiding in een lokaal. De voorlichting duurt ca. 45 minuten.",
-                    "          ",
-                    "16:45",
-                    "17:30",
-                    "18:15",
-                    "18:45",
-                    "          ",
-                    "Voorbeelden van projecten",
-                    "          ",
-                    "Studenten Informatica hebben het studielandschap op de 4e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.",
-                    "16.00 - 20.00 uur doorlopend",
-                    "          ",
-                    "Workshops",
-                    "          ",
-                    "Je kunt een workshop volgen. Je ervaart dan zelf wat je onder andere leert tijdens de opleiding.",
-                    "          ",
-                    "16.00 - 20.00 uur doorlopend"
-
-            };
-        }
-
-        @Override
-        public String[] getOpenDaysDates() {
-            return new String[] {
-                    new String("2019-04-4")
-            };
-        }
     }, VOLTIJD_COMMUNICATIE_MEDIA() {
         @Override
         public String getName() {
@@ -176,39 +77,6 @@ public enum StudyData implements StudyListener {
             };
         }
 
-        @Override
-        public String[] getOpenDayInformation() {
-            return new String[] {
-                    "Klassikale voorlichting",
-                    "          ",
-                    "Docenten en/of studenten geven een korte voorlichting over de opleiding in een lokaal. De voorlichting duurt ca. 45 minuten.",
-                    "          ",
-                    "16:45",
-                    "17:30",
-                    "18:15",
-                    "18:45",
-                    "          ",
-                    "Voorbeelden van projecten",
-                    "          ",
-                    "Studenten Informatica hebben het studielandschap op de 4e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.",
-                    "16.00 - 20.00 uur doorlopend",
-                    "          ",
-                    "Workshops",
-                    "          ",
-                    "Je kunt een workshop volgen. Je ervaart dan zelf wat je onder andere leert tijdens de opleiding.",
-                    "          ",
-                    "16.00 - 20.00 uur doorlopend"
-
-            };
-        }
-
-        @Override
-        public String[] getOpenDaysDates() {
-            return new String[] {
-                    new String("2019-04-4")
-
-            };
-        }
     }, DEELTIJD_INFORMATICA() {
         @Override
         public String getName() {
@@ -223,40 +91,6 @@ public enum StudyData implements StudyListener {
                     "ICT is overal om ons heen te vinden. Jij bent als informaticus de specialist in het maken van grote en complexe informatiesystemen die snel, efficiënt en veilig werken. Dit varieert van webshops en apps tot big data analyses van social media. Bij het ontwikkelen van deze systemen kom je in aanraking met verschillende programmeertalen als: JavaScript, HTML5, CSS3, Java (Object georiënteerd programmeren), vanaf het tweede jaar is hierin meer variatie. Naast het programmeren en ontwikkelen van verschillende toepassingen leer je ook samenwerken met medestudenten of met studenten van andere opleidingen.",
                     "          ",
                     "De deeltijdopleiding Informatica is bedoeld voor mensen die toe zijn aan een volgende stap in hun loopbaan. Tijdens je studie is er aandacht voor je persoonlijke en beroepsontwikkeling. Je krijgt de hulp en begeleiding waaraan je zelf behoefte hebt; zo geef je zelf sturing aan je eigen studieloopbaan en beroepscarrière. Ben jij nieuwsgierig, een puzzelaar, een beetje eigenzinnig, een doorzetter, geïnteresseerd in nieuwe mogelijkheden en/of toepassingen en werk je graag met en voor mensen? Dan is Informatica iets voor jou!",
-            };
-        }
-
-        @Override
-        public String[] getOpenDayInformation() {
-            return new String[] {
-                    "Klassikale voorlichting",
-                    "          ",
-                    "Docenten en/of studenten geven een korte voorlichting over de opleiding in een lokaal. De voorlichting duurt ca. 45 minuten.",
-                    "          ",
-                    "16:45",
-                    "17:30",
-                    "18:15",
-                    "18:45",
-                    "          ",
-                    "Voorbeelden van projecten",
-                    "          ",
-                    "Studenten Informatica hebben het studielandschap op de 4e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.",
-                    "16.00 - 20.00 uur doorlopend",
-                    "          ",
-                    "Workshops",
-                    "          ",
-                    "Je kunt een workshop volgen. Je ervaart dan zelf wat je onder andere leert tijdens de opleiding.",
-                    "          ",
-                    "16.00 - 20.00 uur doorlopend"
-
-            };
-        }
-
-        @Override
-        public String[] getOpenDaysDates() {
-            return new String[] {
-                    new String("2019-04-12"),
-                    new String("2019-06-4")
             };
         }
     }, DEELTIJD_COMMUNICATIE() {
@@ -280,36 +114,6 @@ public enum StudyData implements StudyListener {
                     "De opleiding Communicatie is innovatief en praktijkgericht en leidt je op tot ‘smart connector’. Een smart connector is een professional die mensen slim met elkaar verbindt met de inzet van bijvoorbeeld social tools, big data en co-creatie.",
                     "          ",
                     "De opleiding biedt je alle ‘tools’ om als ‘smart connector’ mensen te kunnen raken, verbinden en bewegen. Op het goede moment, via het juiste communicatiemiddel en met inzet van nieuwe technologie!"
-            };
-        }
-
-        @Override
-        public String[] getOpenDayInformation() {
-            return new String[] {
-                    "Klassikale voorlichting",
-                    "          ",
-                    "Docenten en/of studenten geven een korte voorlichting over de opleiding in een lokaal. De voorlichting duurt ca. 45 minuten.",
-                    "          ",
-                    "          ",
-                    "Voorbeelden van projecten",
-                    "          ",
-                    "Studenten Informatica hebben het studielandschap op de 4e etage ingericht met voorbeelden van hun projecten en vertellen je hier graag iets over.",
-                    "16.00 - 20.00 uur doorlopend",
-                    "          ",
-                    "Workshops",
-                    "          ",
-                    "Je kunt een workshop volgen. Je ervaart dan zelf wat je onder andere leert tijdens de opleiding.",
-                    "          ",
-                    "16.00 - 20.00 uur doorlopend"
-
-            };
-        }
-
-        @Override
-        public String[] getOpenDaysDates() {
-            return new String[] {
-                    new String("2019-04-12"),
-                    new String("2019-06-4")
             };
         }
     }

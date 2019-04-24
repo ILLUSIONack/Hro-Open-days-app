@@ -26,5 +26,10 @@
     <string name="informaticaopenday">Proin viverra, dui quis facilisis efficitur, nibh ligula imperdiet nulla, sit amet pulvinar mauris magna ut metus. Nam eu molestie eros, eget tincidunt ipsum. Fusce ut commodo purus. Etiam malesuada dui sed orci elementum, dictum feugiat sem tempus. Duis sem lorem, lacinia id consequat et, fringilla ac felis. Vivamus suscipit dolor et turpis accumsan blandit. Sed auctor sed erat eget maximus. Curabitur rhoncus turpis mauris. Cras elit est, consectetur vitae ligula eu, porttitor vestibulum libero. Vivamus imperdiet libero venenatis nisi porta blandit ut at odio. Praesent lectus ante, feugiat nec ex sit amet, dapibus rhoncus dolor</string>
     <string name="obutton">Open dagen</string>
     <string name="share">Share</string>
-
+    <string name="OV">OV: Take metro line D from Rotterdam Central Station to De Akkers or E to Slinge. Step out at when you arrive at Beurs. And walk 400 meters in the direction of De Kamer van
+    Koophandel, at the side of the water directed to the south.</string>
+    <string name="Car">Car: Drive from  the south over the Erasmugbrug or from the north via the Coolsingel towards the cube houses. To do this you need to turn right onto the Posthoornstraat and then the second right onto Wijnhaven.</string>
+    <string name="Tunnel">Maastunnel (partly) closed: From the 3rd of July until the end of September, the tunnel is being
+    renovated. The result is that until then there will be only one tunnel open for motorized traffic from the south to the north. The Maastunnel is closed from the north to the south.</string>
+    <string name="address">Wijnhaven 107, 3011 WN Rotterdam</string>
 </resources>
