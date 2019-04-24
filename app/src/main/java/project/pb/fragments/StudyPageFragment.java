@@ -8,7 +8,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import project.pb.R;
@@ -16,7 +15,6 @@ import project.pb.study.StudyData;
 
 public class StudyPageFragment extends Fragment {
 
-    private Button openday;
     private ImageButton VoltijdInfButton, VoltijdTechInfButton, VoltijdCommButton,
             VoltijdCmdButton, DeeltijdInfButton, DeeltijdCommButton;
 
