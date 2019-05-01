@@ -16,11 +16,15 @@ import java.text.DateFormat;
 import java.util.Calendar;
 
 import project.pb.R;
+import project.pb.fragments.opendays.cmdActivity;
+import project.pb.fragments.opendays.com1Activity;
+import project.pb.fragments.opendays.com2Activity;
 import project.pb.fragments.opendays.inf1Activity;
 import project.pb.fragments.opendays.inf2Activity;
+import project.pb.fragments.opendays.tinf1Activity;
 
 public class HomeScreenFragment extends Fragment {
-    private ImageButton inf1Button, inf2Button;
+    private ImageButton inf1Button, tinf1Button, cmdButton, com1Button, inf2Button, com2Button;
 
 
     @Nullable
@@ -42,11 +46,43 @@ public class HomeScreenFragment extends Fragment {
                 v.getContext().startActivity(i);
             }
         });
+        tinf1Button = view.findViewById(R.id.tinf1Button);
+        tinf1Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), tinf1Activity.class);
+                v.getContext().startActivity(i);
+            }
+        });
+        cmdButton = view.findViewById(R.id.cmdButton);
+        cmdButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), cmdActivity.class);
+                v.getContext().startActivity(i);
+            }
+        });
+        com1Button = view.findViewById(R.id.com1Button);
+        com1Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), com1Activity.class);
+                v.getContext().startActivity(i);
+            }
+        });
         inf2Button = view.findViewById(R.id.inf2Button);
         inf2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), inf2Activity.class);
+                v.getContext().startActivity(i);
+            }
+        });
+        com2Button = view.findViewById(R.id.com2Button);
+        com2Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), com2Activity.class);
                 v.getContext().startActivity(i);
             }
         });
