@@ -17,9 +17,10 @@ import java.util.Calendar;
 
 import project.pb.R;
 import project.pb.fragments.opendays.inf1Activity;
+import project.pb.fragments.opendays.inf2Activity;
 
 public class HomeScreenFragment extends Fragment {
-    private ImageButton inf1Button;
+    private ImageButton inf1Button, inf2Button;
 
 
     @Nullable
@@ -38,6 +39,14 @@ public class HomeScreenFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), inf1Activity.class);
+                v.getContext().startActivity(i);
+            }
+        });
+        inf2Button = view.findViewById(R.id.inf2Button);
+        inf2Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), inf2Activity.class);
                 v.getContext().startActivity(i);
             }
         });
