@@ -1,10 +1,13 @@
 package project.pb.fragments;
 
+import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +20,11 @@ import java.util.Calendar;
 
 import project.pb.R;
 import project.pb.fragments.opendays.inf1Activity;
+import project.pb.notifications.NotificationCreation;
 
 public class HomeScreenFragment extends Fragment {
+
+    private View view;
     private ImageButton inf1Button;
 
 
@@ -37,8 +43,11 @@ public class HomeScreenFragment extends Fragment {
         inf1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                NotificationCreation notificationCreation =
+                        new NotificationCreation(getContext(), "Study", "You have clicked on a study!");
+                notificationCreation.display();
                 Intent i = new Intent(v.getContext(), inf1Activity.class);
-                v.getContext().startActivity(i);
+                 v.getContext().startActivity(i);
             }
         });
         return view;
