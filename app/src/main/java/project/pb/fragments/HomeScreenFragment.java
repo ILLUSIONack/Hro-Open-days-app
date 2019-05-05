@@ -15,11 +15,12 @@ import java.text.DateFormat;
 import java.util.Calendar;
 
 import project.pb.R;
+import project.pb.opendag.OpenDagData;
 
 public class HomeScreenFragment extends Fragment {
 
-    private View view;
     private ImageButton inf1Button, tinf1Button, cmdButton, com1Button, inf2Button, com2Button;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class HomeScreenFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), OpenDayInformation.class);
+                i.putExtra("open_dag_informatie", OpenDagData.INFORMATICA_VT);
                 v.getContext().startActivity(i);
             }
         });

@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.opendays.inf1Activity">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView3"
@@ -12,6 +11,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:text="De open dag en avond is een ideaal startpunt om kennis te maken met Hogeschool Rotterdam en alvast sfeer te proeven. Studenten en docenten staan voor je klaar om al je vragen te beantwoorden."
+        android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
