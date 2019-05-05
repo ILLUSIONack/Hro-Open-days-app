@@ -46,6 +46,7 @@ public class HomeScreenFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), OpenDayInformation.class);
+                i.putExtra("open_dag_informatie", OpenDagData.TECHNISCHE_INFORMATICA_VT);
                 v.getContext().startActivity(i);
             }
         });
@@ -54,6 +55,7 @@ public class HomeScreenFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), OpenDayInformation.class);
+                i.putExtra("open_dag_informatie", OpenDagData.COMMUNICATIE_EN_MEDIA_VT);
                 v.getContext().startActivity(i);
             }
         });
@@ -62,6 +64,7 @@ public class HomeScreenFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), OpenDayInformation.class);
+                i.putExtra("open_dag_informatie", OpenDagData.COMMUNICATIE_VT);
                 v.getContext().startActivity(i);
             }
         });
@@ -70,6 +73,7 @@ public class HomeScreenFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), OpenDayInformation.class);
+                i.putExtra("open_dag_informatie", OpenDagData.INFORMATICA_DT);
                 v.getContext().startActivity(i);
             }
         });
@@ -78,6 +82,7 @@ public class HomeScreenFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), OpenDayInformation.class);
+                i.putExtra("open_dag_informatie", OpenDagData.COMMUNICATIE_DT);
                 v.getContext().startActivity(i);
             }
         });
