@@ -3,6 +3,16 @@ package project.pb.opendag;
 public enum OpenDagData implements OpenDagListener {
 
     INFORMATICA_VT() {
+
+        @Override
+        public String getName() {
+            return "Informatica Fulltime";
+        }
+
+        public String getLink(){
+            return "https://www.hogeschoolrotterdam.nl/";
+        }
+
         @Override
         public String[] getInformation() {
             return new String[] {
@@ -26,6 +36,16 @@ public enum OpenDagData implements OpenDagListener {
         }
     },
     TECHNISCHE_INFORMATICA_VT() {
+
+        @Override
+        public String getName() {
+            return "Technical Informatica";
+        }
+
+        public String getLink(){
+            return "https://www.hogeschoolrotterdam.nl/";
+        }
+
         @Override
         public String[] getInformation() {
             return new String[] {
@@ -51,6 +71,16 @@ public enum OpenDagData implements OpenDagListener {
         }
     },
     COMMUNICATIE_EN_MEDIA_VT() {
+
+        @Override
+        public String getName() {
+            return "Communication and Media";
+        }
+
+        public String getLink(){
+            return "https://www.hogeschoolrotterdam.nl/";
+        }
+
         @Override
         public String[] getInformation() {
             return new String[] {
@@ -70,6 +100,16 @@ public enum OpenDagData implements OpenDagListener {
         }
     },
     COMMUNICATIE_VT() {
+
+        @Override
+        public String getName() {
+            return "Communication Fulltime";
+        }
+
+        public String getLink(){
+            return "https://www.hogeschoolrotterdam.nl/";
+        }
+
         @Override
         public String[] getInformation() {
             return new String[] {
@@ -89,6 +129,16 @@ public enum OpenDagData implements OpenDagListener {
         }
     },
     INFORMATICA_DT() {
+
+        @Override
+        public String getName() {
+            return "Informatica Parttime";
+        }
+
+        public String getLink(){
+            return "https://www.hogeschoolrotterdam.nl/";
+        }
+
         @Override
         public String[] getInformation() {
             return new String[] {
@@ -108,6 +158,16 @@ public enum OpenDagData implements OpenDagListener {
         }
     },
     COMMUNICATIE_DT() {
+
+        @Override
+        public String getName() {
+            return "Communication Parttime";
+        }
+
+        public String getLink(){
+            return "https://www.hogeschoolrotterdam.nl/";
+        }
+
         @Override
         public String[] getInformation() {
             return new String[] {
