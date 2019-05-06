@@ -92,7 +92,18 @@ public enum OpenDagData implements OpenDagListener {
         @Override
         public String[] getInformation() {
             return new String[] {
-                    "Informatica Deeltijd",
+                    "The open day for part time Informatica will start with giving you",
+                    "a taste of the atmosphere of the school and the study.",
+                    "You will be getting a comfortable experience of what the study will be offering you.",
+                    "At first the employees and students will show you the interior of the school",
+                    "Than a small course wil take place given by students which will create an",
+                    "opportunity to ask the students how their experience is of the study.",
+                    "The day will end with a game which consists of difficult puzzles.",
+                    "And of course the winning team will earn a price.\n",
+                    "The planning(5 April 16:00 t/m 20:00):\n",
+                    "- Tour of the building",
+                    "- Course about part time Informatica",
+                    "- Endgame"
             };
         }
     },
@@ -100,7 +111,18 @@ public enum OpenDagData implements OpenDagListener {
         @Override
         public String[] getInformation() {
             return new String[] {
-                    "Communicatie Deeltijd",
+                    "The open day for part time communication will start with giving you",
+                    "a taste of the atmosphere of the school and the study.",
+                    "You will be getting a comfortable experience of what the study will be offering you.",
+                    "At first the employees and students will show you the interior of the school",
+                    "Than a small course wil take place given by students which will create an",
+                    "opportunity to ask the students how their experience is of the study.",
+                    "The day will end with a game which consists of difficult puzzles.",
+                    "And of course the winning team will earn a price.\n",
+                    "The planning(5 April 16:00 t/m 20:00):\n",
+                    "- Tour of the building",
+                    "- Course about part time communication",
+                    "- Endgame"
             };
         }
     }
