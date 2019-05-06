@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#cf0245"
     android:layout_height="match_parent">
 
     <TextView
@@ -10,8 +11,9 @@
         android:layout_width="379dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        android:text="De open dag en avond is een ideaal startpunt om kennis te maken met Hogeschool Rotterdam en alvast sfeer te proeven. Studenten en docenten staan voor je klaar om al je vragen te beantwoorden."
         android:scrollbars="vertical"
+        android:text="De open dag en avond is een ideaal startpunt om kennis te maken met Hogeschool Rotterdam en alvast sfeer te proeven. Studenten en docenten staan voor je klaar om al je vragen te beantwoorden."
+        android:textColor="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +23,9 @@
         android:layout_width="207dp"
         android:layout_height="46dp"
         android:layout_marginBottom="28dp"
+        android:background="@android:color/holo_blue_dark"
         android:text="Toevoegen aan agenda"
+        android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.299"
@@ -35,6 +39,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.801"
