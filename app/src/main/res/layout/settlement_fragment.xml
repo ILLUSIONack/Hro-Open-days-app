@@ -16,8 +16,10 @@
         android:layout_marginBottom="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,10 +31,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="47dp"
                 android:fontFamily="serif"
-                android:textAlignment="center"
                 android:text="@string/address"
+                android:textAlignment="center"
                 android:textColor="@android:color/background_light"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:paddingHorizontal="20dp"/>
 
             <TextView
                 android:id="@+id/textView7"
@@ -42,7 +45,8 @@
                 android:text="@string/Car"
                 android:textAlignment="center"
                 android:textColor="@android:color/background_light"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:paddingHorizontal="20dp"/>
 
             <TextView
                 android:id="@+id/textView5"
@@ -52,7 +56,8 @@
                 android:text="@string/Tunnel"
                 android:textAlignment="center"
                 android:textColor="@android:color/background_light"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:paddingHorizontal="20dp"/>
 
             <TextView
                 android:id="@+id/textView6"
@@ -62,135 +67,18 @@
                 android:text="@string/OV"
                 android:textAlignment="center"
                 android:textColor="@android:color/background_light"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:paddingHorizontal="20dp"/>
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/button"
+                android:layout_width="153dp"
                 android:layout_height="wrap_content"
-                android:text="Basement"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textAlignment="center"
+                android:background="@android:color/holo_blue_dark"
+                android:text="@string/link"
                 android:textColor="@android:color/background_light" />
 
-            <ImageView
-                android:id="@+id/imageView12"
-                android:layout_width="300dp"
-                android:layout_height="296dp"
-                app:srcCompat="@drawable/basement" />
 
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:text="Ground Floor"
-                android:textAlignment="center"
-                android:textColor="@android:color/background_light" />
-
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="300dp"
-                android:layout_height="296dp"
-                app:srcCompat="@drawable/groundfloor" />
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:text="1st Floor"
-                android:textAlignment="center"
-                android:textColor="@android:color/background_light" />
-
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="300dp"
-                android:layout_height="296dp"
-                app:srcCompat="@drawable/page1" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:text="2nd Floor"
-                android:textAlignment="center"
-                android:textColor="@android:color/background_light" />
-
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="300dp"
-                android:layout_height="296dp"
-                app:srcCompat="@drawable/page2" />
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="3rd Floor"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textColor="@android:color/background_light" />
-
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="300dp"
-                android:layout_height="296dp"
-                app:srcCompat="@drawable/page3" />
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="4rd Floor"
-                android:textAlignment="center"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/background_light" />
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="300dp"
-                android:layout_height="296dp"
-                app:srcCompat="@drawable/page4" />
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="5th Floor"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textColor="@android:color/background_light" />
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="300dp"
-                android:layout_height="296dp"
-                app:srcCompat="@drawable/page5" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="6th Floor"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textColor="@android:color/background_light" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="300dp"
-                android:layout_height="296dp"
-                app:srcCompat="@drawable/page6" />
         </LinearLayout>
     </ScrollView>
 
