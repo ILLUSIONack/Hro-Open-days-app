@@ -9,29 +9,48 @@ public enum OpenDagData implements OpenDagListener {
             return "Informatica Fulltime";
         }
 
+        @Override
         public String getLink(){
             return "https://www.hogeschoolrotterdam.nl/";
         }
 
         @Override
+        public String getDescription() {
+            return "Informatica open day at hogeschool rotterdam.";
+        }
+
+        @Override
+        public String getLocation() {
+            return "Wijnhaven 107";
+        }
+
+        @Override
+        public int[] getDate() {
+            return new int[] {
+                    2019,
+                    5,
+                    4
+            };
+        }
+
+        @Override
         public String[] getInformation() {
             return new String[] {
-                    "Tijdens de informatica voltijd open dag zal je kennis maken",
-                    "met niet alleen de sfeer van de hogeschool rotterdam maar ook",
-                    "met een van de belangerijkste opleidingen in de ICT industrie",
-                    "namelijk informatica.",
-                    "De open dag informatica voltijd, zal eerst beginnen met een rondleiding",
-                    "rond het gebouw, hierdoor kom je precies te weten waar alles ligt.",
-                    "na de rondleiding wordt er een kleine cursus gegeven door een aantal studenten",
-                    "hierbij word een snelle uitleg gegeven over wat je kan verwachten.",
-                    "Nadat de curses voorbij is, krijg je nog kans om eventuelle vragen te stellem",
-                    "Hieronder kan je nog de planning van de dag bekijken",
+                    "During the informatica voltijd open day you will learn more",
+                    "about not just the atmosphere of the Hogeschool Rotterdam, but",
+                    "also with one of the most important studies in the ICT industry",
+                    "The open day computer science full-time, will first start with a tour",
+                    "around the building, this way you can find out exactly where everything is.",
+                    "after the tour a small course is given by a number of students",
+                    "Hereby a quick explanation is given about what you can expect.",
+                    "After the courses are over, you still have a chance to ask any questions",
+                    "Below you can view the schedule for the day",
                     "",
-                    "De planning (4 April 16:00 t/m 20:00):",
-                    "- Rondleiding rond het gebouw",
-                    "- Cursus over informatica",
-                    "- Vragen over de cursus",
-                    "- Eventuelle inschrijvingen voor geintresseerde"
+                    "The schedule (April 4 from 4:00 pm to 8:00 pm):",
+                    "- Tour around the building",
+                    "- Computer science course",
+                    "- Questions about the course",
+                    "- Any registrations for the interested"
             };
         }
     },
@@ -42,31 +61,51 @@ public enum OpenDagData implements OpenDagListener {
             return "Technical Informatica";
         }
 
+        @Override
         public String getLink(){
             return "https://www.hogeschoolrotterdam.nl/";
         }
 
         @Override
+        public String getDescription() {
+            return "Informatica open day at hogeschool rotterdam.";
+        }
+
+        @Override
+        public String getLocation() {
+            return "Wijnhaven 107";
+        }
+
+        @Override
+        public int[] getDate() {
+            return new int[] {
+                    2019,
+                    06,
+                    04
+            };
+        }
+
+        @Override
         public String[] getInformation() {
             return new String[] {
-                    "Tijdens de technische informatica voltijd open dag zal je kennis maken",
-                    "met niet alleen de sfeer van de hogeschool rotterdam maar ook",
-                    "met een van de belangerijkste opleidingen in de ICT industrie",
-                    "namelijk technische informatica.",
-                    "De open dag technische informatica voltijd, zal eerst beginnen met een rondleiding",
-                    "rond het gebouw, hierdoor kom je precies te weten waar alles ligt.",
-                    "na de rondleiding wordt er een kleine cursus gegeven door een aantal studenten",
-                    "hierbij word een snelle uitleg gegeven over wat je kan verwachten.",
-                    "Nadat de curses voorbij is, krijg je nog kans om eventuelle vragen te stellem",
-                    "Hieronder kan je nog de planning van de dag bekijken",
-                    "De dag zal eindige met een eindspel, het eindspel zal verschillende",
-                    "moeilijke puzzels bevatten die zo snel mogelijk moeten worden opgelost,",
-                    "het groepje dat het eindspel wint zal natuurlijk worden beloond met een prijs!",
+                    "You will become acquainted during technical computer science full-time open day",
+                    "with not only the atmosphere of the Rotterdam university but also",
+                    "with one of the most important courses in the IT industry",
+                    "namely technical informatics.",
+                    "The open day technical computer science full time, will first start with a tour",
+                    "around the building, this way you can find out exactly where everything is.",
+                    "after the tour a small course is given by a number of students",
+                    "Hereby a quick explanation is given about what you can expect.",
+                    "After the courses are over, you still have a chance to ask any questions",
+                    "Below you can view the schedule for the day",
+                    "The day will end with an endgame, the endgame will be different",
+                    "contain difficult puzzles that must be solved as quickly as possible,",
+                    "the group that wins the endgame will of course be rewarded with a prize!",
                     "",
-                    "De planning (4 April 16:00 t/m 20:00):",
-                    "- Rondleiding rond het gebouw",
-                    "- Cursus over technische informatica",
-                    "- Eindspel"
+                    "The schedule (April 4 from 4:00 pm to 8:00 pm):",
+                    "- Tour around the building",
+                    "- Course on technical informatics",
+                    "- Endgame"
             };
         }
     },
@@ -77,8 +116,28 @@ public enum OpenDagData implements OpenDagListener {
             return "Communication and Media";
         }
 
+        @Override
         public String getLink(){
             return "https://www.hogeschoolrotterdam.nl/";
+        }
+
+        @Override
+        public String getDescription() {
+            return "Informatica open day at hogeschool rotterdam.";
+        }
+
+        @Override
+        public String getLocation() {
+            return "Wijnhaven 107";
+        }
+
+        @Override
+        public int[] getDate() {
+            return new int[] {
+                    2019,
+                    06,
+                    04
+            };
         }
 
         @Override
@@ -111,6 +170,25 @@ public enum OpenDagData implements OpenDagListener {
         }
 
         @Override
+        public String getDescription() {
+            return "Informatica open day at hogeschool rotterdam.";
+        }
+
+        @Override
+        public String getLocation() {
+            return "Wijnhaven 107";
+        }
+
+        @Override
+        public int[] getDate() {
+            return new int[] {
+                    2019,
+                    06,
+                    04
+            };
+        }
+
+        @Override
         public String[] getInformation() {
             return new String[] {
                     "The open day for Communication full time will start with giving you",
@@ -135,8 +213,28 @@ public enum OpenDagData implements OpenDagListener {
             return "Informatica Parttime";
         }
 
+        @Override
         public String getLink(){
             return "https://www.hogeschoolrotterdam.nl/";
+        }
+
+        @Override
+        public String getDescription() {
+            return "Informatica open day at hogeschool rotterdam.";
+        }
+
+        @Override
+        public String getLocation() {
+            return "Wijnhaven 107";
+        }
+
+        @Override
+        public int[] getDate() {
+            return new int[] {
+                    2019,
+                    06,
+                    04
+            };
         }
 
         @Override
@@ -164,8 +262,28 @@ public enum OpenDagData implements OpenDagListener {
             return "Communication Parttime";
         }
 
+        @Override
         public String getLink(){
             return "https://www.hogeschoolrotterdam.nl/";
+        }
+
+        @Override
+        public String getDescription() {
+            return "Informatica open day at hogeschool rotterdam.";
+        }
+
+        @Override
+        public String getLocation() {
+            return "Wijnhaven 107";
+        }
+
+        @Override
+        public int[] getDate() {
+            return new int[] {
+                    2019,
+                    5,
+                    4
+            };
         }
 
         @Override
