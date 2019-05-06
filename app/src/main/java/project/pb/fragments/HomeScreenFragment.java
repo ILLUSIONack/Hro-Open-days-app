@@ -1,17 +1,13 @@
 package project.pb.fragments;
 
-import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -19,18 +15,12 @@ import java.text.DateFormat;
 import java.util.Calendar;
 
 import project.pb.R;
-import project.pb.fragments.opendays.cmdActivity;
-import project.pb.fragments.opendays.com1Activity;
-import project.pb.fragments.opendays.com2Activity;
-import project.pb.fragments.opendays.inf1Activity;
-import project.pb.fragments.opendays.inf2Activity;
-import project.pb.fragments.opendays.tinf1Activity;
-import project.pb.notifications.NotificationCreation;
+import project.pb.opendag.OpenDagData;
 
 public class HomeScreenFragment extends Fragment {
 
-    private View view;
     private ImageButton inf1Button, tinf1Button, cmdButton, com1Button, inf2Button, com2Button;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -46,18 +36,17 @@ public class HomeScreenFragment extends Fragment {
         inf1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NotificationCreation notificationCreation =
-                        new NotificationCreation(getContext(), "Study", "You have clicked on a study!");
-                notificationCreation.display();
-                Intent i = new Intent(v.getContext(), inf1Activity.class);
-                 v.getContext().startActivity(i);
+                Intent i = new Intent(v.getContext(), OpenDayInformation.class);
+                i.putExtra("open_dag_informatie", OpenDagData.INFORMATICA_VT);
+                v.getContext().startActivity(i);
             }
         });
         tinf1Button = view.findViewById(R.id.tinf1Button);
         tinf1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), tinf1Activity.class);
+                Intent i = new Intent(v.getContext(), OpenDayInformation.class);
+                i.putExtra("open_dag_informatie", OpenDagData.TECHNISCHE_INFORMATICA_VT);
                 v.getContext().startActivity(i);
             }
         });
@@ -65,7 +54,8 @@ public class HomeScreenFragment extends Fragment {
         cmdButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), cmdActivity.class);
+                Intent i = new Intent(v.getContext(), OpenDayInformation.class);
+                i.putExtra("open_dag_informatie", OpenDagData.COMMUNICATIE_EN_MEDIA_VT);
                 v.getContext().startActivity(i);
             }
         });
@@ -73,7 +63,8 @@ public class HomeScreenFragment extends Fragment {
         com1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), com1Activity.class);
+                Intent i = new Intent(v.getContext(), OpenDayInformation.class);
+                i.putExtra("open_dag_informatie", OpenDagData.COMMUNICATIE_VT);
                 v.getContext().startActivity(i);
             }
         });
@@ -81,7 +72,8 @@ public class HomeScreenFragment extends Fragment {
         inf2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), inf2Activity.class);
+                Intent i = new Intent(v.getContext(), OpenDayInformation.class);
+                i.putExtra("open_dag_informatie", OpenDagData.INFORMATICA_DT);
                 v.getContext().startActivity(i);
             }
         });
@@ -89,7 +81,8 @@ public class HomeScreenFragment extends Fragment {
         com2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), com2Activity.class);
+                Intent i = new Intent(v.getContext(), OpenDayInformation.class);
+                i.putExtra("open_dag_informatie", OpenDagData.COMMUNICATIE_DT);
                 v.getContext().startActivity(i);
             }
         });
