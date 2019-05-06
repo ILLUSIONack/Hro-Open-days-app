@@ -34,7 +34,8 @@
                 android:text="@string/address"
                 android:textAlignment="center"
                 android:textColor="@android:color/background_light"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:paddingHorizontal="20dp"/>
 
             <TextView
                 android:id="@+id/textView7"
@@ -44,7 +45,8 @@
                 android:text="@string/Car"
                 android:textAlignment="center"
                 android:textColor="@android:color/background_light"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:paddingHorizontal="20dp"/>
 
             <TextView
                 android:id="@+id/textView5"
@@ -54,7 +56,8 @@
                 android:text="@string/Tunnel"
                 android:textAlignment="center"
                 android:textColor="@android:color/background_light"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:paddingHorizontal="20dp"/>
 
             <TextView
                 android:id="@+id/textView6"
@@ -64,7 +67,8 @@
                 android:text="@string/OV"
                 android:textAlignment="center"
                 android:textColor="@android:color/background_light"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:paddingHorizontal="20dp"/>
 
             <Button
                 android:id="@+id/button"
