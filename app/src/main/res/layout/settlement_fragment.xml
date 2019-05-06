@@ -76,8 +76,8 @@
 
             <ImageView
                 android:id="@+id/imageView12"
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_width="300dp"
+                android:layout_height="296dp"
                 app:srcCompat="@drawable/basement" />
 
             <TextView
@@ -92,8 +92,8 @@
 
             <ImageView
                 android:id="@+id/imageView10"
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_width="300dp"
+                android:layout_height="296dp"
                 app:srcCompat="@drawable/groundfloor" />
 
             <TextView
@@ -108,8 +108,8 @@
 
             <ImageView
                 android:id="@+id/imageView9"
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_width="300dp"
+                android:layout_height="296dp"
                 app:srcCompat="@drawable/page1" />
 
             <TextView
@@ -124,8 +124,8 @@
 
             <ImageView
                 android:id="@+id/imageView8"
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_width="300dp"
+                android:layout_height="296dp"
                 app:srcCompat="@drawable/page2" />
 
             <TextView
@@ -140,8 +140,8 @@
 
             <ImageView
                 android:id="@+id/imageView7"
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_width="300dp"
+                android:layout_height="296dp"
                 app:srcCompat="@drawable/page3" />
 
             <TextView
@@ -156,8 +156,8 @@
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="wrap_content"
-                android:layout_height="400dp"
+                android:layout_width="300dp"
+                android:layout_height="296dp"
                 app:srcCompat="@drawable/page4" />
 
             <TextView
@@ -172,8 +172,8 @@
 
             <ImageView
                 android:id="@+id/imageView5"
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_width="300dp"
+                android:layout_height="296dp"
                 app:srcCompat="@drawable/page5" />
 
             <TextView
@@ -188,8 +188,8 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_width="300dp"
+                android:layout_height="296dp"
                 app:srcCompat="@drawable/page6" />
         </LinearLayout>
     </ScrollView>
