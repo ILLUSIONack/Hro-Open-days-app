@@ -37,11 +37,12 @@ public class GeneralCourseInformation extends Activity {
         for(int i = 0; i < content.length; i++) {
             s += content[i] + "\n";
         }
+        generalInfo.setScrollbarFadingEnabled(false);
         generalInfo.setMovementMethod(new ScrollingMovementMethod());
         generalInfo.setText(s);
     }
 
-    private void insert() {
+/*    private void insert() {
         Calendar calendarEvent = Calendar.getInstance();
         Intent intent = new Intent(Intent.ACTION_EDIT);
         intent.setType("vnd.android.cursor.item/event");
@@ -51,5 +52,6 @@ public class GeneralCourseInformation extends Activity {
         intent.putExtra("allDay", true);
         intent.putExtra("rule", "FREQ=YEARLY");
         startActivity(intent);
-    }
+    }*/
+
 }

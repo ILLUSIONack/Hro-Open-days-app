@@ -14,7 +14,6 @@
         android:fontFamily="sans-serif-black"
         android:paddingHorizontal="8dp"
         android:paddingVertical="6dp"
-        android:fadeScrollbars="false"
         android:scrollbars="vertical"
         android:text="@string/informatica"
         android:textAlignment="viewStart"

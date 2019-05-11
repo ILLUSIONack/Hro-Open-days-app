@@ -35,6 +35,7 @@ public class OpenDayInformation extends AppCompatActivity {
         for(int i = 0; i < content.length; i++) {
             s += content[i] + "\n";
         }
+        generalInfo.setScrollbarFadingEnabled(false);
         generalInfo.setMovementMethod(new ScrollingMovementMethod());
         generalInfo.setText(s);
 
