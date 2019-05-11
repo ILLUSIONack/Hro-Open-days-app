@@ -11,6 +11,7 @@
         android:layout_width="379dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
+        android:fadeScrollbars="false"
         android:scrollbars="vertical"
         android:text="De open dag en avond is een ideaal startpunt om kennis te maken met Hogeschool Rotterdam en alvast sfeer te proeven. Studenten en docenten staan voor je klaar om al je vragen te beantwoorden."
         android:textColor="@android:color/background_light"
