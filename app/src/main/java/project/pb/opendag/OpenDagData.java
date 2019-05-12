@@ -1,9 +1,16 @@
 package project.pb.opendag;
 
+import project.pb.R;
+
 public enum OpenDagData implements OpenDagListener {
 
     INFORMATICA_VT() {
 
+        @Override
+        public int getPic(){
+            int pic = R.drawable.coder;
+            return pic;
+        }
         @Override
         public String getName() {
             return "Informatica Fulltime";
@@ -33,6 +40,7 @@ public enum OpenDagData implements OpenDagListener {
             };
         }
 
+
         @Override
         public String[] getInformation() {
             return new String[] {
@@ -55,6 +63,12 @@ public enum OpenDagData implements OpenDagListener {
         }
     },
     TECHNISCHE_INFORMATICA_VT() {
+
+        @Override
+        public int getPic(){
+            int pic = R.drawable.infdt;
+            return pic;
+        }
 
         @Override
         public String getName() {
@@ -112,8 +126,14 @@ public enum OpenDagData implements OpenDagListener {
     COMMUNICATIE_EN_MEDIA_VT() {
 
         @Override
+        public int getPic(){
+            int pic = R.drawable.coder;
+            return pic;
+        }
+
+        @Override
         public String getName() {
-            return "Communication and Media";
+            return "Communication & Media";
         }
 
         @Override
@@ -159,6 +179,12 @@ public enum OpenDagData implements OpenDagListener {
         }
     },
     COMMUNICATIE_VT() {
+
+        @Override
+        public int getPic(){
+            int pic = R.drawable.coder;
+            return pic;
+        }
 
         @Override
         public String getName() {
@@ -209,6 +235,12 @@ public enum OpenDagData implements OpenDagListener {
     INFORMATICA_DT() {
 
         @Override
+        public int getPic(){
+            int pic = R.drawable.coder;
+            return pic;
+        }
+
+        @Override
         public String getName() {
             return "Informatica Parttime";
         }
@@ -256,6 +288,12 @@ public enum OpenDagData implements OpenDagListener {
         }
     },
     COMMUNICATIE_DT() {
+
+        @Override
+        public int getPic(){
+            int pic = R.drawable.coder;
+            return pic;
+        }
 
         @Override
         public String getName() {
