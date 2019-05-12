@@ -21,6 +21,8 @@ public class SettlementFragment extends Fragment {
         View view = inflater.inflate(R.layout.settlement_fragment, container, false);
         link = view.findViewById(R.id.button);
 
+        getActivity().setTitle("About HR");
+
         link.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

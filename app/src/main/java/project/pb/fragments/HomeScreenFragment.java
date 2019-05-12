@@ -26,11 +26,12 @@ public class HomeScreenFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_layout, container, false);
 
-        Calendar calendar = Calendar.getInstance();
-        String currentDate = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());
-
-        TextView textViewDate = view.findViewById(R.id.text_view_date);
-        textViewDate.setText(currentDate);
+//        Calendar calendar = Calendar.getInstance();
+//        String currentDate = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());
+//
+//        TextView textViewDate = view.findViewById(R.id.text_view_date);
+//        textViewDate.setText(currentDate);
+        getActivity().setTitle("Home");
 
         inf1Button = view.findViewById(R.id.inf1Button);
         inf1Button.setOnClickListener(new View.OnClickListener() {
