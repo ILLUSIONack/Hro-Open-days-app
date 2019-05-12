@@ -15,13 +15,15 @@ import project.pb.R;
 public class SettlementFragment extends Fragment {
 
     private Button mapButton;
+    private Button link;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.settlement_fragment, container, false);
-        link = view.findViewById(R.id.button);
+
+        link = view.findViewById(R.id.mapButton);
 
         getActivity().setTitle("About HR");
 
