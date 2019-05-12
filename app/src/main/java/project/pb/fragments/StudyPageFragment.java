@@ -22,6 +22,7 @@ public class StudyPageFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_courseselection, container, false);
+        getActivity().setTitle("Studies");
         VoltijdInfButton = view.findViewById(R.id.InfKeuzeImageButton);
         VoltijdInfButton.setOnClickListener(new View.OnClickListener() {
             @Override

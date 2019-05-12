@@ -19,9 +19,14 @@ public class SettlementFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.settlement_fragment, container, false);
-        mapButton = view.findViewById(R.id.mapButton);
-        mapButton.setOnClickListener(new View.OnClickListener() {
+
+        View view = inflater.inflate(R.layout.settlement_fragment, container, false);
+        link = view.findViewById(R.id.button);
+
+        getActivity().setTitle("About HR");
+
+        link.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(v.getContext(), MapActivityFragment.class));
