@@ -46,7 +46,11 @@ public class OpenDayInformation extends AppCompatActivity {
             public void onClick(View v) {
                 Intent myIntent = new Intent(Intent.ACTION_SEND);
                 myIntent.setType("text/plain");
-                String shareBody = "Your friend has invited you to join this open day: " + key.getName() +" Visit: "+ key.getLink();
+                String shareBody = "Your friend has invited you to join this open day: " + key.getName() +" Visit: "+ key.getLink() + '\n';
+                shareBody += '\n';
+                for(int i = 0; i < key.getInformation().length; i++) {
+                    shareBody += key.getInformation()[i] + '\n';
+                }
                 String shareSub = key.getName()+" Invitation";
                 myIntent.putExtra(Intent.EXTRA_SUBJECT,shareSub);
                 myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
