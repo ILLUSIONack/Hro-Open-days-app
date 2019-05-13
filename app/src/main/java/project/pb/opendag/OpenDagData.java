@@ -66,7 +66,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public int getPic(){
-            int pic = R.drawable.infdt;
+            int pic = R.drawable.coder;
             return pic;
         }
 
@@ -127,7 +127,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public int getPic(){
-            int pic = R.drawable.coder;
+            int pic = R.drawable.communicationpic;
             return pic;
         }
 
@@ -182,7 +182,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public int getPic(){
-            int pic = R.drawable.coder;
+            int pic = R.drawable.communicationpic;
             return pic;
         }
 
@@ -291,7 +291,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public int getPic(){
-            int pic = R.drawable.coder;
+            int pic = R.drawable.communicationpic;
             return pic;
         }
 
