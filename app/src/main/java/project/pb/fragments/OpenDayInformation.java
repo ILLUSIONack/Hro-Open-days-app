@@ -8,7 +8,6 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -19,10 +18,8 @@ import project.pb.opendag.OpenDagData;
 public class OpenDayInformation extends AppCompatActivity {
 
     private Button addcalender;
-    private TextView generalInfo, nameTitle;
+    private TextView generalInfo;
     private ImageButton shareButton;
-    private ImageView studyPicture;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +27,9 @@ public class OpenDayInformation extends AppCompatActivity {
         setContentView(R.layout.activity_inf1);
         generalInfo = findViewById(R.id.textView3);
         addcalender = findViewById(R.id.addcalender);
-        studyPicture = findViewById(R.id.studyPicture);
-        nameTitle = findViewById(R.id.nameTitle);
 
 
         final OpenDagData key = (OpenDagData) getIntent().getSerializableExtra("open_dag_informatie");
-        studyPicture.setImageResource(key.getPic());
-        nameTitle.setText(key.getName());
         String[] content = key.getInformation();
         String s = "";
         for(int i = 0; i < content.length; i++) {
