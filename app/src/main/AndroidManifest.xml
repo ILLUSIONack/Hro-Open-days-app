@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".fragments.GeneralCourseInformation" />
         <activity android:name=".fragments.OpenDayInformation" />
+        <activity android:name=".fragments.MapActivityFragment"/>
     </application>
 
 </manifest>

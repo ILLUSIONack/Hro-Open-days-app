@@ -25,6 +25,7 @@ public class ContactPageFragment extends Fragment {
         View view = inflater.inflate(R.layout.contact_page, container, false);
 
         initialize(view);
+        getActivity().setTitle("Contact");
         return view;
     }
 
