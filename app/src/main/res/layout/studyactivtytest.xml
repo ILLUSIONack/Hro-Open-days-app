@@ -6,75 +6,59 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/studyPicture"
-        android:layout_width="424dp"
-        android:layout_height="284dp"
+        android:id="@+id/imageView4"
+        android:layout_width="419dp"
+        android:layout_height="288dp"
+        android:layout_marginBottom="448dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/coder" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="371dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/radius"
+        android:padding="20dp"
         android:paddingHorizontal="25dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
         android:scrollbars="vertical"
         android:text="De open dag en avond is een ideaal startpunt om kennis te maken met Hogeschool Rotterdam en alvast sfeer te proeven. Studenten en docenten staan voor je klaar om al je vragen te beantwoorden."
         android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/addcalender"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameTitle" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.205" />
 
     <Button
         android:id="@+id/addcalender"
         android:layout_width="207dp"
         android:layout_height="46dp"
         android:layout_marginEnd="8dp"
-
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/button"
-        android:text="Add to Callender"
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Toevoegen aan agenda"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/shareButton"
-        app:layout_constraintHorizontal_bias="0.909"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/shareButton"
         android:layout_width="57dp"
         android:layout_height="47dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/button"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_share_black_24dp" />
-
-    <TextView
-        android:id="@+id/nameTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:background="#99e9e9e9"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="@color/colorBlack"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/studyPicture" />
-
 
 
 </android.support.constraint.ConstraintLayout>
