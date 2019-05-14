@@ -4,11 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.MotionEvent;
-import android.view.ScaleGestureDetector;
 import android.view.View;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import project.pb.R;
@@ -16,9 +13,7 @@ import project.pb.study.StudyData;
 
 public class GeneralCourseInformation extends Activity {
 
-    private float safe;
     private TextView generalInfo;
-    private ScaleGestureDetector scaleGestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
