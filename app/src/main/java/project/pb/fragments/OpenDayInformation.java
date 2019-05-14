@@ -62,7 +62,7 @@ public class OpenDayInformation extends AppCompatActivity {
 //                myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
 //                myIntent.setType("text/plain");
 //                startActivity(Intent.createChooser(myIntent,"Share using"));
-                onShareClick(v);
+                onShareClick(v, key);
 
             }
         });
@@ -87,14 +87,18 @@ public class OpenDayInformation extends AppCompatActivity {
         });
     }
 
-    public void onShareClick(View v){
+    public void onShareClick(View v, OpenDagData key){
         Resources resources = getResources();
 
         Intent emailIntent = new Intent();
         emailIntent.setAction(Intent.ACTION_SEND);
         // Native email client doesn't currently support HTML, but it doesn't hurt to try in case they fix it
-        String shareBody = "Your friend has invited you to join this open day: Visit: ";
-        String shareSub = " Invitation";
+        String shareBody = "Your friend has invited you to join this open day: " + key.getName() +" Visit: "+ key.getLink() + '\n';
+                shareBody += '\n';
+                for(int i = 0; i < key.getInformation().length; i++) {
+                    shareBody += key.getInformation()[i] + '\n';
+                }
+                String shareSub = key.getName()+" Invitation";
         emailIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, shareSub);
         emailIntent.setType("message/rfc822");
@@ -132,6 +136,11 @@ public class OpenDayInformation extends AppCompatActivity {
                     intent.putExtra(Intent.EXTRA_TEXT, shareBody);
                     intent.putExtra(Intent.EXTRA_SUBJECT, shareBody);
                     intent.setType("message/rfc822");
+                }else if(packageName.contains("whatsapp")) {
+                    // Warning: Facebook IGNORES our text. They say "These fields are intended for users to express themselves. Pre-filling these fields erodes the authenticity of the user voice."
+                    // One workaround is to use the Facebook SDK to post, but that doesn't allow the user to choose how they want to share. We can also make a custom landing page, and the link
+                    // will show the <meta content ="..."> text from that page with our link in Facebook.
+                    intent.putExtra(Intent.EXTRA_TEXT, shareBody);
                 }
 
                 intentList.add(new LabeledIntent(intent, packageName, ri.loadLabel(pm), ri.icon));
