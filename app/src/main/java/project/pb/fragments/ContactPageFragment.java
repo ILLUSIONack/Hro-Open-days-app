@@ -32,7 +32,6 @@ public class ContactPageFragment extends Fragment {
 
     private void initialize(View view) {
         final EditText your_name = view.findViewById(R.id.textName);
-        final EditText your_email = view.findViewById(R.id.textEmail);
         final EditText your_subject = view.findViewById(R.id.textSubject);
         final EditText your_message = view.findViewById(R.id.textMessage);
 
@@ -55,7 +54,6 @@ public class ContactPageFragment extends Fragment {
             public void onClick(View v) {
 
                 String name = your_name.getText().toString();
-                String email = your_email.getText().toString();
                 String subject = your_subject.getText().toString();
                 String message = your_message.getText().toString();
                 if (TextUtils.isEmpty(name)) {
@@ -64,12 +62,6 @@ public class ContactPageFragment extends Fragment {
                     return;
                 }
 
-                Boolean onError = false;
-                if (!isValidEmail(email)) {
-                    onError = true;
-                    your_email.setError("Invalid Email");
-                    return;
-                }
 
 
                 if (TextUtils.isEmpty(subject)) {
@@ -90,7 +82,7 @@ public class ContactPageFragment extends Fragment {
                 sendEmail.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"usman-ack@hotmail.com"});
                 sendEmail.putExtra(android.content.Intent.EXTRA_SUBJECT, subject);
                 sendEmail.putExtra(android.content.Intent.EXTRA_TEXT,
-                        "name:" + name + '\n' + "Email ID:" + email + '\n' + "Message:" + '\n' + message);
+                        "name:" + name + '\n' + "Message:" + '\n' + message);
 
                 /* Send it off to the Activity-Chooser */
                 startActivity(Intent.createChooser(sendEmail, "Send mail..."));
