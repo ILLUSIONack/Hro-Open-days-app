@@ -43,5 +43,4 @@ public class SettlementFragment extends Fragment {
         return view;
     }
 
-
 }
