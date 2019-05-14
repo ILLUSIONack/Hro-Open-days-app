@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.Calendar;
+import java.util.List;
 
 import project.pb.R;
 import project.pb.opendag.OpenDagData;
@@ -45,7 +46,6 @@ public class OpenDayInformation extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(Intent.ACTION_SEND);
-                myIntent.setType("text/plain");
                 String shareBody = "Your friend has invited you to join this open day: " + key.getName() +" Visit: "+ key.getLink() + '\n';
                 shareBody += '\n';
                 for(int i = 0; i < key.getInformation().length; i++) {
@@ -54,6 +54,7 @@ public class OpenDayInformation extends AppCompatActivity {
                 String shareSub = key.getName()+" Invitation";
                 myIntent.putExtra(Intent.EXTRA_SUBJECT,shareSub);
                 myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+                myIntent.setType("text/plain");
                 startActivity(Intent.createChooser(myIntent,"Share using"));
 
             }
@@ -74,7 +75,6 @@ public class OpenDayInformation extends AppCompatActivity {
                 intent.putExtra(CalendarContract.Events.TITLE, key.getName());
                 intent.putExtra(CalendarContract.Events.DESCRIPTION, key.getDescription());
                 intent.putExtra(CalendarContract.Events.EVENT_LOCATION, key.getLocation());
-                intent.putExtra(CalendarContract.Events.RRULE, "FREQ=YEARLY");
                 startActivity(intent);
             }
         });
