@@ -1,10 +1,8 @@
 package project.pb.fragments;
 
 import android.content.Intent;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import java.util.regex.Matcher;
@@ -28,20 +25,19 @@ public class ContactPageFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.contact_page, container, false);
-
         initialize(view);
         getActivity().setTitle("Contact");
         return view;
     }
 
     private void initialize(View view) {
-        final EditText your_name = (EditText) view.findViewById(R.id.textName);
-        final EditText your_email = (EditText) view.findViewById(R.id.textEmail);
-        final EditText your_subject = (EditText) view.findViewById(R.id.textSubject);
-        final EditText your_message = (EditText) view.findViewById(R.id.textMessage);
+        final EditText your_name = view.findViewById(R.id.textName);
+        final EditText your_email = view.findViewById(R.id.textEmail);
+        final EditText your_subject = view.findViewById(R.id.textSubject);
+        final EditText your_message = view.findViewById(R.id.textMessage);
 
 
-        ImageView callImage = (ImageView) view.findViewById(R.id.phoneCallButtonImage);
+        ImageView callImage = view.findViewById(R.id.phoneCallButtonImage);
         callImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,10 +46,10 @@ public class ContactPageFragment extends Fragment {
                 callIntent.setData(Uri.parse("tel:+3164333431"));
                 startActivity(callIntent);
             }
-            
+
         });
 
-        Button email = (Button) view.findViewById(R.id.buttonSend);
+        Button email = view.findViewById(R.id.buttonSend);
         email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -103,13 +99,14 @@ public class ContactPageFragment extends Fragment {
             }
         });
     }
-        private boolean isValidEmail(String email) {
-            String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
-                    + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
-            Pattern pattern = Pattern.compile(EMAIL_PATTERN);
-            Matcher matcher = pattern.matcher(email);
-            return matcher.matches();
+    private boolean isValidEmail(String email) {
+        String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+
+        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
     }
 
 

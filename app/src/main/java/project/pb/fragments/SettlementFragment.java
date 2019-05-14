@@ -10,14 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ScrollView;
-import android.app.Activity;
-
 
 import project.pb.R;
 
 public class SettlementFragment extends Fragment {
 
-    private Button mapButton;
     private Button link;
     public ScrollView scrollSettlement;
 
