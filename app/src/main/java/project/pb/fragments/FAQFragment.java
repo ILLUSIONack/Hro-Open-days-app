@@ -30,16 +30,11 @@ public class FAQFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.gestelde_vragen, container, false);
-        getActivity().setTitle("FAQ");
-
-        expandableListView = view.findViewById(R.id.eListView);
-        fillData();
-
-        listAdapter = new MyExListAdaptor(getContext(),Questions,answers);
-        expandableListView.setAdapter(listAdapter);
+        initialisation(view);
         return view;
 
     }
+
 
     public void fillData(){
         Questions = new ArrayList<>();
@@ -56,5 +51,16 @@ public class FAQFragment extends Fragment {
 
         answers.put(Questions.get(0),answer1);
         answers.put(Questions.get(1),answer2);
+    }
+
+
+    public void initialisation(View view){
+        getActivity().setTitle("FAQ");
+
+        expandableListView = view.findViewById(R.id.eListView);
+        fillData();
+
+        listAdapter = new MyExListAdaptor(getContext(),Questions,answers);
+        expandableListView.setAdapter(listAdapter);
     }
 }
