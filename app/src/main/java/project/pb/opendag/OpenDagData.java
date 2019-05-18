@@ -5,19 +5,19 @@ import project.pb.R;
 public enum OpenDagData implements OpenDagListener {
 
     INFORMATICA_VT() {
-
         @Override
-        public int getPic(){
+        public int getPic() {
             int pic = R.drawable.coder;
             return pic;
         }
+
         @Override
         public String getName() {
             return "Informatica Fulltime";
         }
 
         @Override
-        public String getLink(){
+        public String getLink() {
             return "https://www.hogeschoolrotterdam.nl/";
         }
 
@@ -33,7 +33,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public int[] getDate() {
-            return new int[] {
+            return new int[]{
                     2019,
                     5,
                     4
@@ -43,7 +43,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String[] getInformation() {
-            return new String[] {
+            return new String[]{
                     "Program:",
                     "",
                     "During the informatica voltijd open day you will learn more about not just the atmosphere of the Hogeschool Rotterdam, but also with one of the most important studies in the ICT industry. The open day computer science full-time, will first start with a tour around the building, this way you can find out exactly where everything is. After the tour a small course is given by a number of students. Hereby a quick explanation is given about what you can expect. After the courses are over, you still have a chance to ask any questions. Below you can view the schedule for the day",
@@ -58,9 +58,8 @@ public enum OpenDagData implements OpenDagListener {
         }
     },
     TECHNISCHE_INFORMATICA_VT() {
-
         @Override
-        public int getPic(){
+        public int getPic() {
             int pic = R.drawable.coder;
             return pic;
         }
@@ -71,7 +70,7 @@ public enum OpenDagData implements OpenDagListener {
         }
 
         @Override
-        public String getLink(){
+        public String getLink() {
             return "https://www.hogeschoolrotterdam.nl/";
         }
 
@@ -87,7 +86,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public int[] getDate() {
-            return new int[] {
+            return new int[]{
                     2019,
                     06,
                     04
@@ -96,7 +95,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String[] getInformation() {
-            return new String[] {
+            return new String[]{
                     "Program:",
                     "",
                     "You will become acquainted during technical computer science full-time open day with not only the atmosphere of the Rotterdam university but also with one of the most important courses in the IT industry: technical informatics. The open day technical computer science full time, will first start with a tour around the building. This way you can find out exactly where everything is. After the tour a small course is given by a number of students. Hereby a quick explanation is given about what you can expect. After the courses are over, you still have a chance to ask any questions. Below you can view the schedule for the day. The day will end with an endgame, the endgame will be different, and contains difficult puzzles that must be solved as quickly as possible. The group that wins the endgame will of course be rewarded with a prize!",
@@ -110,9 +109,8 @@ public enum OpenDagData implements OpenDagListener {
         }
     },
     COMMUNICATIE_EN_MEDIA_VT() {
-
         @Override
-        public int getPic(){
+        public int getPic() {
             int pic = R.drawable.communicationpic;
             return pic;
         }
@@ -123,7 +121,7 @@ public enum OpenDagData implements OpenDagListener {
         }
 
         @Override
-        public String getLink(){
+        public String getLink() {
             return "https://www.hogeschoolrotterdam.nl/";
         }
 
@@ -139,7 +137,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public int[] getDate() {
-            return new int[] {
+            return new int[]{
                     2019,
                     06,
                     04
@@ -148,7 +146,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String[] getInformation() {
-            return new String[] {
+            return new String[]{
                     "Program:",
                     "",
                     "You will become acquainted during communication and media full-time open day with not only the atmosphere of the Rotterdam university but also with one of the most important courses in the IT industry: communication and media. The open day communication and media full time, will first start with a tour around the building. This way you can find out exactly where everything is. After the tour a small course is given by a number of students. Hereby a quick explanation is given about what you can expect. After the courses are over, you still have a chance to ask any questions. Below you can view the schedule for the day. The day will end with an endgame, the endgame will be different, and contains difficult puzzles that must be solved as quickly as possible. The group that wins the endgame will of course be rewarded with a prize!",
@@ -162,9 +160,8 @@ public enum OpenDagData implements OpenDagListener {
         }
     },
     COMMUNICATIE_VT() {
-
         @Override
-        public int getPic(){
+        public int getPic() {
             int pic = R.drawable.communicationpic;
             return pic;
         }
@@ -174,7 +171,7 @@ public enum OpenDagData implements OpenDagListener {
             return "Communication Fulltime";
         }
 
-        public String getLink(){
+        public String getLink() {
             return "https://www.hogeschoolrotterdam.nl/";
         }
 
@@ -190,7 +187,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public int[] getDate() {
-            return new int[] {
+            return new int[]{
                     2019,
                     06,
                     04
@@ -199,7 +196,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String[] getInformation() {
-            return new String[] {
+            return new String[]{
                     "Program:",
                     "",
                     "You will become acquainted during communication full-time open day with not only the atmosphere of the Rotterdam university but also with one of the most important courses in the IT industry: communication. The open day communication full time, will first start with a tour around the building. This way you can find out exactly where everything is. After the tour a small course is given by a number of students. Hereby a quick explanation is given about what you can expect. After the courses are over, you still have a chance to ask any questions. Below you can view the schedule for the day. The day will end with an endgame, the endgame will be different, and contains difficult puzzles that must be solved as quickly as possible. The group that wins the endgame will of course be rewarded with a prize!",
@@ -213,9 +210,8 @@ public enum OpenDagData implements OpenDagListener {
         }
     },
     INFORMATICA_DT() {
-
         @Override
-        public int getPic(){
+        public int getPic() {
             int pic = R.drawable.coder;
             return pic;
         }
@@ -226,7 +222,7 @@ public enum OpenDagData implements OpenDagListener {
         }
 
         @Override
-        public String getLink(){
+        public String getLink() {
             return "https://www.hogeschoolrotterdam.nl/";
         }
 
@@ -242,7 +238,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public int[] getDate() {
-            return new int[] {
+            return new int[]{
                     2019,
                     06,
                     04
@@ -251,7 +247,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String[] getInformation() {
-            return new String[] {
+            return new String[]{
                     "Program:",
                     "",
                     "You will become acquainted during informatics part-time open day with not only the atmosphere of the Rotterdam university but also with one of the most important courses in the IT industry: informatics. The open day informatics part-time, will first start with a tour around the building. This way you can find out exactly where everything is. After the tour a small course is given by a number of students. Hereby a quick explanation is given about what you can expect. After the courses are over, you still have a chance to ask any questions. Below you can view the schedule for the day. The day will end with an endgame, the endgame will be different, and contains difficult puzzles that must be solved as quickly as possible. The group that wins the endgame will of course be rewarded with a prize!",
@@ -265,9 +261,8 @@ public enum OpenDagData implements OpenDagListener {
         }
     },
     COMMUNICATIE_DT() {
-
         @Override
-        public int getPic(){
+        public int getPic() {
             int pic = R.drawable.communicationpic;
             return pic;
         }
@@ -278,7 +273,7 @@ public enum OpenDagData implements OpenDagListener {
         }
 
         @Override
-        public String getLink(){
+        public String getLink() {
             return "https://www.hogeschoolrotterdam.nl/";
         }
 
@@ -294,7 +289,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public int[] getDate() {
-            return new int[] {
+            return new int[]{
                     2019,
                     5,
                     4
@@ -303,7 +298,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String[] getInformation() {
-            return new String[] {
+            return new String[]{
                     "Program:",
                     "",
                     "You will become acquainted during communication part-time open day with not only the atmosphere of the Rotterdam university but also with one of the most important courses in the IT industry: communication. The open day communication part time, will first start with a tour around the building. This way you can find out exactly where everything is. After the tour a small course is given by a number of students. Hereby a quick explanation is given about what you can expect. After the courses are over, you still have a chance to ask any questions. Below you can view the schedule for the day. The day will end with an endgame, the endgame will be different, and contains difficult puzzles that must be solved as quickly as possible. The group that wins the endgame will of course be rewarded with a prize!",
