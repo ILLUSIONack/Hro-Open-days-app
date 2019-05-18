@@ -15,6 +15,7 @@ import project.pb.study.StudyData;
 public class GeneralCourseInformation extends Activity {
 
     private TextView generalInfo;
+
     private float mScale = 1f;
     private ScaleGestureDetector mScaleGestureDetector;
     private GestureDetector gestureDetector;
@@ -45,8 +46,8 @@ public class GeneralCourseInformation extends Activity {
                 float prevScale = mScale;
                 mScale += scale;
 
-                if (mScale > 1f)
-                    mScale = 1f;
+                if (mScale > 1.5f)
+                    mScale = 1.5f;
 
                 ScaleAnimation scaleAnimation = new ScaleAnimation(1f / prevScale, 1f / mScale, 1f / prevScale, 1f / mScale, detector.getFocusX(), detector.getFocusY());
                 scaleAnimation.setDuration(0);
