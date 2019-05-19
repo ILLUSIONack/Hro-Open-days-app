@@ -1,7 +1,5 @@
 package project.pb.study;
 
-import java.util.Date;
-
 public enum StudyData implements StudyListener {
 
     VOLTIJD_INFORMATICA() {

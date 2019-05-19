@@ -15,7 +15,6 @@ import android.view.MenuItem;
 import project.pb.fragments.ContactPageFragment;
 import project.pb.fragments.FAQFragment;
 import project.pb.fragments.HomeScreenFragment;
-import project.pb.fragments.MapActivityFragment;
 import project.pb.fragments.SettingsFragment;
 import project.pb.fragments.SettlementFragment;
 import project.pb.fragments.StudyPageFragment;
