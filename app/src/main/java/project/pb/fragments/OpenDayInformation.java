@@ -54,7 +54,6 @@ public class OpenDayInformation extends AppCompatActivity {
         generalInfo.setMovementMethod(new ScrollingMovementMethod());
         generalInfo.setText(s);
 
-
         shareButton = findViewById(R.id.shareButton);
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
