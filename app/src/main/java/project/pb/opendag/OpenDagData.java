@@ -23,7 +23,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String getDescription() {
-            return "Informatica open day at hogeschool rotterdam.";
+            return "The schedule (April 4 from 4:00 pm to 8:00 pm):\n -Tour around the building  \n -Computer science course \n -Questions about the course \n -Any registrations for the interested";
         }
 
         @Override
@@ -76,7 +76,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String getDescription() {
-            return "Informatica open day at hogeschool rotterdam.";
+            return "The schedule (April 4 from 4:00 pm to 8:00 pm): \n - Tour around the building \n - Course on technical informatics \n Endgame";
         }
 
         @Override
@@ -127,7 +127,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String getDescription() {
-            return "Informatica open day at hogeschool rotterdam.";
+            return "The schedule (April 4 from 4:00 pm to 8:00 pm):\n - Tour around the building \n - Course on technical informatics \n     - Endgame";
         }
 
         @Override
@@ -177,7 +177,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String getDescription() {
-            return "Informatica open day at hogeschool rotterdam.";
+            return "The schedule (April 4 from 4:00 pm to 8:00 pm): \n - Tour around the building \n - Course on technical informatics \n - Endgame";
         }
 
         @Override
@@ -228,7 +228,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String getDescription() {
-            return "Informatica open day at hogeschool rotterdam.";
+            return "The schedule (April 4 from 4:00 pm to 8:00 pm): \n - Tour around the building \n - Course on technical informatics \n- Endgame";
         }
 
         @Override
@@ -279,7 +279,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String getDescription() {
-            return "Informatica open day at hogeschool rotterdam.";
+            return "The schedule (April 4 from 4:00 pm to 8:00 pm): \n - Tour around the building \n - Course on technical informatics \n - Endgame";
         }
 
         @Override

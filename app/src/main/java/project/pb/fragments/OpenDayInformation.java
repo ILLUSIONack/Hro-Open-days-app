@@ -132,6 +132,7 @@ public class OpenDayInformation extends AppCompatActivity {
         Intent emailIntent = new Intent();
         emailIntent.setAction(Intent.ACTION_SEND);
         // Native email client doesn't currently support HTML, but it doesn't hurt to try in case they fix it
+        String shareTwitter = "Open Day invite: \n " + key.getDescription() ;
         String shareBody = "Your friend has invited you to join this open day: " + key.getName() +" Visit: "+ key.getLink() + '\n';
                 shareBody += '\n';
                 for(int i = 0; i < key.getInformation().length; i++) {
@@ -163,7 +164,7 @@ public class OpenDayInformation extends AppCompatActivity {
                 intent.setAction(Intent.ACTION_SEND);
                 intent.setType("text/plain");
                 if(packageName.contains("twitter")) {
-                    intent.putExtra(Intent.EXTRA_TEXT, shareBody.substring(0, 512));
+                    intent.putExtra(Intent.EXTRA_TEXT, shareTwitter);
                 } else if(packageName.contains("facebook")) {
                     // Warning: Facebook IGNORES our text. They say "These fields are intended for users to express themselves. Pre-filling these fields erodes the authenticity of the user voice."
                     // One workaround is to use the Facebook SDK to post, but that doesn't allow the user to choose how they want to share. We can also make a custom landing page, and the link
