@@ -35,8 +35,12 @@ public class MapActivityFragment extends Activity {
                 float prevScale = mScale;
                 mScale += scale;
 
-                if (mScale > 1.5f)
-                    mScale = 1.5f;
+                if (mScale > 1.1f) {
+                    mScale = 1.1f;
+                }
+                if (mScale < 0.4f) {
+                    mScale = 0.4f;
+                }
 
                 ScaleAnimation scaleAnimation = new ScaleAnimation(1f / prevScale, 1f / mScale, 1f / prevScale, 1f / mScale, detector.getFocusX(), detector.getFocusY());
                 scaleAnimation.setDuration(0);
