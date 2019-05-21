@@ -7,18 +7,18 @@
 
     <TextView
         android:id="@+id/languageSwitch"
-        android:layout_width="0dp"
+        android:layout_width="309dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="41dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="9dp"
-        android:text="Switch language (English)"
-        android:textSize="26sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        android:layout_marginBottom="149dp"
+        android:text="Switch language"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/switch3"
         app:layout_constraintEnd_toStartOf="@+id/imageView7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
@@ -30,5 +30,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/languageSwitch"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/languageswitch" />
+        app:srcCompat="@drawable/languageflagbutton" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="405dp"
+        android:layout_height="98dp"
+        android:layout_marginBottom="536dp"
+        android:text="Notification"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/languageSwitch"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="402dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="437dp"
+        android:text="Theme switch"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/languageSwitch" />
+
 </android.support.constraint.ConstraintLayout>
