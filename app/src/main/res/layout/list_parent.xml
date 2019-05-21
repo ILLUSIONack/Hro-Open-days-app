@@ -10,6 +10,8 @@
         android:text="Large Text"
         android:id="@+id/parent"
         android:layout_marginLeft="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         />
 
 </LinearLayout>
