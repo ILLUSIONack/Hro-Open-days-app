@@ -40,17 +40,25 @@ public class FAQFragment extends Fragment {
         Questions = new ArrayList<>();
         answers = new HashMap<>();
 
-        Questions.add("What is the school called?");
+        Questions.add("Can i park outside the school?");
         Questions.add("Where is the school located?");
+        Questions.add("Is the food available at the Open day?");
+        Questions.add("What time does the Open day usually end?");
 
         List<String> answer1 = new ArrayList<>();
         List<String> answer2 = new ArrayList<>();
+        List<String> answer3 = new ArrayList<>();
+        List<String> answer4 = new ArrayList<>();
 
-        answer1.add("The school is called HRO");
-        answer2.add("The school is located near the central station");
+        answer1.add("Yes, you can find paid parking outside.");
+        answer2.add("The school is located near the station Beurs");
+        answer3.add("Yes, snacks and drinks are provided");
+        answer4.add("Depends on the chosen study but usually at 15:00");
 
         answers.put(Questions.get(0),answer1);
         answers.put(Questions.get(1),answer2);
+        answers.put(Questions.get(2),answer3);
+        answers.put(Questions.get(3),answer4);
     }
 
 
