@@ -11,11 +11,7 @@ import android.provider.CalendarContract;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
-import android.view.ScaleGestureDetector;
 import android.view.View;
-import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -34,10 +30,6 @@ public class OpenDayInformation extends AppCompatActivity {
     private TextView generalInfo;
     private ImageButton shareButton;
     private ConstraintLayout opendaypage;
-
-    private float mScale = 1f;
-    private ScaleGestureDetector mScaleGestureDetector;
-    private GestureDetector gestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
