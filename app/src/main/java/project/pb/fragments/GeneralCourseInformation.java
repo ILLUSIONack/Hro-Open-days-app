@@ -3,6 +3,7 @@ package project.pb.fragments;
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import project.pb.R;

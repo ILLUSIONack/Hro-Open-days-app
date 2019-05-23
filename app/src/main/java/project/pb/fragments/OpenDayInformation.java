@@ -13,6 +13,7 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -29,6 +30,7 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
     private TextView generalInfo;
     private ImageButton shareButton;
     private OpenDagData key;
+    private LinearLayout newopendaypage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,7 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
         generalInfo = findViewById(R.id.textView3);
         addcalender = findViewById(R.id.addcalender);
         shareButton = findViewById(R.id.shareButton);
+        newopendaypage = findViewById(R.id.newopendaypage);
 
         shareButton.setOnClickListener(this);
         addcalender.setOnClickListener(this);
