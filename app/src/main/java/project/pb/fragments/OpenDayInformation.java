@@ -8,8 +8,10 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.provider.CalendarContract;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
+import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -21,13 +23,18 @@ import java.util.List;
 
 import project.pb.R;
 import project.pb.opendag.OpenDagData;
+import project.pb.zoom.MultiTouchListener;
 
 public class OpenDayInformation extends AppCompatActivity implements View.OnClickListener {
 
     private Button addcalender;
     private TextView generalInfo;
     private ImageButton shareButton;
+    private ConstraintLayout opendaypage;
     private OpenDagData key;
+
+    private float mScale = 1f;
+    private ScaleGestureDetector mScaleGestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +42,7 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_inf1);
         generalInfo = findViewById(R.id.textView3);
         addcalender = findViewById(R.id.addcalender);
+        opendaypage = findViewById(R.id.opendaypage);
 
         key = (OpenDagData) getIntent().getSerializableExtra("open_dag_informatie");
         String[] content = key.getInformation();
@@ -45,6 +53,7 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
         generalInfo.setScrollbarFadingEnabled(false);
         generalInfo.setMovementMethod(new ScrollingMovementMethod());
         generalInfo.setText(s);
+        generalInfo.setOnTouchListener(new MultiTouchListener());
 
         shareButton = findViewById(R.id.shareButton);
         shareButton.setOnClickListener(new View.OnClickListener() {
@@ -73,18 +82,12 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
                 startActivity(intent);
             }
         });
-
-
     }
-
-
 
     @Override
     public void onClick(View v) {
 
     }
-
-
 
     public void onShareClick(View v, OpenDagData key){
         Resources resources = getResources();
