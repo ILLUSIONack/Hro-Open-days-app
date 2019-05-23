@@ -5,25 +5,25 @@ import project.pb.R;
 public enum OpenDagData implements OpenDagListener {
 
     INFORMATICA_VT() {
-
         @Override
-        public int getPic(){
+        public int getPic() {
             int pic = R.drawable.coder;
             return pic;
         }
+
         @Override
         public String getName() {
             return "Informatica Fulltime";
         }
 
         @Override
-        public String getLink(){
+        public String getLink() {
             return "https://www.hogeschoolrotterdam.nl/";
         }
 
         @Override
         public String getDescription() {
-            return "Informatica open day at hogeschool rotterdam.";
+            return "The schedule (April 4 from 4:00 pm to 8:00 pm):\n -Tour around the building  \n -Computer science course \n -Questions about the course \n -Any registrations for the interested";
         }
 
         @Override
@@ -33,7 +33,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public int[] getDate() {
-            return new int[] {
+            return new int[]{
                     2019,
                     5,
                     4
@@ -43,29 +43,22 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String[] getInformation() {
-            return new String[] {
-                    "During the informatica voltijd open day you will learn more",
-                    "about not just the atmosphere of the Hogeschool Rotterdam, but",
-                    "also with one of the most important studies in the ICT industry",
-                    "The open day computer science full-time, will first start with a tour",
-                    "around the building, this way you can find out exactly where everything is.",
-                    "after the tour a small course is given by a number of students",
-                    "Hereby a quick explanation is given about what you can expect.",
-                    "After the courses are over, you still have a chance to ask any questions",
-                    "Below you can view the schedule for the day",
+            return new String[]{
+                    "Program:",
                     "",
+                    "During the Full-Time Informatica open day you will learn about Hogeschool Rotterdam. You will also learn what Informatica means and how important it is within the ICT industry. The open day will first start with a tour around the building. This way you will see the whole school and get a good idea of where everything is. After the tour, a small beginners course is given by a number of 2nd year students and teachers. They will explain what Informatica means and what you will do during the study. After the explanation you are free to ask questions. We encourage you to ask until you are satisfied with your knowledge. You can see schedule for the open day below.",
                     "The schedule (April 4 from 4:00 pm to 8:00 pm):",
+                    "",
                     "- Tour around the building",
-                    "- Computer science course",
+                    "- Course on Informatica",
                     "- Questions about the course",
                     "- Any registrations for the interested"
             };
         }
     },
     TECHNISCHE_INFORMATICA_VT() {
-
         @Override
-        public int getPic(){
+        public int getPic() {
             int pic = R.drawable.coder;
             return pic;
         }
@@ -76,13 +69,13 @@ public enum OpenDagData implements OpenDagListener {
         }
 
         @Override
-        public String getLink(){
+        public String getLink() {
             return "https://www.hogeschoolrotterdam.nl/";
         }
 
         @Override
         public String getDescription() {
-            return "Informatica open day at hogeschool rotterdam.";
+            return "The schedule (April 4 from 4:00 pm to 8:00 pm): \n - Tour around the building \n - Course on technical informatics \n Endgame";
         }
 
         @Override
@@ -92,7 +85,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public int[] getDate() {
-            return new int[] {
+            return new int[]{
                     2019,
                     06,
                     04
@@ -101,32 +94,22 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String[] getInformation() {
-            return new String[] {
-                    "You will become acquainted during technical computer science full-time open day",
-                    "with not only the atmosphere of the Rotterdam university but also",
-                    "with one of the most important courses in the IT industry",
-                    "namely technical informatics.",
-                    "The open day technical computer science full time, will first start with a tour",
-                    "around the building, this way you can find out exactly where everything is.",
-                    "after the tour a small course is given by a number of students",
-                    "Hereby a quick explanation is given about what you can expect.",
-                    "After the courses are over, you still have a chance to ask any questions",
-                    "Below you can view the schedule for the day",
-                    "The day will end with an endgame, the endgame will be different",
-                    "contain difficult puzzles that must be solved as quickly as possible,",
-                    "the group that wins the endgame will of course be rewarded with a prize!",
+            return new String[]{
+                    "Program:",
+                    "",
+                    "During the Full-Time Technical Informatica open day you will learn about Hogeschool Rotterdam. You will also learn what Technical Informatica means and how important it is within the ICT industry. The open day will first start with a tour around the building. This way you will see the whole school and get a good idea of where everything is. After the tour, a small beginners course is given by a number of 2nd year students and teachers. They will explain what Technical Informatica means and what you will do during the study. After the explanation you are free to ask questions. We encourage you to ask until you are satisfied with your knowledge. You can see schedule for the open day below.",
                     "",
                     "The schedule (April 4 from 4:00 pm to 8:00 pm):",
+                    "",
                     "- Tour around the building",
-                    "- Course on technical informatics",
+                    "- Course on Technical Informatica",
                     "- Endgame"
             };
         }
     },
     COMMUNICATIE_EN_MEDIA_VT() {
-
         @Override
-        public int getPic(){
+        public int getPic() {
             int pic = R.drawable.communicationpic;
             return pic;
         }
@@ -137,13 +120,13 @@ public enum OpenDagData implements OpenDagListener {
         }
 
         @Override
-        public String getLink(){
+        public String getLink() {
             return "https://www.hogeschoolrotterdam.nl/";
         }
 
         @Override
         public String getDescription() {
-            return "Informatica open day at hogeschool rotterdam.";
+            return "The schedule (April 4 from 4:00 pm to 8:00 pm):\n - Tour around the building \n - Course on technical informatics \n     - Endgame";
         }
 
         @Override
@@ -153,7 +136,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public int[] getDate() {
-            return new int[] {
+            return new int[]{
                     2019,
                     06,
                     04
@@ -162,26 +145,22 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String[] getInformation() {
-            return new String[] {
-                    "The open day for Communication and Multimedia design full time will start with giving you",
-                    "a taste of the atmosphere of the school and the study.",
-                    "You will be getting a comfortable experience of what the study will be offering you.",
-                    "At first the employees and students will show you the interior of the school",
-                    "Than a small course wil take place given by students which will create an",
-                    "opportunity to ask the students how their experience is of the study.",
-                    "The day will end with a game which consists of difficult puzzles.",
-                    "And of course the winning team will earn a price.\n",
-                    "The planning(5 April 16:00 t/m 20:00):\n",
-                    "- Tour of the building",
-                    "- Course about Communication and Multimedia design",
+            return new String[]{
+                    "Program:",
+                    "",
+                    "During the Full-Time CM open day you will learn about Hogeschool Rotterdam. You will also learn what CM means and how important it is within the ICT industry. The open day will first start with a tour around the building. This way you will see the whole school and get a good idea of where everything is. After the tour, a small beginners course is given by a number of 2nd year students and teachers. They will explain what CM means and what you will do during the study. After the explanation you are free to ask questions. We encourage you to ask until you are satisfied with your knowledge. You can see schedule for the open day below.",
+                    "",
+                    "The schedule (April 4 from 4:00 pm to 8:00 pm):",
+                    "",
+                    "- Tour around the building",
+                    "- Course on Communication And Media",
                     "- Endgame"
             };
         }
     },
     COMMUNICATIE_VT() {
-
         @Override
-        public int getPic(){
+        public int getPic() {
             int pic = R.drawable.communicationpic;
             return pic;
         }
@@ -191,13 +170,13 @@ public enum OpenDagData implements OpenDagListener {
             return "Communication Fulltime";
         }
 
-        public String getLink(){
+        public String getLink() {
             return "https://www.hogeschoolrotterdam.nl/";
         }
 
         @Override
         public String getDescription() {
-            return "Informatica open day at hogeschool rotterdam.";
+            return "The schedule (April 4 from 4:00 pm to 8:00 pm): \n - Tour around the building \n - Course on technical informatics \n - Endgame";
         }
 
         @Override
@@ -207,7 +186,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public int[] getDate() {
-            return new int[] {
+            return new int[]{
                     2019,
                     06,
                     04
@@ -216,26 +195,22 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String[] getInformation() {
-            return new String[] {
-                    "The open day for Communication full time will start with giving you",
-                    "a taste of the atmosphere of the school and the study.",
-                    "You will be getting a comfortable experience of what the study will be offering you.",
-                    "At first the employees and students will show you the interior of the school",
-                    "Than a small course wil take place given by students which will create an",
-                    "opportunity to ask the students how their experience is of the study.",
-                    "The day will end with a game which consists of difficult puzzles.",
-                    "And of course the winning team will earn a price.\n",
-                    "The planning(5 April 16:00 t/m 20:00):\n",
-                    "- Tour of the building",
-                    "- Course about Communication",
+            return new String[]{
+                    "Program:",
+                    "",
+                    "During the Full-Time Communication open day you will learn about Hogeschool Rotterdam. You will also learn what Communication means and how important it is within the ICT industry. The open day will first start with a tour around the building. This way you will see the whole school and get a good idea of where everything is. After the tour, a small beginners course is given by a number of 2nd year students and teachers. They will explain what Communication means and what you will do during the study. After the explanation you are free to ask questions. We encourage you to ask until you are satisfied with your knowledge. You can see schedule for the open day below.",
+                    "",
+                    "The schedule (April 4 from 4:00 pm to 8:00 pm):",
+                    "",
+                    "- Tour around the building",
+                    "- Course on Communication",
                     "- Endgame"
             };
         }
     },
     INFORMATICA_DT() {
-
         @Override
-        public int getPic(){
+        public int getPic() {
             int pic = R.drawable.coder;
             return pic;
         }
@@ -246,13 +221,13 @@ public enum OpenDagData implements OpenDagListener {
         }
 
         @Override
-        public String getLink(){
+        public String getLink() {
             return "https://www.hogeschoolrotterdam.nl/";
         }
 
         @Override
         public String getDescription() {
-            return "Informatica open day at hogeschool rotterdam.";
+            return "The schedule (April 4 from 4:00 pm to 8:00 pm): \n - Tour around the building \n - Course on technical informatics \n- Endgame";
         }
 
         @Override
@@ -262,7 +237,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public int[] getDate() {
-            return new int[] {
+            return new int[]{
                     2019,
                     06,
                     04
@@ -271,26 +246,22 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String[] getInformation() {
-            return new String[] {
-                    "The open day for part time Informatica will start with giving you",
-                    "a taste of the atmosphere of the school and the study.",
-                    "You will be getting a comfortable experience of what the study will be offering you.",
-                    "At first the employees and students will show you the interior of the school",
-                    "Than a small course wil take place given by students which will create an",
-                    "opportunity to ask the students how their experience is of the study.",
-                    "The day will end with a game which consists of difficult puzzles.",
-                    "And of course the winning team will earn a price.\n",
-                    "The planning(5 April 16:00 t/m 20:00):\n",
-                    "- Tour of the building",
-                    "- Course about part time Informatica",
+            return new String[]{
+                    "Program:",
+                    "",
+                    "During the Part-Time Informatica open day you will learn about Hogeschool Rotterdam. You will also learn what Informatica means and how important it is within the ICT industry. The open day will first start with a tour around the building. This way you will see the whole school and get a good idea of where everything is. After the tour, a small beginners course is given by a number of 2nd year students and teachers. They will explain what Informatica means and what you will do during the study. After the explanation you are free to ask questions. We encourage you to ask until you are satisfied with your knowledge. You can see schedule for the open day below.",
+                    "",
+                    "The schedule (April 4 from 4:00 pm to 8:00 pm):",
+                    "",
+                    "- Tour around the building",
+                    "- Course on Informatica",
                     "- Endgame"
             };
         }
     },
     COMMUNICATIE_DT() {
-
         @Override
-        public int getPic(){
+        public int getPic() {
             int pic = R.drawable.communicationpic;
             return pic;
         }
@@ -301,13 +272,13 @@ public enum OpenDagData implements OpenDagListener {
         }
 
         @Override
-        public String getLink(){
+        public String getLink() {
             return "https://www.hogeschoolrotterdam.nl/";
         }
 
         @Override
         public String getDescription() {
-            return "Informatica open day at hogeschool rotterdam.";
+            return "The schedule (April 4 from 4:00 pm to 8:00 pm): \n - Tour around the building \n - Course on technical informatics \n - Endgame";
         }
 
         @Override
@@ -317,7 +288,7 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public int[] getDate() {
-            return new int[] {
+            return new int[]{
                     2019,
                     5,
                     4
@@ -326,18 +297,15 @@ public enum OpenDagData implements OpenDagListener {
 
         @Override
         public String[] getInformation() {
-            return new String[] {
-                    "The open day for part time communication will start with giving you",
-                    "a taste of the atmosphere of the school and the study.",
-                    "You will be getting a comfortable experience of what the study will be offering you.",
-                    "At first the employees and students will show you the interior of the school",
-                    "Than a small course wil take place given by students which will create an",
-                    "opportunity to ask the students how their experience is of the study.",
-                    "The day will end with a game which consists of difficult puzzles.",
-                    "And of course the winning team will earn a price.\n",
-                    "The planning(5 April 16:00 t/m 20:00):\n",
-                    "- Tour of the building",
-                    "- Course about part time communication",
+            return new String[]{
+                    "Program:",
+                    "",
+                    "During the Part-Time Communication open day you will learn about Hogeschool Rotterdam. You will also learn what Communication means and how important it is within the ICT industry. The open day will first start with a tour around the building. This way you will see the whole school and get a good idea of where everything is. After the tour, a small beginners course is given by a number of 2nd year students and teachers. They will explain what Communication means and what you will do during the study. After the explanation you are free to ask questions. We encourage you to ask until you are satisfied with your knowledge. You can see schedule for the open day below.",
+                    "",
+                    "The schedule (April 4 from 4:00 pm to 8:00 pm):",
+                    "",
+                    "- Tour around the building",
+                    "- Course on Communication",
                     "- Endgame"
             };
         }

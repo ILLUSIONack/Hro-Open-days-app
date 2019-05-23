@@ -13,7 +13,7 @@ import android.widget.ImageButton;
 import project.pb.R;
 import project.pb.study.StudyData;
 
-public class StudyPageFragment extends Fragment {
+public class StudyPageFragment extends Fragment implements View.OnClickListener {
 
     private ImageButton VoltijdInfButton, VoltijdTechInfButton, VoltijdCommButton,
             VoltijdCmdButton, DeeltijdInfButton, DeeltijdCommButton;
@@ -22,63 +22,55 @@ public class StudyPageFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_courseselection, container, false);
-        getActivity().setTitle("Studies");
-        VoltijdInfButton = view.findViewById(R.id.InfKeuzeImageButton);
-        VoltijdInfButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), GeneralCourseInformation.class);
-                i.putExtra("opleiding", StudyData.VOLTIJD_INFORMATICA);
-                v.getContext().startActivity(i);
-            }
-        });
-        VoltijdTechInfButton = view.findViewById(R.id.TechInformKeuzeImageButton);
-        VoltijdTechInfButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), GeneralCourseInformation.class);
-                i.putExtra("opleiding", StudyData.VOLTIJD_TECHNISE);
-                v.getContext().startActivity(i);
-            }
-        });
-        VoltijdCommButton = view.findViewById(R.id.CommunicatieKeuzeImageButton);
-        VoltijdCommButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), GeneralCourseInformation.class);
-                i.putExtra("opleiding", StudyData.VOLTIJD_COMMUNICATIE);
-                v.getContext().startActivity(i);
-            }
-        });
-        VoltijdCmdButton = view.findViewById(R.id.CmdKeuzeImageButton);
-        VoltijdCmdButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), GeneralCourseInformation.class);
-                i.putExtra("opleiding", StudyData.VOLTIJD_COMMUNICATIE_MEDIA);
-                v.getContext().startActivity(i);
-            }
-        });
-        DeeltijdInfButton = view.findViewById(R.id.DeeltijdInfKeuzeButton);
-        DeeltijdInfButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), GeneralCourseInformation.class);
-                i.putExtra("opleiding", StudyData.DEELTIJD_INFORMATICA);
-                v.getContext().startActivity(i);
-            }
-        });
-        DeeltijdCommButton = view.findViewById(R.id.DeeltijdCommKeuzeButton);
-        DeeltijdCommButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), GeneralCourseInformation.class);
-                i.putExtra("opleiding", StudyData.DEELTIJD_COMMUNICATIE);
-                v.getContext().startActivity(i);
-            }
-        });
+        initialise(view);
         return view;
 
     }
 
+    public void initialise(View view){
+        getActivity().setTitle("Studies");
+        VoltijdInfButton = view.findViewById(R.id.InfKeuzeImageButton);
+        VoltijdTechInfButton = view.findViewById(R.id.TechInformKeuzeImageButton);
+        VoltijdCommButton = view.findViewById(R.id.CommunicatieKeuzeImageButton);
+        VoltijdCmdButton = view.findViewById(R.id.CmdKeuzeImageButton);
+        DeeltijdInfButton = view.findViewById(R.id.DeeltijdInfKeuzeButton);
+        DeeltijdCommButton = view.findViewById(R.id.DeeltijdCommKeuzeButton);
+        VoltijdInfButton.setOnClickListener(this);
+        VoltijdTechInfButton.setOnClickListener(this);
+        VoltijdCommButton.setOnClickListener(this);
+        VoltijdCmdButton.setOnClickListener(this);
+        DeeltijdInfButton.setOnClickListener(this);
+        DeeltijdCommButton.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent i = new Intent(v.getContext(), GeneralCourseInformation.class);
+        switch (v.getId()){
+            case R.id.InfKeuzeImageButton:
+                i.putExtra("opleiding", StudyData.VOLTIJD_COMMUNICATIE);
+                v.getContext().startActivity(i);
+                break;
+            case R.id.TechInformKeuzeImageButton:
+                i.putExtra("opleiding", StudyData.VOLTIJD_TECHNISE);
+                v.getContext().startActivity(i);
+                break;
+            case R.id.CommunicatieKeuzeImageButton:
+                i.putExtra("opleiding", StudyData.VOLTIJD_COMMUNICATIE);
+                v.getContext().startActivity(i);
+                break;
+            case R.id.CmdKeuzeImageButton:
+                i.putExtra("opleiding", StudyData.VOLTIJD_COMMUNICATIE_MEDIA);
+                v.getContext().startActivity(i);
+                break;
+            case R.id.DeeltijdInfKeuzeButton:
+                i.putExtra("opleiding", StudyData.DEELTIJD_INFORMATICA);
+                v.getContext().startActivity(i);
+                break;
+            case R.id.DeeltijdCommKeuzeButton:
+                i.putExtra("opleiding", StudyData.DEELTIJD_COMMUNICATIE);
+                v.getContext().startActivity(i);
+                break;
+        }
+    }
 }

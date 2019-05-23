@@ -15,7 +15,6 @@ import android.view.MenuItem;
 import project.pb.fragments.ContactPageFragment;
 import project.pb.fragments.FAQFragment;
 import project.pb.fragments.HomeScreenFragment;
-import project.pb.fragments.MapActivityFragment;
 import project.pb.fragments.SettingsFragment;
 import project.pb.fragments.SettlementFragment;
 import project.pb.fragments.StudyPageFragment;
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
