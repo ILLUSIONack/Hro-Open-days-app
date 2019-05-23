@@ -23,13 +23,10 @@ public class SettlementFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.settlement_fragment, container, false);
-        link = view.findViewById(R.id.mapButton);
-
+        getActivity().setTitle("About HR");
         scrollSettlement = view.findViewById(R.id.scrollSettlement);
         scrollSettlement.setScrollbarFadingEnabled(false);
-
-        getActivity().setTitle("About HR");
-
+        link = view.findViewById(R.id.mapButton);
         link.setOnClickListener(new View.OnClickListener() {
 
             @Override

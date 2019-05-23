@@ -29,7 +29,6 @@ public class FAQFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.gestelde_vragen, container, false);
-        getActivity().setTitle("FAQ");
         initialisation(view);
         return view;
     }
@@ -94,6 +93,7 @@ public class FAQFragment extends Fragment {
 
 
     public void initialisation(View view){
+        getActivity().setTitle("FAQ");
         expandableListView = view.findViewById(R.id.eListView);
         fillData();
         listAdapter = new MyExListAdaptor(getContext(),Questions,answers);
