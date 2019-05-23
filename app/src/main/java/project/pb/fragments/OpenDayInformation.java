@@ -8,10 +8,13 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.provider.CalendarContract;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -22,14 +25,16 @@ import java.util.List;
 
 import project.pb.R;
 import project.pb.opendag.OpenDagData;
-import project.pb.zoom.MultiTouchListener;
 
-public class OpenDayInformation extends AppCompatActivity {
+public class OpenDayInformation extends AppCompatActivity implements View.OnClickListener {
 
     private Button addcalender;
     private TextView generalInfo;
     private ImageButton shareButton;
-    private ConstraintLayout opendaypage;
+
+    private float mScale = 1f;
+    private ScaleGestureDetector mScaleGestureDetector;
+    private GestureDetector gestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +42,6 @@ public class OpenDayInformation extends AppCompatActivity {
         setContentView(R.layout.activity_inf1);
         generalInfo = findViewById(R.id.textView3);
         addcalender = findViewById(R.id.addcalender);
-        opendaypage = findViewById(R.id.opendaypage);
 
 
         final OpenDagData key = (OpenDagData) getIntent().getSerializableExtra("open_dag_informatie");
@@ -78,7 +82,53 @@ public class OpenDayInformation extends AppCompatActivity {
             }
         });
 
-        generalInfo.setOnTouchListener(new MultiTouchListener());
+        gestureDetector = new GestureDetector(this, new GestureListener());
+
+        mScaleGestureDetector = new ScaleGestureDetector(this, new ScaleGestureDetector.SimpleOnScaleGestureListener(){
+            @Override
+            public boolean onScale(ScaleGestureDetector detector) {
+                float scale = 1 - detector.getScaleFactor();
+                float prevScale = mScale;
+                mScale += scale;
+
+                if (mScale > 1.1f) {
+                    mScale = 1.1f;
+                }
+                if (mScale < 0.4f) {
+                    mScale = 0.4f;
+                }
+                ScaleAnimation scaleAnimation = new ScaleAnimation(1f / prevScale, 1f / mScale, 1f / prevScale, 1f / mScale, detector.getFocusX(), detector.getFocusY());
+                scaleAnimation.setDuration(0);
+                scaleAnimation.setFillAfter(true);
+                generalInfo.startAnimation(scaleAnimation);
+                return true;
+            }
+        });
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        super.dispatchTouchEvent(event);
+        mScaleGestureDetector.onTouchEvent(event);
+        gestureDetector.onTouchEvent(event);
+        return gestureDetector.onTouchEvent(event);
+    }
+
+    @Override
+    public void onClick(View v) {
+
+    }
+
+    private class GestureListener extends GestureDetector.SimpleOnGestureListener{
+        @Override
+        public boolean onDown(MotionEvent e) {
+            return true;
+        }
+
+        @Override
+        public boolean onDoubleTap(MotionEvent e) {
+            return true;
+        }
     }
 
     public void onShareClick(View v, OpenDagData key){
