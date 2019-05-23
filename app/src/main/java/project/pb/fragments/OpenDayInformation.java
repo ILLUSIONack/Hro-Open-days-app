@@ -13,6 +13,7 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -26,9 +27,10 @@ import project.pb.zoom.MultiTouchListener;
 public class OpenDayInformation extends AppCompatActivity implements View.OnClickListener {
 
     private Button addcalender;
-    private TextView generalInfo;
+    private TextView generalInfo,nameTitle;
     private ImageButton shareButton;
     private OpenDagData key;
+    private ImageView studyPicture;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +43,16 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
         generalInfo = findViewById(R.id.textView3);
         addcalender = findViewById(R.id.addcalender);
         shareButton = findViewById(R.id.shareButton);
-
+        nameTitle = findViewById(R.id.nameTitle);
+        studyPicture = findViewById(R.id.studyPicture);
         shareButton.setOnClickListener(this);
         addcalender.setOnClickListener(this);
 
         generalInfo.setScrollbarFadingEnabled(false);
         generalInfo.setMovementMethod(new ScrollingMovementMethod());
         generalInfo.setText(getData());
+        nameTitle.setText(key.getName());
+        studyPicture.setImageResource(key.getPic());
         generalInfo.setOnTouchListener(new MultiTouchListener());
     }
 
