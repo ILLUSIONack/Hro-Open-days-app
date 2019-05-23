@@ -40,56 +40,53 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inf1);
+        initialize();
+    }
+
+    public void initialize(){
         generalInfo = findViewById(R.id.textView3);
         addcalender = findViewById(R.id.addcalender);
         opendaypage = findViewById(R.id.opendaypage);
+        shareButton = findViewById(R.id.shareButton);
 
-        key = (OpenDagData) getIntent().getSerializableExtra("open_dag_informatie");
-        String[] content = key.getInformation();
-        String s = "";
-        for(int i = 0; i < content.length; i++) {
-            s += content[i] + "\n";
-        }
+        shareButton.setOnClickListener(this);
+        addcalender.setOnClickListener(this);
+
         generalInfo.setScrollbarFadingEnabled(false);
         generalInfo.setMovementMethod(new ScrollingMovementMethod());
-        generalInfo.setText(s);
+        generalInfo.setText(getData());
         generalInfo.setOnTouchListener(new MultiTouchListener());
-
-        shareButton = findViewById(R.id.shareButton);
-        shareButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onShareClick(v, key);
-
-            }
-        });
-
-        addcalender.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Calendar calendarEvent = Calendar.getInstance();
-                calendarEvent.set(key.getDate()[0], key.getDate()[1], key.getDate()[2]);
-                Intent intent = new Intent(Intent.ACTION_EDIT);
-                intent.setType("vnd.android.cursor.item/event");
-                intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
-                        calendarEvent.getTimeInMillis());
-                intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
-                        calendarEvent.getTimeInMillis() + 60 * 60 * 1000);
-                intent.putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY, true);
-                intent.putExtra(CalendarContract.Events.TITLE, key.getName());
-                intent.putExtra(CalendarContract.Events.DESCRIPTION, key.getDescription());
-                intent.putExtra(CalendarContract.Events.EVENT_LOCATION, key.getLocation());
-                startActivity(intent);
-            }
-        });
     }
 
     @Override
     public void onClick(View v) {
-
+        switch (v.getId()){
+            case R.id.shareButton:
+                shareFeature();
+                break;
+            case R.id.addcalender:
+                CallenderFeature();
+                break;
+        }
     }
 
-    public void onShareClick(View v, OpenDagData key){
+    public void CallenderFeature(){
+        Calendar calendarEvent = Calendar.getInstance();
+        calendarEvent.set(key.getDate()[0], key.getDate()[1], key.getDate()[2]);
+        Intent intent = new Intent(Intent.ACTION_EDIT);
+        intent.setType("vnd.android.cursor.item/event");
+        intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
+                calendarEvent.getTimeInMillis());
+        intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
+                calendarEvent.getTimeInMillis() + 60 * 60 * 1000);
+        intent.putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY, true);
+        intent.putExtra(CalendarContract.Events.TITLE, key.getName());
+        intent.putExtra(CalendarContract.Events.DESCRIPTION, key.getDescription());
+        intent.putExtra(CalendarContract.Events.EVENT_LOCATION, key.getLocation());
+        startActivity(intent);
+    }
+
+    public void shareFeature(){
         Resources resources = getResources();
 
         Intent emailIntent = new Intent();
@@ -97,11 +94,11 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
         // Native email client doesn't currently support HTML, but it doesn't hurt to try in case they fix it
         String shareTwitter = "Open Day invite: \n " + key.getDescription() ;
         String shareBody = "Your friend has invited you to join this open day: " + key.getName() +" Visit: "+ key.getLink() + '\n';
-                shareBody += '\n';
-                for(int i = 0; i < key.getInformation().length; i++) {
-                    shareBody += key.getInformation()[i] + '\n';
-                }
-                String shareSub = key.getName()+" Invitation";
+        shareBody += '\n';
+        for(int i = 0; i < key.getInformation().length; i++) {
+            shareBody += key.getInformation()[i] + '\n';
+        }
+        String shareSub = key.getName()+" Invitation";
         emailIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, shareSub);
         emailIntent.setType("message/rfc822");
@@ -152,5 +149,15 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
 
         openInChooser.putExtra(Intent.EXTRA_INITIAL_INTENTS, extraIntents);
         startActivity(openInChooser);
+    }
+
+    public String getData(){
+        key = (OpenDagData) getIntent().getSerializableExtra("open_dag_informatie");
+        String[] content = key.getInformation();
+        String s = "";
+        for(int i = 0; i < content.length; i++) {
+            s += content[i] + "\n";
+        }
+        return s;
     }
 }
