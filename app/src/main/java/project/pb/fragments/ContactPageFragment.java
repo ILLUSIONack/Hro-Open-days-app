@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
 
 import project.pb.R;
 
-public class ContactPageFragment extends Fragment {
+public class ContactPageFragment extends Fragment implements View.OnClickListener {
 
     @Nullable
     @Override
@@ -30,28 +30,25 @@ public class ContactPageFragment extends Fragment {
     }
 
     private void initialize(View view) {
-        final EditText your_name = view.findViewById(R.id.textName);
-        final EditText your_subject = view.findViewById(R.id.textSubject);
-        final EditText your_message = view.findViewById(R.id.textMessage);
         getActivity().setTitle("Contact");
-
         ImageView callImage = view.findViewById(R.id.phoneCallButtonImage);
-        callImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        Button email = view.findViewById(R.id.buttonSend);
+        callImage.setOnClickListener(this);
+        email.setOnClickListener(this);
+    }
 
+    @Override
+    public void onClick(View v) {
+        final EditText your_name = v.findViewById(R.id.textName);
+        final EditText your_subject = v.findViewById(R.id.textSubject);
+        final EditText your_message = v.findViewById(R.id.textMessage);
+        switch(v.getId()){
+            case R.id.phoneCallButtonImage:
                 Intent callIntent = new Intent(Intent.ACTION_DIAL);
                 callIntent.setData(Uri.parse("tel:+3164333431"));
                 startActivity(callIntent);
-            }
-
-        });
-
-        Button email = view.findViewById(R.id.buttonSend);
-        email.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
+                break;
+            case R.id.buttonSend:
                 String name = your_name.getText().toString();
                 String subject = your_subject.getText().toString();
                 String message = your_message.getText().toString();
@@ -60,14 +57,11 @@ public class ContactPageFragment extends Fragment {
                     your_name.requestFocus();
                     return;
                 }
-
-
                 if (TextUtils.isEmpty(subject)) {
                     your_subject.setError("Enter Your Subject");
                     your_subject.requestFocus();
                     return;
                 }
-
                 if (TextUtils.isEmpty(message)) {
                     your_message.setError("Enter Your Message");
                     your_message.requestFocus();
@@ -75,7 +69,6 @@ public class ContactPageFragment extends Fragment {
                 }
 
                 Intent sendEmail = new Intent(android.content.Intent.ACTION_SEND);
-
                 sendEmail.setType("plain/text");
                 sendEmail.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"usman-ack@hotmail.com"});
                 sendEmail.putExtra(android.content.Intent.EXTRA_SUBJECT, subject);
@@ -84,9 +77,6 @@ public class ContactPageFragment extends Fragment {
 
                 /* Send it off to the Activity-Chooser */
                 startActivity(Intent.createChooser(sendEmail, "Send mail..."));
-
-
-            }
-        });
+        }
     }
 }
