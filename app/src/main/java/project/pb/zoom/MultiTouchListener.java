@@ -10,7 +10,7 @@ public class MultiTouchListener implements OnTouchListener {
     public boolean isRotateEnabled = false;
     public boolean isTranslateEnabled = true;
     public boolean isScaleEnabled = true;
-    public float minimumScale = 0.85f;
+    public float minimumScale = 1.0f;
     public float maximumScale = 10.0f;
     private int mActivePointerId = INVALID_POINTER_ID;
     private float mPrevX;
@@ -37,7 +37,7 @@ public class MultiTouchListener implements OnTouchListener {
     }
 
     private static void adjustTranslation(View view, float deltaX, float deltaY) {
-        if (view.getScaleX() > 0.85f) {
+        if (view.getScaleX() > 1.0f) {
             float[] deltaVector = {deltaX, deltaY};
             view.getMatrix().mapVectors(deltaVector);
             view.setTranslationX(view.getTranslationX() + deltaVector[0]);
