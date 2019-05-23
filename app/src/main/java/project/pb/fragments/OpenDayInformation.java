@@ -11,6 +11,7 @@ import android.provider.CalendarContract;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
+import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -24,64 +25,68 @@ import project.pb.R;
 import project.pb.opendag.OpenDagData;
 import project.pb.zoom.MultiTouchListener;
 
-public class OpenDayInformation extends AppCompatActivity {
+public class OpenDayInformation extends AppCompatActivity implements View.OnClickListener {
 
     private Button addcalender;
     private TextView generalInfo;
     private ImageButton shareButton;
     private ConstraintLayout opendaypage;
+    private OpenDagData key;
+
+    private float mScale = 1f;
+    private ScaleGestureDetector mScaleGestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inf1);
+        initialize();
+    }
+
+    public void initialize(){
         generalInfo = findViewById(R.id.textView3);
         addcalender = findViewById(R.id.addcalender);
         opendaypage = findViewById(R.id.opendaypage);
+        shareButton = findViewById(R.id.shareButton);
 
+        shareButton.setOnClickListener(this);
+        addcalender.setOnClickListener(this);
 
-        final OpenDagData key = (OpenDagData) getIntent().getSerializableExtra("open_dag_informatie");
-        String[] content = key.getInformation();
-        String s = "";
-        for(int i = 0; i < content.length; i++) {
-            s += content[i] + "\n";
-        }
         generalInfo.setScrollbarFadingEnabled(false);
         generalInfo.setMovementMethod(new ScrollingMovementMethod());
-        generalInfo.setText(s);
-
-        shareButton = findViewById(R.id.shareButton);
-        shareButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onShareClick(v, key);
-
-            }
-        });
-
-        addcalender.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Calendar calendarEvent = Calendar.getInstance();
-                calendarEvent.set(key.getDate()[0], key.getDate()[1], key.getDate()[2]);
-                Intent intent = new Intent(Intent.ACTION_EDIT);
-                intent.setType("vnd.android.cursor.item/event");
-                intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
-                        calendarEvent.getTimeInMillis());
-                intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
-                        calendarEvent.getTimeInMillis() + 60 * 60 * 1000);
-                intent.putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY, true);
-                intent.putExtra(CalendarContract.Events.TITLE, key.getName());
-                intent.putExtra(CalendarContract.Events.DESCRIPTION, key.getDescription());
-                intent.putExtra(CalendarContract.Events.EVENT_LOCATION, key.getLocation());
-                startActivity(intent);
-            }
-        });
-
+        generalInfo.setText(getData());
         generalInfo.setOnTouchListener(new MultiTouchListener());
     }
 
-    public void onShareClick(View v, OpenDagData key){
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.shareButton:
+                shareFeature();
+                break;
+            case R.id.addcalender:
+                CallenderFeature();
+                break;
+        }
+    }
+
+    public void CallenderFeature(){
+        Calendar calendarEvent = Calendar.getInstance();
+        calendarEvent.set(key.getDate()[0], key.getDate()[1], key.getDate()[2]);
+        Intent intent = new Intent(Intent.ACTION_EDIT);
+        intent.setType("vnd.android.cursor.item/event");
+        intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
+                calendarEvent.getTimeInMillis());
+        intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
+                calendarEvent.getTimeInMillis() + 60 * 60 * 1000);
+        intent.putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY, true);
+        intent.putExtra(CalendarContract.Events.TITLE, key.getName());
+        intent.putExtra(CalendarContract.Events.DESCRIPTION, key.getDescription());
+        intent.putExtra(CalendarContract.Events.EVENT_LOCATION, key.getLocation());
+        startActivity(intent);
+    }
+
+    public void shareFeature(){
         Resources resources = getResources();
 
         Intent emailIntent = new Intent();
@@ -89,11 +94,11 @@ public class OpenDayInformation extends AppCompatActivity {
         // Native email client doesn't currently support HTML, but it doesn't hurt to try in case they fix it
         String shareTwitter = "Open Day invite: \n " + key.getDescription() ;
         String shareBody = "Your friend has invited you to join this open day: " + key.getName() +" Visit: "+ key.getLink() + '\n';
-                shareBody += '\n';
-                for(int i = 0; i < key.getInformation().length; i++) {
-                    shareBody += key.getInformation()[i] + '\n';
-                }
-                String shareSub = key.getName()+" Invitation";
+        shareBody += '\n';
+        for(int i = 0; i < key.getInformation().length; i++) {
+            shareBody += key.getInformation()[i] + '\n';
+        }
+        String shareSub = key.getName()+" Invitation";
         emailIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, shareSub);
         emailIntent.setType("message/rfc822");
@@ -144,5 +149,15 @@ public class OpenDayInformation extends AppCompatActivity {
 
         openInChooser.putExtra(Intent.EXTRA_INITIAL_INTENTS, extraIntents);
         startActivity(openInChooser);
+    }
+
+    public String getData(){
+        key = (OpenDagData) getIntent().getSerializableExtra("open_dag_informatie");
+        String[] content = key.getInformation();
+        String s = "";
+        for(int i = 0; i < content.length; i++) {
+            s += content[i] + "\n";
+        }
+        return s;
     }
 }

@@ -26,7 +26,6 @@ public class ContactPageFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.contact_page, container, false);
         initialize(view);
-        getActivity().setTitle("Contact");
         return view;
     }
 
@@ -34,7 +33,7 @@ public class ContactPageFragment extends Fragment {
         final EditText your_name = view.findViewById(R.id.textName);
         final EditText your_subject = view.findViewById(R.id.textSubject);
         final EditText your_message = view.findViewById(R.id.textMessage);
-
+        getActivity().setTitle("Contact");
 
         ImageView callImage = view.findViewById(R.id.phoneCallButtonImage);
         callImage.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +60,6 @@ public class ContactPageFragment extends Fragment {
                     your_name.requestFocus();
                     return;
                 }
-
 
 
                 if (TextUtils.isEmpty(subject)) {
@@ -91,15 +89,4 @@ public class ContactPageFragment extends Fragment {
             }
         });
     }
-
-    private boolean isValidEmail(String email) {
-        String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
-                + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-
-        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
-        Matcher matcher = pattern.matcher(email);
-        return matcher.matches();
-    }
-
-
 }
