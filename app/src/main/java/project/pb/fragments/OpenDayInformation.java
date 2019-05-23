@@ -8,10 +8,8 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.provider.CalendarContract;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
-import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -30,11 +28,7 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
     private Button addcalender;
     private TextView generalInfo;
     private ImageButton shareButton;
-    private ConstraintLayout opendaypage;
     private OpenDagData key;
-
-    private float mScale = 1f;
-    private ScaleGestureDetector mScaleGestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +40,6 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
     public void initialize(){
         generalInfo = findViewById(R.id.textView3);
         addcalender = findViewById(R.id.addcalender);
-        opendaypage = findViewById(R.id.opendaypage);
         shareButton = findViewById(R.id.shareButton);
 
         shareButton.setOnClickListener(this);
