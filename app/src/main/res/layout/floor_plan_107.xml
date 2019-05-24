@@ -18,6 +18,167 @@
                 android:background="#cf0245"
                 android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/tv30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:text="Floor: -1"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/fn1_107"
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/fn1_107" />
+
+                <TextView
+                    android:id="@+id/tv31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:text="Floor: Ground Floor"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/gf_107"
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/gf_107" />
+
+                <TextView
+                    android:id="@+id/tv32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:text="Floor: 1"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/f1_107"
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/f1_107" />
+
+                <TextView
+                    android:id="@+id/tv33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:text="Floor: 2"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/f2_107"
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/f2_107" />
+
+                <TextView
+                    android:id="@+id/tv34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:text="Floor: 3"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/f3_107"
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/f3_107" />
+
+                <TextView
+                    android:id="@+id/tv35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:text="Floor: 4"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/f4_107"
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/f4_107" />
+
+                <TextView
+                    android:id="@+id/tv36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:text="Floor: 5"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/f5_107"
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/f5_107" />
+
+                <TextView
+                    android:id="@+id/tv37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:text="Floor: 6"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/f6_107"
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/f6_107" />
+
+                <TextView
+                    android:id="@+id/tv38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:text="Roof"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/roof_107"
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/roof_107" />
             </LinearLayout>
         </ScrollView>
 
