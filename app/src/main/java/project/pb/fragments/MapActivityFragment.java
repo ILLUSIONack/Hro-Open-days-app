@@ -2,8 +2,6 @@ package project.pb.fragments;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.GestureDetector;
-import android.view.ScaleGestureDetector;
 import android.widget.ScrollView;
 
 import project.pb.R;
@@ -16,7 +14,7 @@ public class MapActivityFragment extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.map_activity);
+        setContentView(R.layout.floor_plan_99);
         scrollViewMaps = findViewById(R.id.scrollViewMaps);
         scrollViewMaps.setScrollbarFadingEnabled(false);
         scrollViewMaps.setOnTouchListener(new MultiTouchListener());
