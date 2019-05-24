@@ -34,7 +34,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/fn2_99" />
+                    android:src="@drawable/fn2_99" />
 
                 <TextView
                     android:id="@+id/tv3"
@@ -52,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/fn1_99" />
+                    android:src="@drawable/fn1_99" />
 
                 <TextView
                     android:id="@+id/tv11"
@@ -70,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/gf_99" />
+                    android:src="@drawable/gf_99" />
 
                 <TextView
                     android:id="@+id/tv4"
@@ -88,7 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/f1_99" />
+                    android:src="@drawable/f1_99" />
 
                 <TextView
                     android:id="@+id/tv5"
@@ -106,7 +106,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/f2_99" />
+                    android:src="@drawable/f2_99" />
 
                 <TextView
                     android:id="@+id/tv6"
@@ -124,7 +124,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/f3_99" />
+                    android:src="@drawable/f3_99" />
 
                 <TextView
                     android:id="@+id/tv7"
@@ -142,8 +142,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/f4_99"
-                    android:contentDescription="TODO" />
+                    android:src="@drawable/f4_99" />
 
                 <TextView
                     android:id="@+id/tv8"
@@ -161,7 +160,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/f5_99" />
+                    android:src="@drawable/f5_99" />
 
                 <TextView
                     android:id="@+id/tv9"
@@ -179,7 +178,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/roof_99" />
+                    android:src="@drawable/roof_99" />
 
 
             </LinearLayout>

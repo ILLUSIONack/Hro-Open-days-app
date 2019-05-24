@@ -34,7 +34,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/fn1_107" />
+                    android:src="@drawable/fn1_107" />
 
                 <TextView
                     android:id="@+id/tv31"
@@ -52,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/gf_107" />
+                    android:src="@drawable/gf_107" />
 
                 <TextView
                     android:id="@+id/tv32"
@@ -70,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/f1_107" />
+                    android:src="@drawable/f1_107" />
 
                 <TextView
                     android:id="@+id/tv33"
@@ -88,7 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/f2_107" />
+                    android:src="@drawable/f2_107" />
 
                 <TextView
                     android:id="@+id/tv34"
@@ -106,7 +106,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/f3_107" />
+                    android:src="@drawable/f3_107" />
 
                 <TextView
                     android:id="@+id/tv35"
@@ -124,7 +124,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/f4_107" />
+                    android:src="@drawable/f4_107" />
 
                 <TextView
                     android:id="@+id/tv36"
@@ -142,7 +142,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/f5_107" />
+                    android:src="@drawable/f5_107" />
 
                 <TextView
                     android:id="@+id/tv37"
@@ -160,7 +160,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/f6_107" />
+                    android:src="@drawable/f6_107" />
 
                 <TextView
                     android:id="@+id/tv38"
@@ -178,7 +178,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="400dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/roof_107" />
+                    android:src="@drawable/roof_107" />
             </LinearLayout>
         </ScrollView>
 

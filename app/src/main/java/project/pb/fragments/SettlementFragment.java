@@ -21,14 +21,14 @@ public class SettlementFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.settlement_fragment, container, false);
         getActivity().setTitle("About HR");
         scrollSettlement = view.findViewById(R.id.scrollSettlement);
         scrollSettlement.setScrollbarFadingEnabled(false);
-        link = view.findViewById(R.id.mapButton99);
 
+        link = view.findViewById(R.id.mapButton99);
         link.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -37,7 +37,5 @@ public class SettlementFragment extends Fragment {
             }
         });
         return view;
-
     }
-
 }
