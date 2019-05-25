@@ -15,16 +15,14 @@ public class MapActivityFragment extends Activity {
 
     private ScrollView scrollViewMaps;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.floor_plan_99);
         scrollViewMaps = findViewById(R.id.scrollViewMaps);
         scrollViewMaps.setScrollbarFadingEnabled(false);
-        scrollViewMaps.setOnTouchListener(new MultiTouchListener());
 
-        //TODO resize images in Bitmap because it crashes on phone
+        //TODO THIS CAUSES THE SCROLLVIEW TO NOT SCROLL!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //scrollViewMaps.setOnTouchListener(new MultiTouchListener());
     }
 }
