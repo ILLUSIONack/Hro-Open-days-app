@@ -15,6 +15,7 @@ import android.widget.Switch;
 import project.pb.R;
 
 public class SettingsFragment extends Fragment {
+
     private Switch myswitch;
 
     @Nullable
@@ -23,33 +24,33 @@ public class SettingsFragment extends Fragment {
         View view = inflater.inflate(R.layout.settings_page, container, false);
         getActivity().setTitle("Settings");
 
-        if(AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
-             view.setTheme(R.style.DarkTheme);
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            getActivity().setTheme(R.style.AppTheme);
+        } else {
+            getActivity().setTheme(R.style.DarkTheme);
         }
-        else view.setTheme(R.style.AppTheme);
 
-        myswitch=(Switch)getView().findViewById(R.id.switch3);
-        if (AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
+        myswitch = (Switch) view.findViewById(R.id.switch3);
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
             myswitch.setChecked(true);
         }
-        myswitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
-                if(isChecked){
+        myswitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                    restartApp();
-                }
-                else {
+                    refreshApplciation();
+                } else {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                    restartApp();
+                    refreshApplciation();
                 }
             }
         });
         return view;
     }
-    public void restartApp() {
-        Intent i = new Intent(getApplicationContext(),SettingsFragment.class);
-        startActivity(i);
-        finish();
+
+    public void refreshApplciation() {
+        getFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new SettingsFragment()).commit();
     }
 
 }
