@@ -7,10 +7,10 @@ import android.view.View.OnTouchListener;
 public class MultiTouchListener implements OnTouchListener {
 
     private static final int INVALID_POINTER_ID = -1;
-    public boolean isRotateEnabled = true;
+    public boolean isRotateEnabled = false;
     public boolean isTranslateEnabled = true;
     public boolean isScaleEnabled = true;
-    public float minimumScale = 0.85f;
+    public float minimumScale = 1.0f;
     public float maximumScale = 10.0f;
     private int mActivePointerId = INVALID_POINTER_ID;
     private float mPrevX;
@@ -25,7 +25,10 @@ public class MultiTouchListener implements OnTouchListener {
         computeRenderOffset(view, info.pivotX, info.pivotY);
         adjustTranslation(view, info.deltaX, info.deltaY);
 
-        // Assume that scaling still maintains aspect ratio.
+        // Assume that scaling still maintains aspect ratio
+        if (view.getScaleX() <= 1.0f) {
+            //TODO reset to correct position
+        }
         float scale = view.getScaleX() * info.deltaScale;
         scale = Math.max(info.minimumScale, Math.min(info.maximumScale, scale));
         view.setScaleX(scale);
@@ -34,10 +37,12 @@ public class MultiTouchListener implements OnTouchListener {
     }
 
     private static void adjustTranslation(View view, float deltaX, float deltaY) {
-        float[] deltaVector = {deltaX, deltaY};
-        view.getMatrix().mapVectors(deltaVector);
-        view.setTranslationX(view.getTranslationX() + deltaVector[0]);
-        view.setTranslationY(view.getTranslationY() + deltaVector[1]);
+        if (view.getScaleX() > 1.0f) {
+            float[] deltaVector = {deltaX, deltaY};
+            view.getMatrix().mapVectors(deltaVector);
+            view.setTranslationX(view.getTranslationX() + deltaVector[0]);
+            view.setTranslationY(view.getTranslationY() + deltaVector[1]);
+        }
     }
 
     private static void computeRenderOffset(View view, float pivotX, float pivotY) {
@@ -150,7 +155,6 @@ public class MultiTouchListener implements OnTouchListener {
             info.pivotY = mPivotY;
             info.minimumScale = minimumScale;
             info.maximumScale = maximumScale;
-
             move(view, info);
             return false;
         }
