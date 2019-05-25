@@ -20,14 +20,14 @@ public class SettingsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if(AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
-             setTheme(R.style.DarkTheme);
-        }
-        else setTheme(R.style.AppTheme);
-
         View view = inflater.inflate(R.layout.settings_page, container, false);
         getActivity().setTitle("Settings");
-        return view;
+
+        if(AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
+             view.setTheme(R.style.DarkTheme);
+        }
+        else view.setTheme(R.style.AppTheme);
+
         myswitch=(Switch)getView().findViewById(R.id.switch3);
         if (AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
             myswitch.setChecked(true);
@@ -44,10 +44,12 @@ public class SettingsFragment extends Fragment {
                 }
             }
         });
+        return view;
     }
     public void restartApp() {
         Intent i = new Intent(getApplicationContext(),SettingsFragment.class);
         startActivity(i);
         finish();
     }
+
 }
