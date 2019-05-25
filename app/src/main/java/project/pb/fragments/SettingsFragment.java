@@ -22,7 +22,8 @@ public class SettingsFragment extends Fragment {
         View view = inflater.inflate(R.layout.settings_page, container, false);
         getActivity().setTitle("Settings");
 
-        sharedPref = new SharedPref(this);
+        sharedPref = new SharedPref(view.getContext());
+
         if (sharedPref.loadNightModeState()==true) {
             getActivity().setTheme(R.style.AppTheme);
         } else {
