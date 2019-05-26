@@ -1,9 +1,11 @@
 package project.pb.fragments;
 
 import android.app.Activity;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.view.GestureDetector;
-import android.view.ScaleGestureDetector;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ScrollView;
 
 import project.pb.R;
@@ -16,10 +18,11 @@ public class MapActivityFragment extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.map_activity);
+        setContentView(R.layout.floor_plan_99);
         scrollViewMaps = findViewById(R.id.scrollViewMaps);
         scrollViewMaps.setScrollbarFadingEnabled(false);
-        scrollViewMaps.setOnTouchListener(new MultiTouchListener());
-    }
 
+        //TODO THIS CAUSES THE SCROLLVIEW TO NOT SCROLL!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //scrollViewMaps.setOnTouchListener(new MultiTouchListener());
+    }
 }
