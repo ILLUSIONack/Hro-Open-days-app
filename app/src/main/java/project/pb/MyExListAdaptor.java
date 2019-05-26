@@ -12,9 +12,9 @@ import java.util.Map;
 
 public class MyExListAdaptor extends BaseExpandableListAdapter {
 
-    Context context;
-    List<String> Questions;
-    Map<String,List<String>> answers;
+    private Context context;
+    private List<String> Questions;
+    private Map<String,List<String>> answers;
 
     public MyExListAdaptor(Context context, List<String> questions, Map<String, List<String>> answers) {
         this.context = context;
