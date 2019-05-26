@@ -15,7 +15,8 @@ import project.pb.R;
 public class SettingsFragment extends Fragment {
 
     private Switch myswitch;
-    SharedPref sharedPref;
+    private SharedPref sharedPref;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

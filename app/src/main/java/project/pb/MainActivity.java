@@ -12,12 +12,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import project.pb.fragments.ContactPageFragment;
 import project.pb.fragments.FAQFragment;
 import project.pb.fragments.HomeScreenFragment;
 import project.pb.fragments.SettingsFragment;
 import project.pb.fragments.SettlementFragment;
 import project.pb.fragments.StudyPageFragment;
+import project.pb.notifications.NotificationCreation;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -27,6 +31,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initializeChannels();
+        //preLoadNotification(); <- Notification TODO
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -92,6 +97,24 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void preLoadNotification() {
+        TimerTask timerTask = new TimerTask() {
+            int tick = 0;
+            @Override
+            public void run() {
+                switch (tick++) {
+                    case 25:
+                        new NotificationCreation(getApplicationContext(), "Reminder",
+                                "Notification test [TICK:  " + tick + "]").display();
+                        break;
+                }
+            }
+        };
+
+        Timer timer = new Timer();
+        timer.schedule(timerTask, 1000, 1000);
     }
 
     private void initializeChannels() {

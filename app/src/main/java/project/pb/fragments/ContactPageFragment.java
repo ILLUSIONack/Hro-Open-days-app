@@ -14,9 +14,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import project.pb.R;
 
 public class ContactPageFragment extends Fragment implements View.OnClickListener {
