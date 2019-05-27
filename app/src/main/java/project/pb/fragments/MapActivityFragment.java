@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.ScrollView;
 
 import project.pb.R;
+import project.pb.zoom.MultiTouchListener;
 
 public class MapActivityFragment extends Activity {
 
@@ -17,7 +18,9 @@ public class MapActivityFragment extends Activity {
         scrollViewMaps = findViewById(R.id.scrollViewMaps);
         scrollViewMaps.setScrollbarFadingEnabled(false);
 
+
         //TODO THIS CAUSES THE SCROLLVIEW TO NOT SCROLL!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //scrollViewMaps.setOnTouchListener(new MultiTouchListener());
         //scrollViewMaps.setOnTouchListener(new MultiTouchListener());
     }
 }
