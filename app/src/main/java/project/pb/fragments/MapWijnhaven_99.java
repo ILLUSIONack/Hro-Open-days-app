@@ -6,7 +6,7 @@ import android.widget.ScrollView;
 
 import project.pb.R;
 
-public class MapActivityFragment extends Activity {
+public class MapWijnhaven_99 extends Activity {
 
     private ScrollView scrollViewMaps;
 
@@ -21,3 +21,4 @@ public class MapActivityFragment extends Activity {
         //scrollViewMaps.setOnTouchListener(new MultiTouchListener());
     }
 }
+
