@@ -18,7 +18,6 @@
                 android:background="#cf0245"
                 android:orientation="vertical">
 
-
                 <TextView
                     android:id="@+id/title1"
                     android:layout_width="match_parent"
