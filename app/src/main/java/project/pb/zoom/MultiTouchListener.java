@@ -7,7 +7,6 @@ import android.view.View.OnTouchListener;
 public class MultiTouchListener implements OnTouchListener {
 
     private static final int INVALID_POINTER_ID = -1;
-    public boolean isRotateEnabled = false;
     public boolean isTranslateEnabled = true;
     public boolean isScaleEnabled = true;
     public float minimumScale = 1.0f;
@@ -27,6 +26,8 @@ public class MultiTouchListener implements OnTouchListener {
 
         // Assume that scaling still maintains aspect ratio
         if (view.getScaleX() <= 1.0f) {
+            view.setY(0.0f);
+            view.setX(0.0f);
             //TODO reset to correct position
         }
         float scale = view.getScaleX() * info.deltaScale;
@@ -148,7 +149,6 @@ public class MultiTouchListener implements OnTouchListener {
         public boolean onScale(View view, ScaleGestureDetector detector) {
             TransformInfo info = new TransformInfo();
             info.deltaScale = isScaleEnabled ? detector.getScaleFactor() : 1.0f;
-            info.deltaAngle = isRotateEnabled ? Vector2D.getAngle(mPrevSpanVector, detector.getCurrentSpanVector()) : 0.0f;
             info.deltaX = isTranslateEnabled ? detector.getFocusX() - mPivotX : 0.0f;
             info.deltaY = isTranslateEnabled ? detector.getFocusY() - mPivotY : 0.0f;
             info.pivotX = mPivotX;
@@ -165,7 +165,6 @@ public class MultiTouchListener implements OnTouchListener {
         public float deltaX;
         public float deltaY;
         public float deltaScale;
-        public float deltaAngle;
         public float pivotX;
         public float pivotY;
         public float minimumScale;
