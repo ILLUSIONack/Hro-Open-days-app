@@ -12,8 +12,5 @@ public class MapWijnhaven_103 extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.floor_plan_103);
-
-        //TODO THIS CAUSES THE SCROLLVIEW TO NOT SCROLL!!!!!!!!!!!!!!!!!!!!!!!!!!
-        //scrollViewMaps.setOnTouchListener(new MultiTouchListener());
     }
 }
