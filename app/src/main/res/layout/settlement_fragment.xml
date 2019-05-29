@@ -7,9 +7,9 @@
     android:background="#CC0133">
 
     <ScrollView
+        android:id="@+id/scrollSettlement"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/scrollSettlement">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,7 +36,6 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:background="@drawable/text_view_border_by_hadi"
                 android:fontFamily="serif"
                 android:paddingHorizontal="10dp"
                 android:paddingTop="8dp"
@@ -52,20 +51,48 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                android:text="Ov Directions"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/background_light"
+                android:textSize="18dp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-
                 android:layout_marginEnd="8dp"
                 android:fontFamily="sans-serif-condensed-medium"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
                 android:text="@string/OV"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/background_light"
-                android:paddingHorizontal="12dp"
-                android:paddingVertical="8dp"
                 android:textSize="16sp"
-                android:background="@drawable/text_view_border_by_hadi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                android:text="Car Directions"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/background_light"
+                android:textSize="18dp"
+                android:textStyle="bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.48"
                 app:layout_constraintStart_toStartOf="parent"
@@ -76,16 +103,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="208dp"
                 android:layout_marginStart="8dp"
-
                 android:layout_marginEnd="8dp"
                 android:fontFamily="sans-serif-condensed-medium"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
                 android:text="@string/Car"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/background_light"
                 android:textSize="16sp"
-                android:paddingHorizontal="12dp"
-                android:paddingVertical="8dp"
-                android:background="@drawable/text_view_border_by_hadi"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.111"
                 app:layout_constraintStart_toStartOf="parent"
@@ -98,13 +123,12 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="sans-serif-condensed-medium"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
                 android:text="@string/Tunnel"
                 android:textAlignment="textStart"
                 android:textColor="@android:color/background_light"
-                android:paddingHorizontal="12dp"
-                android:paddingVertical="8dp"
                 android:textSize="16sp"
-                android:background="@drawable/text_view_border_by_hadi"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.461"
                 app:layout_constraintStart_toStartOf="parent"
