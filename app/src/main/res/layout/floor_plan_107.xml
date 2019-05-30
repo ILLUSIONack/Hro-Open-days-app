@@ -5,4 +5,102 @@
     android:layout_height="match_parent"
     android:background="#cf0245">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/thumb_button_31"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginRight="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wijnhaven_107_min1"
+                android:layout_marginTop="20dp"/>
+
+            <ImageButton
+                android:id="@+id/thumb_button_32"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginRight="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wijnhaven_107_bg"
+                android:layout_marginTop="20dp"/>
+
+            <ImageButton
+                android:id="@+id/thumb_button_33"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginRight="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wijnhaven_107_1"
+                android:layout_marginTop="20dp"/>
+
+            <ImageButton
+                android:id="@+id/thumb_button_34"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginRight="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wijnhaven_107_2"
+                android:layout_marginTop="20dp"/>
+
+            <ImageButton
+                android:id="@+id/thumb_button_35"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginRight="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wijnhaven_107_3"
+                android:layout_marginTop="20dp"/>
+
+            <ImageButton
+                android:id="@+id/thumb_button_36"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginRight="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wijnhaven_107_4"
+                android:layout_marginTop="20dp"/>
+
+            <ImageButton
+                android:id="@+id/thumb_button_37"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginRight="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wijnhaven_107_5"
+                android:layout_marginTop="20dp"/>
+
+            <ImageButton
+                android:id="@+id/thumb_button_38"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginRight="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wijnhaven_107_6"
+                android:layout_marginTop="20dp"/>
+
+            <ImageButton
+                android:id="@+id/thumb_button_39"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginRight="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wijnhaven_107_dak"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/expanded_image3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
 </FrameLayout>
