@@ -22,9 +22,9 @@
     </activity>
     <activity android:name=".fragments.GeneralCourseInformation" />
     <activity android:name=".fragments.OpenDayInformation" />
-    <activity android:name=".fragments.MapWijnhaven_99"/>
-    <activity android:name=".fragments.MapWijnhaven_103"/>
-    <activity android:name=".fragments.MapWijnhaven_107"/>
+    <activity android:name=".fragments.MapWijnhaven99"/>
+    <activity android:name=".fragments.MapWijnhaven103"/>
+    <activity android:name=".fragments.MapWijnhaven107"/>
   </application>
 
 </manifest>

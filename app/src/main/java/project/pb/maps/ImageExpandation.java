@@ -12,8 +12,6 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import project.pb.R;
-
 public class ImageExpandation {
 
     private View thumbView;
