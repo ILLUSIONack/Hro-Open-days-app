@@ -21,7 +21,7 @@
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/wijnhaven_103_min1"
+                android:src="@mipmap/wijnhaven_103_min1"
                 android:layout_marginTop="20dp"/>
 
             <ImageButton
@@ -30,7 +30,7 @@
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/wijnhaven_103_bg"
+                android:src="@mipmap/wijnhaven_103_bg"
                 android:layout_marginTop="20dp"/>
 
             <ImageButton
@@ -39,7 +39,7 @@
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/wijnhaven_103_1"
+                android:src="@mipmap/wijnhaven_103_1"
                 android:layout_marginTop="20dp"/>
 
             <ImageButton
@@ -48,7 +48,7 @@
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/wijnhaven_103_2"
+                android:src="@mipmap/wijnhaven_103_2"
                 android:layout_marginTop="20dp"/>
 
             <ImageButton
@@ -57,7 +57,7 @@
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/wijnhaven_103_3"
+                android:src="@mipmap/wijnhaven_103_3"
                 android:layout_marginTop="20dp"/>
 
             <ImageButton
@@ -66,7 +66,7 @@
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/wijnhaven_103_4"
+                android:src="@mipmap/wijnhaven_103_4"
                 android:layout_marginTop="20dp"/>
 
             <ImageButton
@@ -75,7 +75,7 @@
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/wijnhaven_103_5"
+                android:src="@mipmap/wijnhaven_103_5"
                 android:layout_marginTop="20dp"/>
 
             <ImageButton
@@ -84,7 +84,7 @@
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/wijnhaven_103_6"
+                android:src="@mipmap/wijnhaven_103_6"
                 android:layout_marginTop="20dp"/>
 
             <ImageButton
@@ -93,7 +93,7 @@
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/wijnhaven_103_dak"
+                android:src="@mipmap/wijnhaven_103_dak"
                 android:layout_marginTop="20dp"/>
 
         </LinearLayout>

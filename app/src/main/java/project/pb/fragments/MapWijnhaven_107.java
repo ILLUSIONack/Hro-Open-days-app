@@ -165,34 +165,5 @@ public class MapWijnhaven_107 extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.thumb_button_31:
-                zoomImageFromThumb(v, R.drawable.wijnhaven_107_min1);
-                break;
-            case R.id.thumb_button_32:
-                zoomImageFromThumb(v, R.drawable.wijnhaven_107_bg);
-                break;
-            case R.id.thumb_button_33:
-                zoomImageFromThumb(v, R.drawable.wijnhaven_107_1);
-                break;
-            case R.id.thumb_button_34:
-                zoomImageFromThumb(v, R.drawable.wijnhaven_107_2);
-                break;
-            case R.id.thumb_button_35:
-                zoomImageFromThumb(v, R.drawable.wijnhaven_107_3);
-                break;
-            case R.id.thumb_button_36:
-                zoomImageFromThumb(v, R.drawable.wijnhaven_107_4);
-                break;
-            case R.id.thumb_button_37:
-                zoomImageFromThumb(v, R.drawable.wijnhaven_107_5);
-                break;
-            case R.id.thumb_button_38:
-                zoomImageFromThumb(v, R.drawable.wijnhaven_107_6);
-                break;
-            case R.id.thumb_button_39:
-                zoomImageFromThumb(v, R.drawable.wijnhaven_107_dak);
-                break;
-        }
     }
 }
