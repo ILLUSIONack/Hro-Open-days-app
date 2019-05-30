@@ -1,108 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#cf0245">
 
-    <ScrollView
+    <ListView
+        android:id="@+id/mapslisted"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+    </ListView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-
-            <ImageButton
-                android:id="@+id/thumb_button_21"
-                android:layout_width="match_parent"
-                android:layout_height="135dp"
-                android:layout_marginRight="1dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/wijnhaven_103_min1"
-                android:layout_marginTop="20dp"/>
-
-            <ImageButton
-                android:id="@+id/thumb_button_22"
-                android:layout_width="match_parent"
-                android:layout_height="135dp"
-                android:layout_marginRight="1dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/wijnhaven_103_bg"
-                android:layout_marginTop="20dp"/>
-
-            <ImageButton
-                android:id="@+id/thumb_button_23"
-                android:layout_width="match_parent"
-                android:layout_height="135dp"
-                android:layout_marginRight="1dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/wijnhaven_103_1"
-                android:layout_marginTop="20dp"/>
-
-            <ImageButton
-                android:id="@+id/thumb_button_24"
-                android:layout_width="match_parent"
-                android:layout_height="135dp"
-                android:layout_marginRight="1dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/wijnhaven_103_2"
-                android:layout_marginTop="20dp"/>
-
-            <ImageButton
-                android:id="@+id/thumb_button_25"
-                android:layout_width="match_parent"
-                android:layout_height="135dp"
-                android:layout_marginRight="1dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/wijnhaven_103_3"
-                android:layout_marginTop="20dp"/>
-
-            <ImageButton
-                android:id="@+id/thumb_button_26"
-                android:layout_width="match_parent"
-                android:layout_height="135dp"
-                android:layout_marginRight="1dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/wijnhaven_103_4"
-                android:layout_marginTop="20dp"/>
-
-            <ImageButton
-                android:id="@+id/thumb_button_27"
-                android:layout_width="match_parent"
-                android:layout_height="135dp"
-                android:layout_marginRight="1dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/wijnhaven_103_5"
-                android:layout_marginTop="20dp"/>
-
-            <ImageButton
-                android:id="@+id/thumb_button_28"
-                android:layout_width="match_parent"
-                android:layout_height="135dp"
-                android:layout_marginRight="1dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/wijnhaven_103_6"
-                android:layout_marginTop="20dp"/>
-
-            <ImageButton
-                android:id="@+id/thumb_button_29"
-                android:layout_width="match_parent"
-                android:layout_height="135dp"
-                android:layout_marginRight="1dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/wijnhaven_103_dak"
-                android:layout_marginTop="20dp"/>
-
-        </LinearLayout>
-    </ScrollView>
+    <TextView
+        android:id="@+id/clickAnywhere"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
+        android:text="Click anywhere to exit"
+        android:textSize="26dp"
+        android:visibility="invisible"
+        android:background="@color/redhro"
+        android:alpha="0.8"/>
 
     <ImageView
-        android:id="@+id/expanded_image2"
+        android:id="@+id/expanded_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible" />
 
-</FrameLayout>
+</RelativeLayout>
