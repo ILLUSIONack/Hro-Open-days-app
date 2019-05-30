@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import project.pb.R;
 import project.pb.maps.CustomMapAdapter;
 import project.pb.maps.ImageExpandation;
