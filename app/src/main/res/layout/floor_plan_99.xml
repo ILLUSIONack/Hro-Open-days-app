@@ -17,7 +17,7 @@
 
             <ImageButton
                 android:id="@+id/thumb_button_1"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
@@ -26,7 +26,7 @@
 
             <ImageButton
                 android:id="@+id/thumb_button_2"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
@@ -34,8 +34,17 @@
                 android:layout_marginTop="20dp"/>
 
             <ImageButton
+                android:id="@+id/thumb_button_8"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginRight="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wijnhaven_99_bg"
+                android:layout_marginTop="20dp"/>
+
+            <ImageButton
                 android:id="@+id/thumb_button_3"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
@@ -44,7 +53,7 @@
 
             <ImageButton
                 android:id="@+id/thumb_button_4"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
@@ -53,7 +62,7 @@
 
             <ImageButton
                 android:id="@+id/thumb_button_5"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
@@ -62,7 +71,7 @@
 
             <ImageButton
                 android:id="@+id/thumb_button_6"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
@@ -71,25 +80,17 @@
 
             <ImageButton
                 android:id="@+id/thumb_button_7"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/wijnhaven_99_5"
                 android:layout_marginTop="20dp"/>
 
-            <ImageButton
-                android:id="@+id/thumb_button_8"
-                android:layout_width="350dp"
-                android:layout_height="135dp"
-                android:layout_marginRight="1dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/wijnhaven_99_bg"
-                android:layout_marginTop="20dp"/>
 
             <ImageButton
                 android:id="@+id/thumb_button_9"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="135dp"
                 android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
