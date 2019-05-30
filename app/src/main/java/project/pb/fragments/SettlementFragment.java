@@ -46,13 +46,13 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.mapButton99:
-                startActivity(new Intent(v.getContext(), MapWijnhaven_99.class));
+                startActivity(new Intent(v.getContext(), MapWijnhaven99.class));
                 break;
             case R.id.mapButton103:
-                startActivity(new Intent(v.getContext(), MapWijnhaven_103.class));
+                startActivity(new Intent(v.getContext(), MapWijnhaven103.class));
                 break;
             case R.id.mapButton107:
-                startActivity(new Intent(v.getContext(), MapWijnhaven_107.class));
+                startActivity(new Intent(v.getContext(), MapWijnhaven107.class));
                 break;
         }
     }
