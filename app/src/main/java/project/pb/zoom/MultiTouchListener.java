@@ -30,11 +30,9 @@ public class MultiTouchListener implements OnTouchListener {
         computeRenderOffset(view, info.pivotX, info.pivotY);
         adjustTranslation(view, info.deltaX, info.deltaY);
 
-        // Assume that scaling still maintains aspect ratio
         if (view.getScaleX() <= 1.0f) {
             view.setY(0.0f);
             view.setX(0.0f);
-            //TODO reset to correct position
         }
         float scale = view.getScaleX() * info.deltaScale;
         scale = Math.max(info.minimumScale, Math.min(info.maximumScale, scale));
@@ -76,7 +74,6 @@ public class MultiTouchListener implements OnTouchListener {
     @Override
     public boolean onTouch(View view, MotionEvent event) {
         if (customView != null) {
-            System.out.println("Making use of custom view... ");
             mScaleGestureDetector.onTouchEvent(customView, event);
         } else {
             mScaleGestureDetector.onTouchEvent(view, event);
@@ -108,7 +105,6 @@ public class MultiTouchListener implements OnTouchListener {
                     // gesture.
                     if (!mScaleGestureDetector.isInProgress()) {
                         if (customView != null) {
-                            System.out.println("Making use of custom view... [TRANSLATION]");
                             adjustTranslation(customView, currX - mPrevX, currY - mPrevY);
                         } else {
                             adjustTranslation(view, currX - mPrevX, currY - mPrevY);

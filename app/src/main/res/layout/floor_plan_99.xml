@@ -20,7 +20,7 @@
         android:textSize="26dp"
         android:visibility="invisible"
         android:background="@color/redhro"
-        android:alpha="0.8"/>
+        android:alpha="0.9"/>
 
     <ImageView
         android:id="@+id/expanded_image"

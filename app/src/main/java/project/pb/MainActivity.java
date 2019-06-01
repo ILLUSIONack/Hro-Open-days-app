@@ -60,11 +60,7 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
-//uuhfghamzaisde beste in deze wereld en hij gaat zeker stuk maken/
-    //in de ring enzo enzo yeye wtf dude whatsup met jou
-    //dit stukje code is een tering slechte stuk geschreven door hamza
-    //hij is shit en weet niet hoe hij moet coderen dus hij moet gwn basicly stoppen
-    //met wtf hij zit te doen etc etc etc en dat is gwn zo dus stop maar
+
     /**
      * Fetches what menu id is being pressed and executes the clicked item
      * @param item

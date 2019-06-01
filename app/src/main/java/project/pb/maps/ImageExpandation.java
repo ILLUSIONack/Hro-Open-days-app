@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import project.pb.zoom.MultiTouchListener;
+
 public class ImageExpandation {
 
     private View thumbView;
@@ -21,11 +23,8 @@ public class ImageExpandation {
     private RelativeLayout layout;
     private TextView textView;
 
-    public ImageExpandation(View thumbView, int imageResId,
-                            int shortAnimationDuration,
-                            ImageView expandedImageView,
-                            RelativeLayout layout,
-                            TextView textView) {
+    public ImageExpandation(View thumbView, int imageResId, int shortAnimationDuration,
+                            ImageView expandedImageView, RelativeLayout layout, TextView textView) {
         this.thumbView = thumbView;
         this.imageResId = imageResId;
         this.shortAnimationDuration = shortAnimationDuration;
@@ -70,6 +69,7 @@ public class ImageExpandation {
 
         thumbView.setAlpha(0f);
         expandedImageView.setVisibility(View.VISIBLE);
+        textView.setVisibility(View.VISIBLE);
 
         expandedImageView.setPivotX(1f);
         expandedImageView.setPivotY(1f);
@@ -101,7 +101,6 @@ public class ImageExpandation {
         currentAnimator = set;
 
 
-        textView.setVisibility(View.VISIBLE);
         final float startScaleFinal = startScale;
         expandedImageView.setOnClickListener(new View.OnClickListener() {
             @Override
