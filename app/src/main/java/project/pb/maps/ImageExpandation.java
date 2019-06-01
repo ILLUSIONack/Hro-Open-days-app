@@ -6,6 +6,7 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.graphics.Point;
 import android.graphics.Rect;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
@@ -101,8 +102,9 @@ public class ImageExpandation {
         currentAnimator = set;
 
 
-        final float startScaleFinal = startScale;
-        expandedImageView.setOnClickListener(new View.OnClickListener() {
+        //final float startScaleFinal = startScale;
+        expandedImageView.setOnTouchListener(new MultiTouchListener());
+        /*expandedImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (currentAnimator != null) {
@@ -143,6 +145,6 @@ public class ImageExpandation {
                 set.start();
                 currentAnimator = set;
             }
-        });
+        });*/
     }
 }
