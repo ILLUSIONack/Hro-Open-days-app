@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new HomeScreenFragment()).commit();
 
+        navigationView.setCheckedItem(R.id.nav_home_screen);
+
     }
 
     @Override
@@ -58,7 +60,11 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
-
+//uuhfghamzaisde beste in deze wereld en hij gaat zeker stuk maken/
+    //in de ring enzo enzo yeye wtf dude whatsup met jou
+    //dit stukje code is een tering slechte stuk geschreven door hamza
+    //hij is shit en weet niet hoe hij moet coderen dus hij moet gwn basicly stoppen
+    //met wtf hij zit te doen etc etc etc en dat is gwn zo dus stop maar
     /**
      * Fetches what menu id is being pressed and executes the clicked item
      * @param item
@@ -97,24 +103,6 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    private void preLoadNotification() {
-        TimerTask timerTask = new TimerTask() {
-            int tick = 0;
-            @Override
-            public void run() {
-                switch (tick++) {
-                    case 25:
-                        new NotificationCreation(getApplicationContext(), "Reminder",
-                                "Notification test [TICK:  " + tick + "]").display();
-                        break;
-                }
-            }
-        };
-
-        Timer timer = new Timer();
-        timer.schedule(timerTask, 1000, 1000);
     }
 
     private void initializeChannels() {

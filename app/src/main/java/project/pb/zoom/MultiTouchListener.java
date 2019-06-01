@@ -15,9 +15,15 @@ public class MultiTouchListener implements OnTouchListener {
     private float mPrevX;
     private float mPrevY;
     private ScaleGestureDetector mScaleGestureDetector;
+    private View customView;
 
     public MultiTouchListener() {
         mScaleGestureDetector = new ScaleGestureDetector(new ScaleGestureListener());
+    }
+
+    public MultiTouchListener(View view) {
+        mScaleGestureDetector = new ScaleGestureDetector(new ScaleGestureListener());
+        customView = view;
     }
 
     private static void move(View view, TransformInfo info) {
@@ -69,7 +75,12 @@ public class MultiTouchListener implements OnTouchListener {
 
     @Override
     public boolean onTouch(View view, MotionEvent event) {
-        mScaleGestureDetector.onTouchEvent(view, event);
+        if (customView != null) {
+            System.out.println("Making use of custom view... ");
+            mScaleGestureDetector.onTouchEvent(customView, event);
+        } else {
+            mScaleGestureDetector.onTouchEvent(view, event);
+        }
 
         if (!isTranslateEnabled) {
             return true;
@@ -96,7 +107,12 @@ public class MultiTouchListener implements OnTouchListener {
                     // Only move if the ScaleGestureDetector isn't processing a
                     // gesture.
                     if (!mScaleGestureDetector.isInProgress()) {
-                        adjustTranslation(view, currX - mPrevX, currY - mPrevY);
+                        if (customView != null) {
+                            System.out.println("Making use of custom view... [TRANSLATION]");
+                            adjustTranslation(customView, currX - mPrevX, currY - mPrevY);
+                        } else {
+                            adjustTranslation(view, currX - mPrevX, currY - mPrevY);
+                        }
                     }
                 }
 
@@ -155,7 +171,11 @@ public class MultiTouchListener implements OnTouchListener {
             info.pivotY = mPivotY;
             info.minimumScale = minimumScale;
             info.maximumScale = maximumScale;
-            move(view, info);
+            if (customView != null) {
+                move(customView, info);
+            } else {
+                move(view, info);
+            }
             return false;
         }
     }
