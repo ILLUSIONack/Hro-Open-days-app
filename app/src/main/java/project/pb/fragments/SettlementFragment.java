@@ -50,28 +50,7 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.routeButtonMap:
-                PopupMenu popup = new PopupMenu(getContext(), v);
-                MenuInflater inflater = popup.getMenuInflater();
-                inflater.inflate(R.menu.equalizer, popup.getMenu());
-                popup.show();
-                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        switch (item.getItemId()) {
-                            case R.id.wijnhaven99:
-                                openMaps("geo:0,0?q=Wijnhaven 99, 3011 WN Rotterdam");
-                                break;
-                            case R.id.wijnhaven103:
-                                openMaps("geo:0,0?q=Wijnhaven 103, 3011 WN Rotterdam");
-                                break;
-                            case R.id.wijnhaven107:
-                                openMaps("geo:0,0?q=Wijnhaven 107, 3011 WN Rotterdam");
-                                break;
-                        }
-                        System.out.println("Item Id: " + item.getTitle());
-                        return true;
-                    }
-                });
+                popMenuButton(v);
                 break;
             case R.id.mapButton99:
                 startActivity(new Intent(v.getContext(), MapWijnhaven99.class));
@@ -92,5 +71,30 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
         if (mapIntent.resolveActivity(getContext().getPackageManager()) != null) {
             startActivity(mapIntent);
         }
+    }
+
+    private void popMenuButton(View v){
+        PopupMenu popup = new PopupMenu(getContext(), v);
+        MenuInflater inflater = popup.getMenuInflater();
+        inflater.inflate(R.menu.equalizer, popup.getMenu());
+        popup.show();
+        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.wijnhaven99:
+                        openMaps("geo:0,0?q=Wijnhaven 99, 3011 WN Rotterdam");
+                        break;
+                    case R.id.wijnhaven103:
+                        openMaps("geo:0,0?q=Wijnhaven 103, 3011 WN Rotterdam");
+                        break;
+                    case R.id.wijnhaven107:
+                        openMaps("geo:0,0?q=Wijnhaven 107, 3011 WN Rotterdam");
+                        break;
+                }
+                System.out.println("Item Id: " + item.getTitle());
+                return true;
+            }
+        });
     }
 }
