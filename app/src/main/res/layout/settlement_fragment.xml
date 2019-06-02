@@ -150,6 +150,21 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
             <Button
+                android:id="@+id/mapRouteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:width="200dp"
+                android:background="#60001d"
+                android:text="Route"
+                android:textColor="#FFF"
+                android:translationX="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <Button
                 android:id="@+id/mapButton99"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
