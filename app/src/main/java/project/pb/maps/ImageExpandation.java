@@ -101,9 +101,8 @@ public class ImageExpandation {
         currentAnimator = set;
 
 
-        //final float startScaleFinal = startScale;
-        expandedImageView.setOnTouchListener(new MultiTouchListener());
-        /*expandedImageView.setOnClickListener(new View.OnClickListener() {
+        final float startScaleFinal = startScale;
+        expandedImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (currentAnimator != null) {
@@ -144,6 +143,6 @@ public class ImageExpandation {
                 set.start();
                 currentAnimator = set;
             }
-        });*/
+        });
     }
 }
