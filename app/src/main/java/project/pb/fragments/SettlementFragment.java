@@ -21,15 +21,11 @@ import project.pb.R;
 public class SettlementFragment extends Fragment implements View.OnClickListener {
 
     private ScrollView scrollSettlement;
-    private Button mapRouteButton;
-    private Button mapButton_99;
-    private Button mapButton_103;
-    private Button mapButton_107;
+    private Button mapRouteButton, mapButton_99, mapButton_103, mapButton_107;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
-
         final View view = inflater.inflate(R.layout.settlement_fragment, container, false);
         initialise(view);
         return view;
