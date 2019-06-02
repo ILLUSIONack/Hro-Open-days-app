@@ -21,7 +21,7 @@ import project.pb.R;
 public class SettlementFragment extends Fragment implements View.OnClickListener {
 
     private ScrollView scrollSettlement;
-    private Button mapRouteButton, mapButton_99, mapButton_103, mapButton_107;
+    private Button routeButtonMap, mapButton_99, mapButton_103, mapButton_107;
 
     @Nullable
     @Override
@@ -36,11 +36,11 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
         getActivity().setTitle("About HR");
         scrollSettlement = view.findViewById(R.id.scrollSettlement);
         scrollSettlement.setScrollbarFadingEnabled(false);
-        mapRouteButton = view.findViewById(R.id.mapRouteButton);
+        routeButtonMap = view.findViewById(R.id.routeButtonMap);
         mapButton_99 = view.findViewById(R.id.mapButton99);
         mapButton_103 = view.findViewById(R.id.mapButton103);
         mapButton_107 = view.findViewById(R.id.mapButton107);
-        mapRouteButton.setOnClickListener(this);
+        routeButtonMap.setOnClickListener(this);
         mapButton_99.setOnClickListener(this);
         mapButton_103.setOnClickListener(this);
         mapButton_107.setOnClickListener(this);
@@ -49,7 +49,7 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.mapRouteButton:
+            case R.id.routeButtonMap:
                 PopupMenu popup = new PopupMenu(getContext(), v);
                 MenuInflater inflater = popup.getMenuInflater();
                 inflater.inflate(R.menu.equalizer, popup.getMenu());
