@@ -46,23 +46,6 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
         mapButton_107.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.routeButtonMap:
-                popMenuButton(v);
-                break;
-            case R.id.mapButton99:
-                startActivity(new Intent(v.getContext(), MapWijnhaven99.class));
-                break;
-            case R.id.mapButton103:
-                startActivity(new Intent(v.getContext(), MapWijnhaven103.class));
-                break;
-            case R.id.mapButton107:
-                startActivity(new Intent(v.getContext(), MapWijnhaven107.class));
-                break;
-        }
-    }
 
     private void openMaps(String location) {
         Uri gmmIntentUri = Uri.parse(location);
@@ -96,5 +79,23 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
                 return true;
             }
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.routeButtonMap:
+                popMenuButton(v);
+                break;
+            case R.id.mapButton99:
+                startActivity(new Intent(v.getContext(), MapWijnhaven99.class));
+                break;
+            case R.id.mapButton103:
+                startActivity(new Intent(v.getContext(), MapWijnhaven103.class));
+                break;
+            case R.id.mapButton107:
+                startActivity(new Intent(v.getContext(), MapWijnhaven107.class));
+                break;
+        }
     }
 }
