@@ -20,6 +20,7 @@ import project.pb.R;
 
 public class ContactPageFragment extends Fragment implements View.OnClickListener {
 
+    private SharedPref sharedPref;
     private EditText your_name;
     private EditText your_subject;
     private EditText your_message;
@@ -30,6 +31,14 @@ public class ContactPageFragment extends Fragment implements View.OnClickListene
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        sharedPref = new SharedPref(getContext().getApplicationContext());
+        if(sharedPref.loadNightModeState() == true) {
+            getActivity().setTheme(R.style.DarkTheme);
+        } else {
+            getActivity().setTheme(R.style.AppTheme);
+        }
+
+
         View view = inflater.inflate(R.layout.contact_page, container, false);
         initialize(view);
         return view;
