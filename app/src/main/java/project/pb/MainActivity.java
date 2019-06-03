@@ -17,17 +17,24 @@ import project.pb.fragments.FAQFragment;
 import project.pb.fragments.HomeScreenFragment;
 import project.pb.fragments.SettingsFragment;
 import project.pb.fragments.SettlementFragment;
+import project.pb.fragments.SharedPref;
 import project.pb.fragments.StudyPageFragment;
+import project.pb.hints.HintExecutor;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private SharedPref sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initializeChannels();
-        //preLoadNotification(); <- Notification TODO
+        sharedPref = new SharedPref(getApplicationContext());
+        if (sharedPref.getNotificationState()) {
+            HintExecutor.start(this);
+        }
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

@@ -1,0 +1,44 @@
+package project.pb.hints;
+
+import android.content.Context;
+
+import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import project.pb.notifications.NotificationCreation;
+
+public class HintExecutor {
+
+    public static boolean isRunning = false;
+    private static Random random = new Random();
+    private static HintsData[] hintsData = HintsData.values();
+
+    public static void start(final Context context) {
+        isRunning = true;
+        TimerTask timerTask = new TimerTask() {
+            int tick = 0;
+            @Override
+            public void run() {
+                if (isRunning == false) {
+                    System.out.println("Quit the task!");
+                    cancel();
+                }
+                System.out.println("Current Tick: " + tick);
+                switch (tick++) {
+                    case 5:
+                        tick = 0;
+                        new NotificationCreation(context, "Did you know?",
+                                getRandomHint().getHint()).display();
+                        break;
+                }
+            }
+        };
+        Timer timer = new Timer();
+        timer.schedule(timerTask, 1000, 1000);
+    }
+
+    private static HintsData getRandomHint() {
+        return hintsData[random.nextInt(hintsData.length)];
+    }
+}
