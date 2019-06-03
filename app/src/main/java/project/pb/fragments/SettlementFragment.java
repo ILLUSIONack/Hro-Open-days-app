@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -22,10 +21,18 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
 
     private ScrollView scrollSettlement;
     private Button routeButtonMap, mapButton_99, mapButton_103, mapButton_107;
+    private SharedPref sharedPref;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
+        sharedPref = new SharedPref(getContext().getApplicationContext());
+        if(sharedPref.loadNightModeState() == true) {
+            getActivity().setTheme(R.style.DarkTheme);
+        } else {
+            getActivity().setTheme(R.style.AppTheme);
+        }
+
         final View view = inflater.inflate(R.layout.settlement_fragment, container, false);
         initialise(view);
         return view;

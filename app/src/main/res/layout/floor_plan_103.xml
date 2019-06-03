@@ -19,7 +19,7 @@
         android:text="Click anywhere to exit"
         android:textSize="26dp"
         android:visibility="invisible"
-        android:background="@color/redhro"
+        android:background="?attr/tintcolor"
         android:alpha="0.8"/>
 
     <ImageView
