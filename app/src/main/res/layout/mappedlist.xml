@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/android_list_view_tutorial_with_example"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="7dp">
+
+    <TextView
+        android:id="@+id/theimagetitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Map 0"
+        android:textSize="16dp"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/theimage"
+        android:layout_width="404dp"
+        android:layout_height="206dp"
+        android:layout_below="@+id/theimagetitle"
+        android:layout_alignStart="@+id/theimagetitle"
+        android:adjustViewBounds="false"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@mipmap/wijnhaven_99_dak" />
+</RelativeLayout>

@@ -3,26 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="project.pb">
 
-    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+  <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@drawable/icon_nav"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+  <application
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:roundIcon="@drawable/icon_nav"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme"
+      tools:ignore="GoogleAppIndexingWarning">
+    <activity android:name=".MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".fragments.GeneralCourseInformation" />
-        <activity android:name=".fragments.OpenDayInformation" />
-        <activity android:name=".fragments.MapActivityFragment"/>
-    </application>
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:name=".fragments.GeneralCourseInformation" />
+    <activity android:name=".fragments.OpenDayInformation" />
+    <activity android:name=".fragments.MapWijnhaven99"/>
+    <activity android:name=".fragments.MapWijnhaven103"/>
+    <activity android:name=".fragments.MapWijnhaven107"/>
+  </application>
 
 </manifest>

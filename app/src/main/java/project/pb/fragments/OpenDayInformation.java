@@ -13,7 +13,6 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
@@ -21,7 +20,6 @@ import java.util.Calendar;
 import java.util.List;
 import project.pb.R;
 import project.pb.opendag.OpenDagData;
-import project.pb.zoom.MultiTouchListener;
 
 public class OpenDayInformation extends AppCompatActivity implements View.OnClickListener {
 
@@ -29,9 +27,7 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
     private TextView generalInfo,nameTitle;
     private ImageButton shareButton;
     private OpenDagData key;
-    private LinearLayout newopendaypage;
     private ImageView studyPicture;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +40,6 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
         generalInfo = findViewById(R.id.textView3);
         addcalender = findViewById(R.id.addcalender);
         shareButton = findViewById(R.id.shareButton);
-        newopendaypage = findViewById(R.id.newopendaypage);
 
         nameTitle = findViewById(R.id.nameTitle);
         studyPicture = findViewById(R.id.studyPicture);
@@ -57,7 +52,6 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
         generalInfo.setText(getData());
         nameTitle.setText(key.getName());
         studyPicture.setImageResource(key.getPic());
-        generalInfo.setOnTouchListener(new MultiTouchListener());
     }
 
     @Override
