@@ -18,6 +18,10 @@ public class GeneralCourseInformation extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.generalcourseinfo);
+        initialise();
+    }
+
+    private void initialise(){
 
         generalInfo = findViewById(R.id.informaticag);
         generalInfo.setScrollbarFadingEnabled(false);
@@ -26,7 +30,7 @@ public class GeneralCourseInformation extends Activity {
         generalInfo.setOnTouchListener(new MultiTouchListener());
     }
 
-    public String getData(){
+    private String getData(){
         key = (StudyData) getIntent().getSerializableExtra("opleiding");
         String[] content = key.getGeneralInformation();
         String s = "";
@@ -35,6 +39,7 @@ public class GeneralCourseInformation extends Activity {
         }
         return s;
     }
+
 }
 
 
