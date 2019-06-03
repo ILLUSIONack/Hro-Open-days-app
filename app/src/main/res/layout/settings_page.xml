@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CC0133">
+    android:background="?attr/backgroundcolor">
 
     <Switch
         android:id="@+id/switch1"
