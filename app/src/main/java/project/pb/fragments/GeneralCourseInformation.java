@@ -13,6 +13,7 @@ public class GeneralCourseInformation extends Activity {
 
     private TextView generalInfo;
     private StudyData key;
+    private SharedPref sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

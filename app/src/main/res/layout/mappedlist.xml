@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:text="Map 0"
         android:textSize="16dp"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="?attr/textcolor"/>
 
     <ImageView
         android:id="@+id/theimage"
