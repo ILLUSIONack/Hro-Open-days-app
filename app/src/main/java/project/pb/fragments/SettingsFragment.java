@@ -64,12 +64,12 @@ public class SettingsFragment extends Fragment {
                 if (isChecked) {
                     toast_notification_on.show();
                     sharedPref.setNotification(true);
-                    HintExecutor.isRunning = true;
+                    HintExecutor.setRunning(true);
                     HintExecutor.start(getContext());
                 } else {
                     toast_notification_off.show();
                     sharedPref.setNotification(false);
-                    HintExecutor.isRunning = false;
+                    HintExecutor.setRunning(false);
                 }
             }
         });

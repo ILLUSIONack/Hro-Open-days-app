@@ -25,7 +25,7 @@ public class NotificationCreation {
                 .setContentTitle(title)
                 .setContentText(content)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setCategory(NotificationCompat.CATEGORY_MESSAGE).build();
+                .setCategory(NotificationCompat.CATEGORY_REMINDER).build();
         notificationManagerCompat.notify(1, notification);
     }
 }
