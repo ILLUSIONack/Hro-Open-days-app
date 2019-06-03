@@ -20,6 +20,7 @@ import project.pb.R;
 
 public class FAQFragment extends Fragment {
 
+    private SharedPref sharedPref;
     private ExpandableListView expandableListView;
     private List<String> questions;
     private Map<String, List<String>> answers;
@@ -29,6 +30,13 @@ public class FAQFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        sharedPref = new SharedPref(getContext().getApplicationContext());
+        if(sharedPref.loadNightModeState() == true) {
+            getActivity().setTheme(R.style.DarkTheme);
+        } else {
+            getActivity().setTheme(R.style.AppTheme);
+        }
+
         View view = inflater.inflate(R.layout.gestelde_vragen, container, false);
         initialisation(view);
         return view;
