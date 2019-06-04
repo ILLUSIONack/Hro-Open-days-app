@@ -1,5 +1,6 @@
 package project.pb.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
@@ -44,10 +45,16 @@ public class MapWijnhaven107 extends FragmentActivity {
         androidListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                new ImageExpandation(view, mapsData.getDrawables()[position],
-                        shortAnimationDuration, imageView, layout, clickAnywhere).show();
+                display(mapsData.getDrawables()[position]);
             }
         });
+
+    }
+
+    private void display(int drawable) {
+        Intent intent = new Intent(this, MapImageDisplay.class);
+        intent.putExtra("drawable", drawable);
+        startActivity(intent);
 
     }
 }

@@ -1,7 +1,8 @@
 package project.pb.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -13,12 +14,13 @@ import project.pb.maps.CustomMapAdapter;
 import project.pb.maps.ImageExpandation;
 import project.pb.maps.MapsData;
 
-public class MapWijnhaven103 extends FragmentActivity {
+public class MapWijnhaven103 extends AppCompatActivity {
 
     private int shortAnimationDuration;
     private ListView androidListView;
     private MapsData mapsData = MapsData.WIJNHAVEN_103;
 
+    private ImageView imageView;
     private TextView clickAnywhere;
 
     @Override
@@ -29,7 +31,7 @@ public class MapWijnhaven103 extends FragmentActivity {
         clickAnywhere = findViewById(R.id.clickAnywhere);
 
         final RelativeLayout layout = findViewById(R.id.container);
-        final ImageView imageView = findViewById(R.id.expanded_image);
+        imageView = findViewById(R.id.expanded_image);
 
         shortAnimationDuration = getResources().getInteger(
                 android.R.integer.config_shortAnimTime);
@@ -44,10 +46,15 @@ public class MapWijnhaven103 extends FragmentActivity {
         androidListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                new ImageExpandation(view, mapsData.getDrawables()[position],
-                        shortAnimationDuration, imageView, layout, clickAnywhere).show();
+                display(mapsData.getDrawables()[position]);
             }
         });
 
+    }
+
+    private void display(int drawable) {
+        Intent intent = new Intent(this, MapImageDisplay.class);
+        intent.putExtra("drawable", drawable);
+        startActivity(intent);
     }
 }
