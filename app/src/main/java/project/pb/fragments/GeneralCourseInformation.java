@@ -3,6 +3,7 @@ package project.pb.fragments;
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import project.pb.R;
@@ -11,8 +12,9 @@ import project.pb.zoom.MultiTouchListener;
 
 public class GeneralCourseInformation extends Activity {
 
-    private TextView generalInfo;
+    private TextView generalInfo,nameTitle;
     private StudyData key;
+    private LinearLayout generalCoursePage;
     private SharedPref sharedPref;
 
     @Override
@@ -22,13 +24,18 @@ public class GeneralCourseInformation extends Activity {
         initialise();
     }
 
-    private void initialise(){
 
+    private void initialise(){
+        nameTitle = findViewById(R.id.nameTitleStudy);
+        generalCoursePage = findViewById(R.id.generalCoursePage);
         generalInfo = findViewById(R.id.informaticag);
         generalInfo.setScrollbarFadingEnabled(false);
         generalInfo.setMovementMethod(new ScrollingMovementMethod());
         generalInfo.setText(getData());
-        generalInfo.setOnTouchListener(new MultiTouchListener());
+        generalInfo.setScrollbarFadingEnabled(false);
+        generalInfo.setMovementMethod(new ScrollingMovementMethod());
+        generalInfo.setOnTouchListener(new MultiTouchListener(generalCoursePage));
+        nameTitle.setText(key.getName());
     }
 
     private String getData(){
