@@ -5,7 +5,7 @@ public enum StudyData implements StudyListener {
     VOLTIJD_INFORMATICA() {
         @Override
         public String getName() {
-            return "Informatica";
+            return "Informatica FT";
         }
 
         @Override
@@ -24,7 +24,7 @@ public enum StudyData implements StudyListener {
     VOLTIJD_TECHNISE() {
         @Override
         public String getName() {
-            return "Technise Informatica";
+            return "Technical Informatica FT";
         }
 
         @Override
@@ -40,7 +40,7 @@ public enum StudyData implements StudyListener {
     }, VOLTIJD_COMMUNICATIE() {
         @Override
         public String getName() {
-            return "Technise Informatica";
+            return "Communication FT";
         }
 
         @Override
@@ -61,7 +61,7 @@ public enum StudyData implements StudyListener {
     }, VOLTIJD_COMMUNICATIE_MEDIA() {
         @Override
         public String getName() {
-            return "Technise Informatica";
+            return "Communication & Media FT";
         }
 
         @Override
@@ -78,7 +78,7 @@ public enum StudyData implements StudyListener {
     }, DEELTIJD_INFORMATICA() {
         @Override
         public String getName() {
-            return "Technise Informatica";
+            return "Technical Informatica PT";
         }
 
         @Override
@@ -94,7 +94,7 @@ public enum StudyData implements StudyListener {
     }, DEELTIJD_COMMUNICATIE() {
         @Override
         public String getName() {
-            return "Technise Informatica";
+            return "Communication PT";
         }
 
         @Override
