@@ -15,10 +15,18 @@ import project.pb.opendag.OpenDagData;
 public class HomeScreenFragment extends Fragment implements View.OnClickListener {
 
     private ImageButton inf1Button, tinf1Button, cmdButton, com1Button, inf2Button, com2Button;
+    private SharedPref sharedPref;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        sharedPref = new SharedPref(getContext().getApplicationContext());
+        if(sharedPref.loadNightModeState() == true) {
+            getActivity().setTheme(R.style.DarkTheme);
+        } else {
+            getActivity().setTheme(R.style.AppTheme);
+        }
+
         View view = inflater.inflate(R.layout.home_layout, container, false);
         initialize(view);
         return view;

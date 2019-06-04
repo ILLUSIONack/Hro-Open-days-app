@@ -15,6 +15,7 @@ public class GeneralCourseInformation extends Activity {
     private TextView generalInfo,nameTitle;
     private StudyData key;
     private LinearLayout generalCoursePage;
+    private SharedPref sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class GeneralCourseInformation extends Activity {
         setContentView(R.layout.generalcourseinfo);
         initialise();
     }
+
 
     private void initialise(){
         nameTitle = findViewById(R.id.nameTitleStudy);
@@ -45,6 +47,7 @@ public class GeneralCourseInformation extends Activity {
         }
         return s;
     }
+
 }
 
 

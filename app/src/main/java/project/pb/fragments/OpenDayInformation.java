@@ -67,12 +67,12 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
                 shareFeature();
                 break;
             case R.id.addcalender:
-                CallenderFeature();
+                callenderFeature();
                 break;
         }
     }
 
-    public void CallenderFeature(){
+    public void callenderFeature(){
         Calendar calendarEvent = Calendar.getInstance();
         calendarEvent.set(key.getDate()[0], key.getDate()[1], key.getDate()[2]);
         Intent intent = new Intent(Intent.ACTION_EDIT);
