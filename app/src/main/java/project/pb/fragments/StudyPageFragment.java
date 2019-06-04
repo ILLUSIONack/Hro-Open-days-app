@@ -48,7 +48,7 @@ public class StudyPageFragment extends Fragment implements View.OnClickListener 
         Intent i = new Intent(v.getContext(), GeneralCourseInformation.class);
         switch (v.getId()){
             case R.id.InfKeuzeImageButton:
-                i.putExtra("opleiding", StudyData.VOLTIJD_COMMUNICATIE);
+                i.putExtra("opleiding", StudyData.VOLTIJD_INFORMATICA);
                 v.getContext().startActivity(i);
                 break;
             case R.id.TechInformKeuzeImageButton:
