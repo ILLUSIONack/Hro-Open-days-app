@@ -20,6 +20,10 @@ public class GeneralCourseInformation extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.generalcourseinfo);
+        initialise();
+    }
+
+    private void initialise(){
         nameTitle = findViewById(R.id.nameTitleStudy);
         generalCoursePage = findViewById(R.id.generalCoursePage);
         generalInfo = findViewById(R.id.informaticag);
