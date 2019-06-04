@@ -73,8 +73,8 @@
 
             <ImageButton
                 android:id="@+id/cmdButton"
-                android:layout_width="363dp"
-                android:layout_height="wrap_content"
+                android:layout_width="367dp"
+                android:layout_height="73dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
