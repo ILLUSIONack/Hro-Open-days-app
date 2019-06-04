@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+        <item android:id="@+id/wijnhaven99"
+            android:title="Wijnhaven 99" />
+        <item android:id="@+id/wijnhaven103"
+            android:title="Wijnhaven 103" />
+        <item android:id="@+id/wijnhaven107"
+            android:title="Wijnhaven 107" />
+    </group>
+</menu>
