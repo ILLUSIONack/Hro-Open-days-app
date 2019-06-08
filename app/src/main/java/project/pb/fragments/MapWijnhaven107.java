@@ -38,14 +38,14 @@ public class MapWijnhaven107 extends FragmentActivity {
         androidListView = (ListView) findViewById(R.id.mapslisted);
 
         CustomMapAdapter customAdapter = new CustomMapAdapter(this,
-                mapsData.getTitles(), mapsData.getDrawables());
+                mapsData.getFloors());
 
         androidListView.setAdapter(customAdapter);
 
         androidListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                display(mapsData.getDrawables()[position]);
+                display(mapsData.getFloors()[position].getImage());
             }
         });
 
