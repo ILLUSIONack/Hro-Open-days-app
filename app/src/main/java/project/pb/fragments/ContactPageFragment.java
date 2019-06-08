@@ -21,23 +21,19 @@ import project.pb.R;
 public class ContactPageFragment extends Fragment implements View.OnClickListener {
 
     private SharedPref sharedPref;
-    private EditText your_name;
-    private EditText your_subject;
-    private EditText your_message;
+    private EditText your_name, your_subject, your_message;
     private ImageView callImage;
     private Button email;
-
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         sharedPref = new SharedPref(getContext().getApplicationContext());
-        if(sharedPref.loadNightModeState() == true) {
+        if (sharedPref.loadNightModeState() == true) {
             getActivity().setTheme(R.style.DarkTheme);
         } else {
             getActivity().setTheme(R.style.AppTheme);
         }
-
 
         View view = inflater.inflate(R.layout.contact_page, container, false);
         initialize(view);
@@ -55,14 +51,14 @@ public class ContactPageFragment extends Fragment implements View.OnClickListene
         email.setOnClickListener(this);
     }
 
-    public void phoneCall(){
+    public void phoneCall() {
         Intent callIntent = new Intent(Intent.ACTION_DIAL);
         callIntent.setData(Uri.parse("tel:+3164333431"));
         startActivity(callIntent);
     }
 
     //Asks the users to choose a email service of choice
-    public void chooseEmailService(){
+    public void chooseEmailService() {
         Context context = getContext();
         CharSequence text = "Please select Email Client";
         int duration = Toast.LENGTH_SHORT;
@@ -71,7 +67,7 @@ public class ContactPageFragment extends Fragment implements View.OnClickListene
         toast.show();
     }
 
-    public void sendMessage(){
+    public void sendMessage() {
         String name = your_name.getText().toString();
         String subject = your_subject.getText().toString();
         String message = your_message.getText().toString();
@@ -106,7 +102,7 @@ public class ContactPageFragment extends Fragment implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-        switch(v.getId()){
+        switch (v.getId()) {
             case R.id.phoneCallButtonImage:
                 phoneCall();
                 break;

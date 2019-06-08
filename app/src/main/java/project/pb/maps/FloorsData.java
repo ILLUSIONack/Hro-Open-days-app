@@ -2,7 +2,7 @@ package project.pb.maps;
 
 import project.pb.R;
 
-public enum MapsData {
+public enum FloorsData {
 
     WIJNHAVEN_99(
             new Floor("Floor -2", R.mipmap.wijnhaven_99_min2),
@@ -40,7 +40,7 @@ public enum MapsData {
 
     private Floor[] floors;
 
-    MapsData(Floor... floors) {
+    FloorsData(Floor... floors) {
         this.floors = floors;
     }
 

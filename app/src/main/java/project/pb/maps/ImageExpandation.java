@@ -1,18 +1,23 @@
 package project.pb.maps;
 
-import android.widget.ImageView;
+import android.content.Context;
+import android.content.Intent;
+
+import project.pb.fragments.MapImageDisplay;
 
 public class ImageExpandation {
-    private int imageResId;
-    private ImageView expandedImageView;
 
-    public ImageExpandation(int imageResId,
-                            ImageView expandedImageView) {
-        this.imageResId = imageResId;
-        this.expandedImageView = expandedImageView;
+    private Context context;
+    private int image;
+
+    public ImageExpandation(Context context, int image) {
+        this.context = context;
+        this.image = image;
     }
 
     public void show() {
-        expandedImageView.setImageResource(imageResId);
+        Intent intent = new Intent(context, MapImageDisplay.class);
+        intent.putExtra("drawable", image);
+        context.startActivity(intent);
     }
 }

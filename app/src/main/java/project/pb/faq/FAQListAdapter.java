@@ -1,4 +1,4 @@
-package project.pb;
+package project.pb.faq;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,13 +10,15 @@ import android.widget.TextView;
 import java.util.List;
 import java.util.Map;
 
-public class MyExListAdaptor extends BaseExpandableListAdapter {
+import project.pb.R;
+
+public class FAQListAdapter extends BaseExpandableListAdapter {
 
     private Context context;
     private List<String> Questions;
     private Map<String,List<String>> answers;
 
-    public MyExListAdaptor(Context context, List<String> questions, Map<String, List<String>> answers) {
+    public FAQListAdapter(Context context, List<String> questions, Map<String, List<String>> answers) {
         this.context = context;
         this.Questions = questions;
         this.answers = answers;
