@@ -3,9 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/redhro"
     android:layout_height="match_parent"
-    android:id="@+id/generalCoursePage">
+    android:id="@+id/newopendaypage">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,48 +12,54 @@
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/redhro">
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/studyPicture"
+                android:layout_width="424dp"
+                android:layout_height="284dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.538"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/coder" />
 
             <TextView
                 android:id="@+id/informaticag"
-                android:layout_width="match_parent"
+                android:layout_width="371dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="24dp"
-                android:fontFamily="sans-serif-black"
-                android:paddingHorizontal="8dp"
-                android:paddingVertical="6dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/radius"
+                android:paddingHorizontal="25dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
                 android:scrollbars="vertical"
-                android:text="@string/informatica"
-                android:textAlignment="viewStart"
-                android:textColor="#FFF"
-                android:textSize="14sp"
-                android:textStyle="normal"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Informatie over de studie etc"
+                android:textColor="@android:color/black"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.695"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameTitleStudy" />
+                app:layout_constraintTop_toBottomOf="@+id/nameTitle" />
 
             <TextView
-                android:id="@+id/nameTitleStudy"
-                android:layout_width="429dp"
-                android:layout_height="41dp"
+                android:id="@+id/nameTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="8dp"
-                android:background="#99e5a3ad"
+                android:background="#99CF0245"
                 android:text="TextView"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="30dp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/studyPicture" />
 
         </android.support.constraint.ConstraintLayout>
-    </ScrollView>
 
+
+    </ScrollView>
 </LinearLayout>

@@ -1,8 +1,15 @@
 package project.pb.study;
 
+import project.pb.R;
+
 public enum StudyData implements StudyListener {
 
     VOLTIJD_INFORMATICA() {
+        @Override
+        public int getPic1() {
+            int pic = R.drawable.coder;
+            return pic;
+        }
         @Override
         public String getName() {
             return "Informatica FT";
@@ -23,6 +30,11 @@ public enum StudyData implements StudyListener {
     },
     VOLTIJD_TECHNISE() {
         @Override
+        public int getPic1() {
+            int pic = R.drawable.coder;
+            return pic;
+        }
+        @Override
         public String getName() {
             return "Technical Informatica FT";
         }
@@ -38,6 +50,11 @@ public enum StudyData implements StudyListener {
             };
         }
     }, VOLTIJD_COMMUNICATIE() {
+        @Override
+        public int getPic1() {
+            int pic = R.drawable.communicationpic;
+            return pic;
+        }
         @Override
         public String getName() {
             return "Communication FT";
@@ -60,6 +77,11 @@ public enum StudyData implements StudyListener {
 
     }, VOLTIJD_COMMUNICATIE_MEDIA() {
         @Override
+        public int getPic1() {
+            int pic = R.drawable.communicationpic;
+            return pic;
+        }
+        @Override
         public String getName() {
             return "Communication & Media FT";
         }
@@ -77,6 +99,11 @@ public enum StudyData implements StudyListener {
 
     }, DEELTIJD_INFORMATICA() {
         @Override
+        public int getPic1() {
+            int pic = R.drawable.coder;
+            return pic;
+        }
+        @Override
         public String getName() {
             return "Technical Informatica PT";
         }
@@ -92,6 +119,11 @@ public enum StudyData implements StudyListener {
             };
         }
     }, DEELTIJD_COMMUNICATIE() {
+        @Override
+        public int getPic1() {
+            int pic = R.drawable.communicationpic;
+            return pic;
+        }
         @Override
         public String getName() {
             return "Communication PT";
