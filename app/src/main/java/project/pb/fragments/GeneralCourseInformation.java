@@ -3,6 +3,7 @@ package project.pb.fragments;
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import project.pb.R;
@@ -11,8 +12,9 @@ import project.pb.zoom.MultiTouchListener;
 
 public class GeneralCourseInformation extends Activity {
 
-    private TextView generalInfo;
+    private TextView generalInfo, nameTitle;
     private StudyData key;
+    private ImageView studyPicture;
     private SharedPref sharedPref;
 
     @Override
@@ -29,6 +31,12 @@ public class GeneralCourseInformation extends Activity {
         generalInfo.setMovementMethod(new ScrollingMovementMethod());
         generalInfo.setText(getData());
         generalInfo.setOnTouchListener(new MultiTouchListener());
+
+        nameTitle = findViewById(R.id.nameTitle);
+        studyPicture = findViewById(R.id.studyPicture);
+
+        nameTitle.setText(key.getName());
+        studyPicture.setImageResource(key.getPic1());
     }
 
     private String getData(){

@@ -20,7 +20,7 @@ import project.pb.R;
 public class SettlementFragment extends Fragment implements View.OnClickListener {
 
     private ScrollView scrollSettlement;
-    private Button routeButtonMap, mapButton_99, mapButton_103, mapButton_107;
+    private Button routeButtonMap, mapButton_99, mapButton_103, mapButton_107, studiesButton;
     private SharedPref sharedPref;
 
     @Nullable
@@ -47,10 +47,12 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
         mapButton_99 = view.findViewById(R.id.mapButton99);
         mapButton_103 = view.findViewById(R.id.mapButton103);
         mapButton_107 = view.findViewById(R.id.mapButton107);
+        studiesButton = view.findViewById(R.id.studiesButton);
         routeButtonMap.setOnClickListener(this);
         mapButton_99.setOnClickListener(this);
         mapButton_103.setOnClickListener(this);
         mapButton_107.setOnClickListener(this);
+        studiesButton.setOnClickListener(this);
     }
 
 
@@ -90,6 +92,7 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
+        Intent i = new Intent(v.getContext(), StudyPageFragment.class);
         switch (v.getId()) {
             case R.id.routeButtonMap:
                 popMenuButton(v);
@@ -103,6 +106,12 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
             case R.id.mapButton107:
                 startActivity(new Intent(v.getContext(), MapWijnhaven107.class));
                 break;
+            case R.id.studiesButton:
+                i.putExtra("Studies", StudyPageFragment.class);
+                v.getContext().startActivity(i);
+                break;
+
+
         }
     }
 }

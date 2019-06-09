@@ -1,8 +1,14 @@
 package project.pb.study;
 
+import project.pb.R;
+
 public enum StudyData implements StudyListener {
 
     VOLTIJD_INFORMATICA() {
+        public int getPic1() {
+            int pic = R.drawable.coder;
+            return pic;
+        }
         @Override
         public String getName() {
             return "Informatica";
@@ -20,11 +26,17 @@ public enum StudyData implements StudyListener {
                     "If you are interested in new technological developments, curious, a little self-willed and a go-getter, then the Computer Science program is for you!"
             };
         }
+
     },
     VOLTIJD_TECHNISE() {
         @Override
+        public int getPic1() {
+            int pic = R.drawable.coder;
+            return pic;
+        }
+        @Override
         public String getName() {
-            return "Technise Informatica";
+            return "Technical Informatica";
         }
 
         @Override
@@ -39,8 +51,13 @@ public enum StudyData implements StudyListener {
         }
     }, VOLTIJD_COMMUNICATIE() {
         @Override
+        public int getPic1() {
+            int pic = R.drawable.communicationpic;
+            return pic;
+        }
+        @Override
         public String getName() {
-            return "Technise Informatica";
+            return "Communication";
         }
 
         @Override
@@ -60,8 +77,13 @@ public enum StudyData implements StudyListener {
 
     }, VOLTIJD_COMMUNICATIE_MEDIA() {
         @Override
+        public int getPic1() {
+            int pic = R.drawable.communicationpic;
+            return pic;
+        }
+        @Override
         public String getName() {
-            return "Technise Informatica";
+            return "Communication Media";
         }
 
         @Override
@@ -77,8 +99,13 @@ public enum StudyData implements StudyListener {
 
     }, DEELTIJD_INFORMATICA() {
         @Override
+        public int getPic1() {
+            int pic = R.drawable.coder;
+            return pic;
+        }
+        @Override
         public String getName() {
-            return "Technise Informatica";
+            return "Informatica";
         }
 
         @Override
@@ -93,8 +120,13 @@ public enum StudyData implements StudyListener {
         }
     }, DEELTIJD_COMMUNICATIE() {
         @Override
+        public int getPic1() {
+            int pic = R.drawable.communicationpic;
+            return pic;
+        }
+        @Override
         public String getName() {
-            return "Technise Informatica";
+            return "Communication";
         }
 
         @Override
