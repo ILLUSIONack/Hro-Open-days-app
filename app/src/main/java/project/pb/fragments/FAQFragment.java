@@ -15,8 +15,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import project.pb.MyExListAdaptor;
 import project.pb.R;
+import project.pb.faq.FAQListAdapter;
 
 public class FAQFragment extends Fragment {
 
@@ -75,7 +75,7 @@ public class FAQFragment extends Fragment {
         getActivity().setTitle("FAQ");
         expandableListView = view.findViewById(R.id.eListView);
         fillData();
-        listAdapter = new MyExListAdaptor(getContext(), questions, answers);
+        listAdapter = new FAQListAdapter(getContext(), questions, answers);
         expandableListView.setAdapter(listAdapter);
     }
 }

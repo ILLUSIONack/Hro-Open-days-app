@@ -27,19 +27,21 @@
   <string name="obutton">Open dagen</string>
   <string name="share">Share</string>
   <string name="OV">
-        Step 1: Take metro line D from Rotterdam Central Station to De Akkers or E to Slinge.\n
-        Step 2: Step out at when you arrive at Beurs. And walk 400 meters in the direction of De Kamer van
-    Koophandel.\n
-        Step 3: Walk at the side of the water directed to the south.\n</string>
+        Take metro line D from Rotterdam Central Station to De Akkers or E to Slinge.
+        Then step out at when you arrive at Beurs. Nextly walk 400 meters in the direction of De Kamer van Koophandel.
+        Walk at the side of the water directed to the south of the city.</string>
   <string name="Car">
-        Step 1: Drive from  the south over the Erasmusbrug or from the north via the Coolsingel towards the cube houses.\n
-        Step 2: To do this you need to turn right onto the Posthoornstraat and then the second right onto Wijnhaven.</string>
+        Drive from  the south over the Erasmusbrug or from the north via the Coolsingel towards the cube houses.
+        To do this you need to turn right onto the Posthoornstraat and then the second right onto Wijnhaven.</string>
   <string name="Tunnel">
         Maastunnel (partly) closed:\n
-        From the 3rd of July until the end of September.\n
-        The tunnel is being renovated.\n
-        The result is that until then there will be only one tunnel open for motorized traffic from the south to the north.\n
+        From the 3rd of July until the end of September.
+        The tunnel is being renovated.
+        The result is that until then there will be only one tunnel open for motorized traffic from the south to the north.
         The Maastunnel is closed from the north to the south.</string>
-  <string name="address">ADDRESS: Wijnhaven 107, 3011 WN Rotterdam</string>
+  <string name="address_of_school">ADDRESS: Wijnhaven 107, 3011 WN Rotterdam</string>
   <string name="link">Click for Map</string>
+    <string name="click_on_the_button_to_call">Click on the button to call:</string>
+    <string name="upc_opendays">Upcoming open days:</string>
+    <string name="cmi_info">Het instituut voor Communicatie, Media en Informatietechnologie (CMI) heeft met de opleidingen Communicatie, Informatica, Technische Informatica, Creative Media and Game Technologies en Communication and Multimedia Design maar liefst 3000 studenten die een waardevolle bijdrage leveren aan de onbegrensde wereld van communicatie, media en ICT.\n</string>
 </resources>

@@ -20,7 +20,7 @@ import project.pb.R;
 public class SettlementFragment extends Fragment implements View.OnClickListener {
 
     private ScrollView scrollSettlement;
-    private Button routeButtonMap, mapButton_99, mapButton_103, mapButton_107, studiesButton;
+    private Button routeButtonMap, mapButton;
     private SharedPref sharedPref;
 
     @Nullable
@@ -44,15 +44,10 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
         scrollSettlement = view.findViewById(R.id.scrollSettlement);
         scrollSettlement.setScrollbarFadingEnabled(false);
         routeButtonMap = view.findViewById(R.id.routeButtonMap);
-        mapButton_99 = view.findViewById(R.id.mapButton99);
-        mapButton_103 = view.findViewById(R.id.mapButton103);
-        mapButton_107 = view.findViewById(R.id.mapButton107);
-        studiesButton = view.findViewById(R.id.studiesButton);
+        mapButton = view.findViewById(R.id.mapButton);
         routeButtonMap.setOnClickListener(this);
-        mapButton_99.setOnClickListener(this);
-        mapButton_103.setOnClickListener(this);
-        mapButton_107.setOnClickListener(this);
-        studiesButton.setOnClickListener(this);
+        mapButton.setOnClickListener(this);
+
     }
 
 
@@ -65,7 +60,7 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
         }
     }
 
-    private void popMenuButton(View v){
+    private void popMenuButtonRoute(View v){
         PopupMenu popup = new PopupMenu(getContext(), v);
         MenuInflater inflater = popup.getMenuInflater();
         inflater.inflate(R.menu.equalizer, popup.getMenu());
@@ -90,28 +85,42 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
         });
     }
 
+    private void popMenuButtonFloors(View v){
+        PopupMenu popup = new PopupMenu(getContext(), v);
+        MenuInflater inflater = popup.getMenuInflater();
+        inflater.inflate(R.menu.floormaps, popup.getMenu());
+        popup.show();
+        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.wijnhaven99:
+                        startActivity(new Intent(getContext(), MapWijnhaven99.class));
+                        break;
+                    case R.id.wijnhaven103:
+                        startActivity(new Intent(getContext(), MapWijnhaven103.class));
+                        break;
+                    case R.id.wijnhaven107:
+                        startActivity(new Intent(getContext(), MapWijnhaven107.class));
+                        break;
+                }
+                System.out.println("Item Id: " + item.getTitle());
+                return true;
+            }
+        });
+    }
+
+
+
     @Override
     public void onClick(View v) {
-        Intent i = new Intent(v.getContext(), StudyPageFragment.class);
         switch (v.getId()) {
             case R.id.routeButtonMap:
-                popMenuButton(v);
+                popMenuButtonRoute(v);
                 break;
-            case R.id.mapButton99:
-                startActivity(new Intent(v.getContext(), MapWijnhaven99.class));
+            case R.id.mapButton:
+                popMenuButtonFloors(v);
                 break;
-            case R.id.mapButton103:
-                startActivity(new Intent(v.getContext(), MapWijnhaven103.class));
-                break;
-            case R.id.mapButton107:
-                startActivity(new Intent(v.getContext(), MapWijnhaven107.class));
-                break;
-            case R.id.studiesButton:
-                i.putExtra("Studies", StudyPageFragment.class);
-                v.getContext().startActivity(i);
-                break;
-
-
         }
     }
 }

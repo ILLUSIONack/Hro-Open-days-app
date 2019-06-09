@@ -13,23 +13,21 @@ import project.pb.R;
 public class CustomMapAdapter extends BaseAdapter {
 
     private Context context;
-    private String[] titles;
-    private int[] drawables;
+    private Floor[] floors;
 
-    public CustomMapAdapter(Context context, String[] titles, int[] drawables) {
+    public CustomMapAdapter(Context context, Floor[] floors) {
         this.context = context;
-        this.titles = titles;
-        this.drawables = drawables;
+        this.floors = floors;
     }
 
     @Override
     public int getCount() {
-        return drawables.length;
+        return floors.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return drawables[position];
+        return floors[position];
     }
 
     @Override
@@ -42,8 +40,8 @@ public class CustomMapAdapter extends BaseAdapter {
         convertView = LayoutInflater.from(context).inflate(R.layout.mappedlist, null);
         TextView textView = (TextView) convertView.findViewById(R.id.theimagetitle);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.theimage);
-        textView.setText("Floor: " + titles[position]);
-        imageView.setImageResource(drawables[position]);
+        textView.setText(floors[position].getTitle());
+        imageView.setImageResource(floors[position].getImage());
         return convertView;
     }
 }
