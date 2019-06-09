@@ -15,7 +15,6 @@ public class GeneralCourseInformation extends Activity {
     private TextView generalInfo,nameTitle;
     private StudyData key;
     private LinearLayout generalCoursePage;
-    private SharedPref sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

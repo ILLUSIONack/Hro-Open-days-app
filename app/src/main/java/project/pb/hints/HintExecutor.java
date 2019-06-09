@@ -21,12 +21,10 @@ public class HintExecutor {
             @Override
             public void run() {
                 if (!isRunning()) {
-                    System.out.println("Quit the task!");
                     cancel();
                 }
-                System.out.println("Current Tick: " + tick);
                 switch (tick++) {
-                    case 5:
+                    case 1800:
                         tick = 0;
                         new NotificationCreation(context, "Did you know?",
                                 getRandomHint().getHint()).display();

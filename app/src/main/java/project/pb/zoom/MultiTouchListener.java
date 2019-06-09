@@ -42,6 +42,7 @@ public class MultiTouchListener implements OnTouchListener {
     }
 
     private static void adjustTranslation(View view, float deltaX, float deltaY) {
+        System.out.println(view.getTranslationX() + " : " + view.getTranslationY());
         if (view.getScaleX() > 1.0f) {
             float[] deltaVector = {deltaX, deltaY};
             view.getMatrix().mapVectors(deltaVector);

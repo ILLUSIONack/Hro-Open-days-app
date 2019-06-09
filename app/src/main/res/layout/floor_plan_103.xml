@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textAlignment="center"
-        android:text="Click anywhere to exit"
+        android:text="Click back button to exit"
         android:textSize="26dp"
         android:visibility="invisible"
         android:background="?attr/tintcolor"
