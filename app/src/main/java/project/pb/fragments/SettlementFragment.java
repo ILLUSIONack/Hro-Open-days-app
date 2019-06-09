@@ -70,13 +70,13 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.wijnhaven99:
-                        openMaps("geo:0,0?q=Wijnhaven 99, 3011 WN Rotterdam");
+                        openMaps("google.navigation:q=Wijnhaven 99, 3011 WN Rotterdam");
                         break;
                     case R.id.wijnhaven103:
-                        openMaps("geo:0,0?q=Wijnhaven 103, 3011 WN Rotterdam");
+                        openMaps("google.navigation:q=Wijnhaven 103, 3011 WN Rotterdam");
                         break;
                     case R.id.wijnhaven107:
-                        openMaps("geo:0,0?q=Wijnhaven 107, 3011 WN Rotterdam");
+                        openMaps("google.navigation:q=Wijnhaven 107, 3011 WN Rotterdam");
                         break;
                 }
                 System.out.println("Item Id: " + item.getTitle());
