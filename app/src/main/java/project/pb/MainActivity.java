@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import project.pb.fragments.ContactPageFragment;
 import project.pb.fragments.FAQFragment;
 import project.pb.fragments.HomeScreenFragment;
+import project.pb.fragments.QuizFragment;
 import project.pb.fragments.SettingsFragment;
 import project.pb.fragments.SettlementFragment;
 import project.pb.fragments.SharedPref;
@@ -96,6 +97,10 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_settings:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new SettingsFragment()).commit();
+                break;
+            case R.id.nav_quiz:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new QuizFragment()).commit();
                 break;
         }
 
