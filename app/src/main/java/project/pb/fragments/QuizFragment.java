@@ -15,7 +15,7 @@ import project.pb.R;
 public class QuizFragment extends Fragment {
 
     private SharedPref sharedPref;
-    private QuestionsAndAnswers mQuestionLibrary = new QuestionsAndAnswers();
+    private QuestionsAndAnswers QuestionAndAnswersLibrary = new QuestionsAndAnswers();
 
     private TextView ScoreCounter;
     private TextView ScoreText;
@@ -117,13 +117,13 @@ public class QuizFragment extends Fragment {
 
 
     private void updateQuestion(){
-        QuestionView.setText(mQuestionLibrary.getQuestionFromList(QuestionNumber));
-        Choice1Button.setText(mQuestionLibrary.getChoiceOne(QuestionNumber));
-        Choice2Button.setText(mQuestionLibrary.getChoiceTwo(QuestionNumber));
-        Choice3Button.setText(mQuestionLibrary.getChoiceThree(QuestionNumber));
-        Choice4Button.setText(mQuestionLibrary.getChoiceFour(QuestionNumber));
+        QuestionView.setText(QuestionAndAnswersLibrary.getQuestionFromList(QuestionNumber));
+        Choice1Button.setText(QuestionAndAnswersLibrary.getChoiceOne(QuestionNumber));
+        Choice2Button.setText(QuestionAndAnswersLibrary.getChoiceTwo(QuestionNumber));
+        Choice3Button.setText(QuestionAndAnswersLibrary.getChoiceThree(QuestionNumber));
+        Choice4Button.setText(QuestionAndAnswersLibrary.getChoiceFour(QuestionNumber));
 
-        Answer = mQuestionLibrary.getCorrectAnswer(QuestionNumber);
+        Answer = QuestionAndAnswersLibrary.getCorrectAnswer(QuestionNumber);
         if (QuestionNumber<10) {QuestionNumber++;}
 
     }
