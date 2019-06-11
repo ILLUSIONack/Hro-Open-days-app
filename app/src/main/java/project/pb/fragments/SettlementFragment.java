@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
@@ -20,7 +21,7 @@ import project.pb.R;
 public class SettlementFragment extends Fragment implements View.OnClickListener {
 
     private ScrollView scrollSettlement;
-    private Button routeButtonMap, mapButton;
+    private Button routeButtonMap, mapButton, studyButton;
     private SharedPref sharedPref;
 
     @Nullable
@@ -41,10 +42,13 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
 
     public void initialise(View view) {
         getActivity().setTitle("About HR");
+
         scrollSettlement = view.findViewById(R.id.scrollSettlement);
         scrollSettlement.setScrollbarFadingEnabled(false);
         routeButtonMap = view.findViewById(R.id.routeButtonMap);
         mapButton = view.findViewById(R.id.mapButton);
+        studyButton = view.findViewById(R.id.studyButton);
+        studyButton.setOnClickListener(this);
         routeButtonMap.setOnClickListener(this);
         mapButton.setOnClickListener(this);
 
@@ -79,7 +83,6 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
                         openMaps("google.navigation:q=Wijnhaven 107, 3011 WN Rotterdam");
                         break;
                 }
-                System.out.println("Item Id: " + item.getTitle());
                 return true;
             }
         });
@@ -120,6 +123,10 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
                 break;
             case R.id.mapButton:
                 popMenuButtonFloors(v);
+                break;
+            case R.id.studyButton:
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new StudyPageFragment()).commit();
                 break;
         }
     }
