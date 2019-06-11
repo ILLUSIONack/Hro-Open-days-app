@@ -28,7 +28,7 @@ public class QuestionsAndAnswers {
             {"Qwick Mafs", "4", "f(x)=(4x - 3x + 12x) * (2x)", "10?"},
             {"Undisclosed date in 2018", "May 24th, 2014", "April 4th, 2017", "No clue when."},
             {"When the world went to s**t", "Halloween 2016", "January 20th, 2017", "When he became president"},
-            {"9", "8", "Eight", "A phone manufactured by OnePlus" }
+            {"9", "8", "Eight", "A phone manufactured by OnePlus"},
     };
 
     private String CorrectAnswers [] = {"Java", "White in Hex", "Android Studio", "Operating Systems", "Red", "A program for writing code", "138", "4", "May 24th, 2014", "January 20th, 2017", "A phone manufactured by OnePlus"};
