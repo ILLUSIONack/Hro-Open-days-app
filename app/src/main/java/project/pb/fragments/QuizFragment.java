@@ -18,6 +18,7 @@ public class QuizFragment extends Fragment {
     private QuestionsAndAnswers mQuestionLibrary = new QuestionsAndAnswers();
 
     private TextView ScoreCounter;
+    private TextView ScoreText;
     private TextView QuestionView;
     private Button Choice1Button;
     private Button Choice2Button;
@@ -33,7 +34,7 @@ public class QuizFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         sharedPref = new SharedPref(getContext().getApplicationContext());
-        if(sharedPref.loadNightModeState() == true) {
+        if(sharedPref.loadNightModeState()) {
             getActivity().setTheme(R.style.DarkTheme);
         } else {
             getActivity().setTheme(R.style.AppTheme);
@@ -42,11 +43,13 @@ public class QuizFragment extends Fragment {
 
 
         ScoreCounter = view.findViewById(R.id.score);
+        ScoreText = view.findViewById(R.id.score_text);
         QuestionView = view.findViewById(R.id.question);
         Choice1Button = view.findViewById(R.id.choice1);
         Choice2Button = view.findViewById(R.id.choice2);
         Choice3Button = view.findViewById(R.id.choice3);
         Choice4Button = view.findViewById(R.id.choice4);
+
 
         updateQuestion();
 
@@ -57,7 +60,6 @@ public class QuizFragment extends Fragment {
                 if (Choice1Button.getText() == Answer) {
                     Score = Score + 1;
                     updateScore(Score);
-
                 }
                 updateQuestion();
             }
@@ -94,19 +96,22 @@ public class QuizFragment extends Fragment {
                 if (Choice4Button.getText() == Answer) {
                     Score = Score + 1;
                     updateScore(Score);
+                if (Choice4Button.getText() == "A phone manufactured by OnePlus")
+                {
+                    ScoreCounter.setText(null);
+                    ScoreText.setText("Your final score is: " + Score);
+                    Choice4Button.setEnabled(false);
+                }
                 }
                 updateQuestion();
+
             }
+
         });
-
-
         return view;
-
-
     }
-
     private void updateScore(int score) {
-        ScoreCounter.setText("" + Score);
+        ScoreCounter.setText("" + score);
     }
 
 
@@ -119,7 +124,7 @@ public class QuizFragment extends Fragment {
         Choice4Button.setText(mQuestionLibrary.getChoiceFour(QuestionNumber));
 
         Answer = mQuestionLibrary.getCorrectAnswer(QuestionNumber);
-        QuestionNumber++;
-    }
+        if (QuestionNumber<10) {QuestionNumber++;}
 
+    }
 }

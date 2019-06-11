@@ -2,7 +2,7 @@ package project.pb.fragments;
 
 public class QuestionsAndAnswers {
 
-    private String QuesionList [] = {
+    private String QuestionList[] = {
             "Which language can you use to write code in Android Studio?",
             "What is #FFFF?",
             "What program do we use to make Android Apps?",
@@ -17,7 +17,7 @@ public class QuestionsAndAnswers {
 
     };
 
-    private String ChoicesString [] [] = {
+    public String ChoicesString [] [] = {
             {"Java", "Python", "Droid++", "C##"},
             {"RNG Code", "White in Hex", "Morse Code", "Binary Code"},
             {"PyCharm", "Microsoft Word", "Android Studio", "Sony Vegas"},
@@ -31,36 +31,45 @@ public class QuestionsAndAnswers {
             {"9", "8", "Eight", "A phone manufactured by OnePlus" }
     };
 
-    private String CorrectAnswers [] = {"Java", "White in Hex", "Android Studio", "Operating Systems", "Red", "A program for writing code", "138", "3", "May 24th, 2014", "January 20th, 2017", "A phone manufactured by OnePlus"};
+    private String CorrectAnswers [] = {"Java", "White in Hex", "Android Studio", "Operating Systems", "Red", "A program for writing code", "138", "4", "May 24th, 2014", "January 20th, 2017", "A phone manufactured by OnePlus"};
+
+
+
 
     public String getQuestionFromList(int a) {
-        String question = QuesionList[a];
+        String question;
+        question = QuestionList[a];
         return question;
     }
 
     public String getChoiceOne(int a) {
-        String choice1 = ChoicesString[a][0];
+        String choice1;
+        choice1 = ChoicesString[a][0];
         return choice1;
     }
 
     public String getChoiceTwo(int a) {
-        String choice2 = ChoicesString[a][1];
+        String choice2;
+        choice2 = ChoicesString[a][1];
         return choice2;
     }
 
     public String getChoiceThree(int a) {
-        String choice3 = ChoicesString[a][2];
+        String choice3;
+        choice3 = ChoicesString[a][2];
         return choice3;
     }
 
     public String getChoiceFour(int a) {
-        String choice4 = ChoicesString[a][3];
+        String choice4;
+        choice4 = ChoicesString[a][3];
         return choice4;
     }
 
 
     public String getCorrectAnswer(int a) {
-        String answer = CorrectAnswers[a];
+        String answer;
+        answer = CorrectAnswers[a];
         return answer;
     }
 
