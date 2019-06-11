@@ -31,15 +31,13 @@
         android:layout_width="303dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="68dp"
         android:layout_marginEnd="8dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/name"
         android:inputType="textPersonName"
         android:textColor="?attr/textcolor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -48,9 +46,8 @@
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="8dp"
-        android:hint="Subject"
         android:textColor="?attr/textcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
@@ -66,7 +63,6 @@
         android:layout_marginEnd="8dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/question"
         android:inputType="textPersonName"
         android:lineSpacingExtra="8sp"
         android:textAlignment="textStart"
@@ -76,7 +72,7 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textSubject"
-        app:layout_constraintVertical_bias="0.169" />
+        app:layout_constraintVertical_bias="0.201" />
 
     <ImageView
         android:id="@+id/phoneCallButtonImage"
@@ -142,5 +138,52 @@
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="297dp"
+        android:layout_marginBottom="25dp"
+        android:text="Name"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintBottom_toTopOf="@+id/textName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="297dp"
+        android:layout_marginBottom="16dp"
+        android:text="Subject"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintBottom_toTopOf="@+id/textSubject"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textName" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="298dp"
+        android:layout_marginBottom="12dp"
+        android:text="Question"
+        android:textColor="?attr/textcolor"
+        app:layout_constraintBottom_toTopOf="@+id/textMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSubject"
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>
