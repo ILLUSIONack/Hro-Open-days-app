@@ -1,5 +1,6 @@
 package project.pb.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -96,12 +97,6 @@ public class QuizFragment extends Fragment {
                 if (Choice4Button.getText() == Answer) {
                     Score = Score + 1;
                     updateScore(Score);
-                if (Choice4Button.getText() == "A phone manufactured by OnePlus")
-                {
-                    ScoreCounter.setText(null);
-                    ScoreText.setText("Your final score is: " + Score);
-                    Choice4Button.setEnabled(false);
-                }
                 }
                 updateQuestion();
 
@@ -115,16 +110,22 @@ public class QuizFragment extends Fragment {
     }
 
 
-
     private void updateQuestion(){
+
+
+        if (QuestionNumber == 11) {
+            Intent resultIntent = new Intent(getContext(), QuizFinalResult.class);
+            resultIntent.putExtra("score", Score);
+            startActivity(resultIntent);
+            return;
+        }
         QuestionView.setText(QuestionAndAnswersLibrary.getQuestionFromList(QuestionNumber));
         Choice1Button.setText(QuestionAndAnswersLibrary.getChoiceOne(QuestionNumber));
         Choice2Button.setText(QuestionAndAnswersLibrary.getChoiceTwo(QuestionNumber));
         Choice3Button.setText(QuestionAndAnswersLibrary.getChoiceThree(QuestionNumber));
         Choice4Button.setText(QuestionAndAnswersLibrary.getChoiceFour(QuestionNumber));
-
         Answer = QuestionAndAnswersLibrary.getCorrectAnswer(QuestionNumber);
-        if (QuestionNumber<10) {QuestionNumber++;}
+        QuestionNumber++;
 
     }
 }

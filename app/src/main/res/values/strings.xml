@@ -43,5 +43,7 @@
     <string name="link">Click for Map</string>
     <string name="click_on_the_button_to_call">Click on the button to call:</string>
     <string name="upc_opendays">Upcoming open days:</string>
+    <string name="notyourstudy">Judging from your test results, we can not recommend an ICT study at our school.</string>
+    <string name="youbelonghere">Based on your test results we can say that you have great knowledge of ICT and have a place in our school!</string>
     <string name="cmi_info">Het instituut voor Communicatie, Media en Informatietechnologie (CMI) heeft met de opleidingen Communicatie, Informatica, Technische Informatica, Creative Media and Game Technologies en Communication and Multimedia Design maar liefst 3000 studenten die een waardevolle bijdrage leveren aan de onbegrensde wereld van communicatie, media en ICT.\n</string>
 </resources>
