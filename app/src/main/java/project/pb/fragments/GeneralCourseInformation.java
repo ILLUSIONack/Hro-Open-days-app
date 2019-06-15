@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import project.pb.R;
 import project.pb.study.StudyData;
+import project.pb.zoom.MultiTouchListener;
 
 public class GeneralCourseInformation extends Activity {
 
@@ -26,6 +27,7 @@ public class GeneralCourseInformation extends Activity {
 
 
     private void initialise(){
+        generalCoursePage = findViewById(R.id.newopendaypage);
         generalInfo = findViewById(R.id.informaticag);
         generalInfo.setScrollbarFadingEnabled(false);
         generalInfo.setMovementMethod(new ScrollingMovementMethod());
@@ -33,12 +35,14 @@ public class GeneralCourseInformation extends Activity {
         generalInfo.setScrollbarFadingEnabled(false);
         generalInfo.setMovementMethod(new ScrollingMovementMethod());
 
+
         nameTitle = findViewById(R.id.nameTitle);
         studyPicture = findViewById(R.id.studyPicture);
 
         nameTitle.setText(key.getName());
         studyPicture.setImageResource(key.getPic1());
 
+        generalInfo.setOnTouchListener(new MultiTouchListener(generalCoursePage));
     }
 
     private String getData(){
