@@ -14,20 +14,36 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".fragments.QuizFinalResult"/>
-        <activity android:name=".fragments.MapImageDisplay" />
-        <activity android:name=".fragments.GeneralCourseInformation" />
-        <activity android:name=".fragments.OpenDayInformation" />
-        <activity android:name=".fragments.MapWijnhaven99" />
-        <activity android:name=".fragments.MapWijnhaven103" />
-        <activity android:name=".fragments.MapWijnhaven107" />
+        <activity
+            android:name=".fragments.QuizFinalResult"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragments.MapImageDisplay"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragments.GeneralCourseInformation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragments.OpenDayInformation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragments.MapWijnhaven99"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragments.MapWijnhaven103"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragments.MapWijnhaven107"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

@@ -11,13 +11,19 @@ import project.pb.R;
 
 public class QuizFinalResult extends Activity {
 
-
+    private SharedPref sharedPref;
     private TextView finalScoreCount;
     private TextView conclusion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sharedPref = new SharedPref(getApplicationContext());
+        if(sharedPref.loadNightModeState() == true) {
+            setTheme(R.style.DarkTheme);
+        } else {
+            setTheme(R.style.AppTheme);
+        }
         setContentView(R.layout.activity_quiz_resultss);
 
         int finalScore = getIntent().getIntExtra("score", 0);
