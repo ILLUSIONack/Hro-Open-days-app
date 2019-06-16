@@ -57,7 +57,7 @@ public class ContactPageFragment extends Fragment implements View.OnClickListene
 
     public void phoneCall() {
         Intent callIntent = new Intent(Intent.ACTION_DIAL);
-        callIntent.setData(Uri.parse("tel:+3164333431"));
+        callIntent.setData(Uri.parse("tel:0107944000"));
         startActivity(callIntent);
     }
 
