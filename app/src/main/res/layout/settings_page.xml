@@ -8,8 +8,8 @@
 
     <Switch
         android:id="@+id/switch1"
-        android:layout_width="365dp"
-        android:layout_height="65dp"
+        android:layout_width="314dp"
+        android:layout_height="57dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
@@ -24,8 +24,8 @@
 
     <Switch
         android:id="@+id/switch3"
-        android:layout_width="359dp"
-        android:layout_height="56dp"
+        android:layout_width="311dp"
+        android:layout_height="54dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
@@ -40,11 +40,11 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="366dp"
-        android:layout_height="62dp"
+        android:layout_width="311dp"
+        android:layout_height="122dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:paddingHorizontal="2dp"
+        android:paddingHorizontal="4dp"
         android:text="When turned on, you will be receiving random use full tips about the application itself. These will occur every 20-30 minutes."
         android:textColor="?attr/textcolor"
         android:textSize="18sp"
@@ -54,11 +54,11 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="361dp"
-        android:layout_height="25dp"
+        android:layout_width="311dp"
+        android:layout_height="26dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:paddingHorizontal="2dp"
+        android:paddingHorizontal="4dp"
         android:text="Click to swap themes between dark and light."
         android:textColor="?attr/textcolor"
         android:textSize="18sp"
