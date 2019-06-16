@@ -30,11 +30,18 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
     private ImageButton shareButton;
     private OpenDagData key;
     private ImageView studyPicture;
+    private SharedPref sharedPref;
     private LinearLayout newopendaypage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sharedPref = new SharedPref(getApplicationContext());
+        if(sharedPref.loadNightModeState() == true) {
+            setTheme(R.style.DarkTheme);
+        } else {
+            setTheme(R.style.AppTheme);
+        }
         setContentView(R.layout.activity_inf1);
         initialize();
     }

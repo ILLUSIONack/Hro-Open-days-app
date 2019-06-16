@@ -17,10 +17,17 @@ public class GeneralCourseInformation extends Activity {
     private StudyData key;
     private ImageView studyPicture;
     private LinearLayout generalCoursePage;
+    private SharedPref sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sharedPref = new SharedPref(getApplicationContext());
+        if(sharedPref.loadNightModeState() == true) {
+            setTheme(R.style.DarkTheme);
+        } else {
+            setTheme(R.style.AppTheme);
+        }
         setContentView(R.layout.generalcourseinfo);
         initialise();
     }
