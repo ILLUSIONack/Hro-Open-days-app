@@ -171,12 +171,11 @@
                 android:width="200dp"
                 android:background="@drawable/radiumabouthrpage"
                 android:text="Show on map"
+                android:layout_gravity="fill"
                 android:textColor="#FFF"
-                android:translationX="100dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:translationX="100dp" />
 
             <Button
                 android:id="@+id/mapButton"
@@ -187,11 +186,10 @@
                 android:background="@drawable/radiumabouthrpage"
                 android:text="Floor Plans"
                 android:textColor="#FFF"
+                android:layout_gravity="fill_horizontal"
                 android:translationX="100dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp" />
             <Button
                 android:id="@+id/studyButton"
                 android:layout_width="200dp"
@@ -201,11 +199,11 @@
                 android:background="@drawable/radiumabouthrpage"
                 android:text="Studies"
                 android:textColor="#FFF"
+                android:layout_gravity="fill_horizontal"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
                 android:translationX="100dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                 />
 
         </LinearLayout>
     </ScrollView>
