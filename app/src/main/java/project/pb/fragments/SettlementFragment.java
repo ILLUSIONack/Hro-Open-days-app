@@ -114,7 +114,6 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
     }
 
 
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -125,6 +124,9 @@ public class SettlementFragment extends Fragment implements View.OnClickListener
                 popMenuButtonFloors(v);
                 break;
             case R.id.studyButton:
+                NavigationView navigationView = (NavigationView) getActivity().findViewById(R.id.nav_view);
+                navigationView.getMenu().getItem(1).setChecked(true);
+
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new StudyPageFragment()).commit();
                 break;
