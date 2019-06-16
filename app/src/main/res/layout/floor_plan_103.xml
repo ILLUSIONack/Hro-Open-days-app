@@ -3,7 +3,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#cf0245">
+    android:background="?attr/backgroundcolor">
 
     <ListView
         android:id="@+id/mapslisted"
@@ -19,7 +19,7 @@
         android:text="Click back button to exit"
         android:textSize="26dp"
         android:visibility="invisible"
-        android:background="?attr/tintcolor"
+        android:background="@color/redhro"
         android:alpha="0.8"/>
 
     <ImageView

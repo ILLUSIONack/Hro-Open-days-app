@@ -12,12 +12,21 @@ import project.pb.maps.ImageExpandation;
 
 public class MapWijnhaven103 extends AppCompatActivity {
 
+    private SharedPref sharedPref;
     private ListView androidListView;
     private FloorsData mapsData = FloorsData.WIJNHAVEN_103;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sharedPref = new SharedPref(getApplicationContext());
+        if(sharedPref.loadNightModeState() == true) {
+            setTheme(R.style.DarkTheme);
+        } else {
+            setTheme(R.style.AppTheme);
+        }
+
+
         setContentView(R.layout.floor_plan_103);
 
         androidListView = (ListView) findViewById(R.id.mapslisted);
