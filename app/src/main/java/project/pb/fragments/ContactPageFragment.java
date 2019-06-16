@@ -16,12 +16,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import project.pb.R;
 
 public class ContactPageFragment extends Fragment implements View.OnClickListener {
 
     private SharedPref sharedPref;
-    private EditText your_name, your_subject, your_message;
+    private EditText your_name, your_subject, your_message,your_email;
     private ImageView callImage;
     private Button email;
 
@@ -44,6 +47,7 @@ public class ContactPageFragment extends Fragment implements View.OnClickListene
         getActivity().setTitle("Contact");
         your_name = view.findViewById(R.id.textName);
         your_subject = view.findViewById(R.id.textSubject);
+        your_email = view.findViewById(R.id.email);
         your_message = view.findViewById(R.id.textMessage);
         callImage = view.findViewById(R.id.phoneCallButtonImage);
         email = view.findViewById(R.id.buttonSend);
@@ -53,7 +57,7 @@ public class ContactPageFragment extends Fragment implements View.OnClickListene
 
     public void phoneCall() {
         Intent callIntent = new Intent(Intent.ACTION_DIAL);
-        callIntent.setData(Uri.parse("tel:+3164333431"));
+        callIntent.setData(Uri.parse("tel:0107944000"));
         startActivity(callIntent);
     }
 
@@ -70,6 +74,7 @@ public class ContactPageFragment extends Fragment implements View.OnClickListene
     public void sendMessage() {
         String name = your_name.getText().toString();
         String subject = your_subject.getText().toString();
+        String email = your_email.getText().toString();
         String message = your_message.getText().toString();
         if (TextUtils.isEmpty(name)) {
             your_name.setError("Enter Your Name");
@@ -79,6 +84,12 @@ public class ContactPageFragment extends Fragment implements View.OnClickListene
         if (TextUtils.isEmpty(subject)) {
             your_subject.setError("Enter Your Subject");
             your_subject.requestFocus();
+            return;
+        }
+        Boolean onError = false;
+        if (!isValidEmail(email)) {
+            onError = true;
+            your_email.setError("Invalid Email");
             return;
         }
         if (TextUtils.isEmpty(message)) {
@@ -92,12 +103,21 @@ public class ContactPageFragment extends Fragment implements View.OnClickListene
         sendEmail.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"usman-ack@hotmail.com"});
         sendEmail.putExtra(android.content.Intent.EXTRA_SUBJECT, subject);
         sendEmail.putExtra(android.content.Intent.EXTRA_TEXT,
-                "name:" + name + '\n' + "Message:" + '\n' + message);
+                "name:" + name + '\n'+ "Email:"+'\n'+ email + '\n'+ "Message:" + '\n' + message);
 
         /* Send it off to the Activity-Chooser */
         startActivity(Intent.createChooser(sendEmail, "Send mail..."));
 
         chooseEmailService();
+    }
+
+    private boolean isValidEmail(String email) {
+        String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+
+        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
     }
 
     @Override

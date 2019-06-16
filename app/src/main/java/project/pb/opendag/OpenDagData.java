@@ -52,7 +52,8 @@ public enum OpenDagData implements OpenDagListener {
                     "- Tour around the building",
                     "- Course on Informatica",
                     "- Questions about the course",
-                    "- Any registrations for the interested"
+                    "- Any registrations for the interested",
+                    "- Takes place at Wijnhaven 107, Rotterdam"
             };
         }
     },
@@ -103,7 +104,8 @@ public enum OpenDagData implements OpenDagListener {
                     "",
                     "- Tour around the building",
                     "- Course on Technical Informatica",
-                    "- Endgame"
+                    "- Endgame",
+                    "- Takes place at Wijnhaven 107, Rotterdam"
             };
         }
     },
@@ -154,7 +156,8 @@ public enum OpenDagData implements OpenDagListener {
                     "",
                     "- Tour around the building",
                     "- Course on Communication And Media",
-                    "- Endgame"
+                    "- Endgame",
+                    "- Takes place at Wijnhaven 107, Rotterdam"
             };
         }
     },
@@ -204,7 +207,8 @@ public enum OpenDagData implements OpenDagListener {
                     "",
                     "- Tour around the building",
                     "- Course on Communication",
-                    "- Endgame"
+                    "- Endgame",
+                    "- Takes place at Wijnhaven 107, Rotterdam"
             };
         }
     },
@@ -255,7 +259,8 @@ public enum OpenDagData implements OpenDagListener {
                     "",
                     "- Tour around the building",
                     "- Course on Informatica",
-                    "- Endgame"
+                    "- Endgame",
+                    "- Takes place at Wijnhaven 107, Rotterdam"
             };
         }
     },
@@ -306,7 +311,8 @@ public enum OpenDagData implements OpenDagListener {
                     "",
                     "- Tour around the building",
                     "- Course on Communication",
-                    "- Endgame"
+                    "- Endgame",
+                    "- Takes place at Wijnhaven 107, Rotterdam"
             };
         }
     }
