@@ -103,7 +103,7 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
         // Native email client doesn't currently support HTML, but it doesn't hurt to try in case they fix it
         String shareTwitter = "Open Day invite: \n " + key.getDescription() ;
         String shareBody = "Your friend has invited you to join this open day: " + key.getName() +" Visit: "+ key.getLink() + '\n';
-        String shareWeb =
+        String shareWeb = key.getWebsite();
         shareBody += '\n';
         for(int i = 0; i < key.getInformation().length; i++) {
             shareBody += key.getInformation()[i] + '\n';
