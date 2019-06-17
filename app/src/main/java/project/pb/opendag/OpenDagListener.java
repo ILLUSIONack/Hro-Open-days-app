@@ -15,4 +15,6 @@ public interface OpenDagListener {
     int[] getDate();
 
     String[] getInformation();
+
+    String getWebsite();
 }

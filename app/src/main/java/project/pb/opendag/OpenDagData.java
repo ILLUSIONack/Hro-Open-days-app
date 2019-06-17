@@ -56,6 +56,11 @@ public enum OpenDagData implements OpenDagListener {
                     "- Takes place at Wijnhaven 107, Rotterdam"
             };
         }
+
+        @Override
+        public String getWebsite() {
+            return "https://illusionack.github.io/websiteOpenday/informaticaVT.html";
+        }
     },
     TECHNISCHE_INFORMATICA_VT() {
         @Override
@@ -108,6 +113,12 @@ public enum OpenDagData implements OpenDagListener {
                     "- Takes place at Wijnhaven 107, Rotterdam"
             };
         }
+
+        @Override
+        public String getWebsite() {
+            return "https://illusionack.github.io/websiteOpenday/TI.html";
+        }
+
     },
     COMMUNICATIE_EN_MEDIA_VT() {
         @Override
@@ -160,6 +171,10 @@ public enum OpenDagData implements OpenDagListener {
                     "- Takes place at Wijnhaven 107, Rotterdam"
             };
         }
+        @Override
+        public String getWebsite() {
+            return "https://illusionack.github.io/websiteOpenday/CMD.html";
+        }
     },
     COMMUNICATIE_VT() {
         @Override
@@ -210,6 +225,10 @@ public enum OpenDagData implements OpenDagListener {
                     "- Endgame",
                     "- Takes place at Wijnhaven 107, Rotterdam"
             };
+        }
+        @Override
+        public String getWebsite() {
+            return "https://illusionack.github.io/websiteOpenday/communVT.html";
         }
     },
     INFORMATICA_DT() {
@@ -263,6 +282,10 @@ public enum OpenDagData implements OpenDagListener {
                     "- Takes place at Wijnhaven 107, Rotterdam"
             };
         }
+        @Override
+        public String getWebsite() {
+            return "https://illusionack.github.io/websiteOpenday/INFDT.html";
+        }
     },
     COMMUNICATIE_DT() {
         @Override
@@ -314,6 +337,11 @@ public enum OpenDagData implements OpenDagListener {
                     "- Endgame",
                     "- Takes place at Wijnhaven 107, Rotterdam"
             };
+        }
+
+        @Override
+        public String getWebsite() {
+            return "https://illusionack.github.io/websiteOpenday/commDT.html";
         }
     }
 }

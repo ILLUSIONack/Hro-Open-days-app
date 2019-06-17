@@ -103,6 +103,7 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
         // Native email client doesn't currently support HTML, but it doesn't hurt to try in case they fix it
         String shareTwitter = "Open Day invite: \n " + key.getDescription() ;
         String shareBody = "Your friend has invited you to join this open day: " + key.getName() +" Visit: "+ key.getLink() + '\n';
+        String shareWeb =
         shareBody += '\n';
         for(int i = 0; i < key.getInformation().length; i++) {
             shareBody += key.getInformation()[i] + '\n';
@@ -135,10 +136,7 @@ public class OpenDayInformation extends AppCompatActivity implements View.OnClic
                 if(packageName.contains("twitter")) {
                     intent.putExtra(Intent.EXTRA_TEXT, shareTwitter);
                 } else if(packageName.contains("facebook")) {
-                    // Warning: Facebook IGNORES our text. They say "These fields are intended for users to express themselves. Pre-filling these fields erodes the authenticity of the user voice."
-                    // One workaround is to use the Facebook SDK to post, but that doesn't allow the user to choose how they want to share. We can also make a custom landing page, and the link
-                    // will show the <meta content ="..."> text from that page with our link in Facebook.
-                    intent.putExtra(Intent.EXTRA_TEXT, shareBody);
+                    intent.putExtra(Intent.EXTRA_SUBJECT, shareWeb);
                 } else if(packageName.contains("mms")) {
                     intent.putExtra(Intent.EXTRA_TEXT, shareBody);
                 } else if(packageName.contains("android.gm")) { // If Gmail shows up twice, try removing this else-if clause and the reference to "android.gm" above
