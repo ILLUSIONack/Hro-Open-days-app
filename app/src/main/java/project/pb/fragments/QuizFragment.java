@@ -41,7 +41,7 @@ public class QuizFragment extends Fragment {
             getActivity().setTheme(R.style.AppTheme);
         }
         View view = inflater.inflate(R.layout.quiz_layout, container, false);
-
+        getActivity().setTitle("Quiz");
 
         ScoreCounter = view.findViewById(R.id.score);
         ScoreText = view.findViewById(R.id.score_text);

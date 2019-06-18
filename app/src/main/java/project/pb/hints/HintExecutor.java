@@ -24,7 +24,7 @@ public class HintExecutor {
                     cancel();
                 }
                 switch (tick++) {
-                    case 1800:
+                    case 5:
                         tick = 0;
                         new NotificationCreation(context, "Did you know?",
                                 getRandomHint().getHint()).display();
