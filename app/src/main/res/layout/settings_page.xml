@@ -45,7 +45,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:paddingHorizontal="4dp"
-        android:text="When turned on, you will be receiving random use full tips about the application itself. These will occur every 20-30 minutes."
+        android:text="When turned on, you will be receiving random use full tips about the application itself. These will occur every 30 minutes."
         android:textColor="?attr/textcolor"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
